@@ -1,18 +1,14 @@
-.gitignore
-/vendor/
-node_modules/
-.env
-# Ignore all environment files
-.env
-*.env
-frontend/.env
-anything/.env
-.env.*
-/public/uploads/
-/config/*.local.php
-/cache/
-/logs/
-.idea/
-.vscode/
-*.log
-*.cache
+# Laravel Backend
+backend/.env
+backend/vendor/
+
+# Vue Frontend
+frontend-new/node_modules/
+frontend-new/dist/
+
+# Root Node Modules
+/node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
