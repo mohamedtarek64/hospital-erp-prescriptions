@@ -1,0 +1,474 @@
+/* Compliance Management Styles */
+.compliance-container {
+  @apply p-6 bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen;
+}
+
+.compliance-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.compliance-title-section {
+  @apply mb-4 lg:mb-0;
+}
+
+.compliance-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.compliance-subtitle {
+  @apply text-lg text-gray-600;
+}
+
+.compliance-actions {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.compliance-create-btn {
+  @apply flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 shadow-lg;
+}
+
+.compliance-refresh-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+}
+
+.compliance-create-icon,
+.compliance-refresh-icon {
+  @apply w-5 h-5;
+}
+
+/* Compliance Overview */
+.compliance-overview {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+.compliance-overview-card {
+  @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-200;
+}
+
+.compliance-overview-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+}
+
+.compliance-overview-icon-compliant {
+  @apply bg-green-100 text-green-600;
+}
+
+.compliance-overview-icon-partial {
+  @apply bg-yellow-100 text-yellow-600;
+}
+
+.compliance-overview-icon-non-compliant {
+  @apply bg-red-100 text-red-600;
+}
+
+.compliance-overview-content {
+  @apply space-y-1;
+}
+
+.compliance-overview-title {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.compliance-overview-value {
+  @apply text-3xl font-bold text-gray-800;
+}
+
+.compliance-overview-percentage {
+  @apply text-lg font-semibold text-green-600;
+}
+
+/* Filters Section */
+.compliance-filters {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.compliance-search {
+  @apply flex-1;
+}
+
+.compliance-search-input-wrapper {
+  @apply relative;
+}
+
+.compliance-search-icon {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+}
+
+.compliance-search-input {
+  @apply w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200;
+}
+
+.compliance-filter-controls {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.compliance-filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200;
+}
+
+/* Loading State */
+.compliance-loading {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.compliance-loading-spinner {
+  @apply w-12 h-12 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin mb-4;
+}
+
+.compliance-loading-text {
+  @apply text-lg text-gray-600;
+}
+
+/* Error State */
+.compliance-error {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg border border-red-200;
+}
+
+.compliance-error-icon {
+  @apply w-16 h-16 text-red-500 mb-4;
+}
+
+.compliance-error-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.compliance-error-message {
+  @apply text-gray-600 mb-4 text-center max-w-md;
+}
+
+.compliance-error-retry-btn {
+  @apply px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200;
+}
+
+/* Compliance Table */
+.compliance-table-container {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden;
+}
+
+.compliance-table-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.compliance-table-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.compliance-table-actions {
+  @apply flex items-center gap-3;
+}
+
+.compliance-export-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+}
+
+.compliance-export-icon {
+  @apply w-4 h-4;
+}
+
+.compliance-table {
+  @apply overflow-x-auto;
+}
+
+.compliance-table-header-row {
+  @apply flex bg-gray-50 border-b border-gray-200;
+}
+
+.compliance-table-row {
+  @apply flex border-b border-gray-200 hover:bg-gray-50 transition-colors duration-200 cursor-pointer;
+}
+
+.compliance-table-cell {
+  @apply px-4 py-4 flex items-center;
+}
+
+.compliance-table-cell-title {
+  @apply flex-1 min-w-0;
+}
+
+.compliance-table-cell-standard {
+  @apply w-48 flex-shrink-0;
+}
+
+.compliance-table-cell-date {
+  @apply w-32 flex-shrink-0;
+}
+
+.compliance-table-cell-status {
+  @apply w-32 flex-shrink-0;
+}
+
+.compliance-table-cell-reviewer {
+  @apply w-32 flex-shrink-0;
+}
+
+.compliance-table-cell-actions {
+  @apply w-24 flex-shrink-0;
+}
+
+.compliance-record-title {
+  @apply font-semibold text-gray-800 mb-1;
+}
+
+.compliance-record-description {
+  @apply text-sm text-gray-600 line-clamp-2;
+}
+
+.compliance-standard-name {
+  @apply text-sm font-medium text-gray-800;
+}
+
+.compliance-date {
+  @apply text-sm text-gray-600;
+}
+
+.compliance-status-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.compliance-status-compliant {
+  @apply bg-green-100 text-green-800;
+}
+
+.compliance-status-partially_compliant {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.compliance-status-non_compliant {
+  @apply bg-red-100 text-red-800;
+}
+
+.compliance-reviewer {
+  @apply text-sm text-gray-600;
+}
+
+.compliance-actions {
+  @apply flex items-center gap-2;
+}
+
+.compliance-action-btn {
+  @apply p-2 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.compliance-action-improve {
+  @apply text-yellow-600 hover:bg-yellow-100 focus:ring-yellow-500;
+}
+
+.compliance-action-complete {
+  @apply text-green-600 hover:bg-green-100 focus:ring-green-500;
+}
+
+.compliance-action-review {
+  @apply text-blue-600 hover:bg-blue-100 focus:ring-blue-500;
+}
+
+.compliance-action-default {
+  @apply text-gray-600 hover:bg-gray-100 focus:ring-gray-500;
+}
+
+.compliance-action-delete {
+  @apply text-red-600 hover:bg-red-100 focus:ring-red-500;
+}
+
+.compliance-action-icon {
+  @apply w-4 h-4;
+}
+
+/* Empty State */
+.compliance-empty {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.compliance-empty-icon {
+  @apply w-16 h-16 text-gray-400 mb-4;
+}
+
+.compliance-empty-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.compliance-empty-message {
+  @apply text-gray-600 mb-6 text-center max-w-md;
+}
+
+.compliance-empty-action-btn {
+  @apply px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-indigo-700 transition-all duration-200;
+}
+
+/* Modal Styles */
+.compliance-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.compliance-modal {
+  @apply bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto;
+}
+
+.compliance-modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.compliance-modal-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.compliance-modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.compliance-modal-close svg {
+  @apply w-6 h-6;
+}
+
+.compliance-modal-form {
+  @apply p-6 space-y-6;
+}
+
+.compliance-modal-form-group {
+  @apply space-y-2;
+}
+
+.compliance-modal-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.compliance-modal-form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.compliance-modal-form-input,
+.compliance-modal-form-select,
+.compliance-modal-form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200;
+}
+
+.compliance-modal-form-textarea {
+  @apply resize-y min-h-[100px];
+}
+
+.compliance-modal-form-actions {
+  @apply flex items-center justify-end gap-3 pt-6 border-t border-gray-200;
+}
+
+.compliance-modal-form-cancel-btn {
+  @apply px-6 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+}
+
+.compliance-modal-form-save-btn {
+  @apply flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.compliance-modal-form-saving-spinner {
+  @apply w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .compliance-table-header-row,
+  .compliance-table-row {
+    @apply flex-col;
+  }
+  
+  .compliance-table-cell {
+    @apply w-full border-b border-gray-100;
+  }
+  
+  .compliance-table-cell:last-child {
+    @apply border-b-0;
+  }
+  
+  .compliance-table-cell-title {
+    @apply font-semibold text-gray-800;
+  }
+  
+  .compliance-table-cell-standard,
+  .compliance-table-cell-date,
+  .compliance-table-cell-status,
+  .compliance-table-cell-reviewer,
+  .compliance-table-cell-actions {
+    @apply w-full;
+  }
+}
+
+@media (max-width: 640px) {
+  .compliance-container {
+    @apply p-4;
+  }
+  
+  .compliance-header {
+    @apply p-4;
+  }
+  
+  .compliance-title {
+    @apply text-2xl;
+  }
+  
+  .compliance-overview {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .compliance-filters {
+    @apply p-4;
+  }
+  
+  .compliance-table-header {
+    @apply p-4;
+  }
+  
+  .compliance-modal {
+    @apply max-w-full mx-4;
+  }
+  
+  .compliance-modal-form-row {
+    @apply grid-cols-1;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .compliance-container {
+    @apply bg-gradient-to-br from-gray-800 to-gray-700;
+  }
+  
+  .compliance-header,
+  .compliance-overview-card,
+  .compliance-filters,
+  .compliance-table-container,
+  .compliance-empty,
+  .compliance-modal {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .compliance-title,
+  .compliance-table-title,
+  .compliance-modal-title,
+  .compliance-empty-title,
+  .compliance-record-title {
+    @apply text-white;
+  }
+  
+  .compliance-subtitle,
+  .compliance-record-description,
+  .compliance-empty-message {
+    @apply text-gray-300;
+  }
+  
+  .compliance-search-input,
+  .compliance-filter-select,
+  .compliance-modal-form-input,
+  .compliance-modal-form-select,
+  .compliance-modal-form-textarea {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+  
+  .compliance-modal-form-label {
+    @apply text-gray-300;
+  }
+  
+  .compliance-table-header-row {
+    @apply bg-gray-700;
+  }
+  
+  .compliance-table-row:hover {
+    @apply bg-gray-700;
+  }
+}

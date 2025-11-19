@@ -1,0 +1,501 @@
+/**
+ * Ward Management System Styles - Modern Light Theme
+ * Modern, clean styling for ward, room, and bed management
+ */
+
+/* ===== WARD MANAGEMENT DASHBOARD ===== */
+.ward-dashboard {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50;
+}
+
+.ward-dashboard-header {
+  @apply bg-white/80 backdrop-blur-sm shadow-xl border-b border-white/20;
+}
+
+.ward-dashboard-title {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.ward-dashboard-subtitle {
+  @apply text-slate-600 text-lg;
+}
+
+/* ===== STATISTICS CARDS ===== */
+.ward-stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10;
+}
+
+.ward-stat-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl transition-all duration-300;
+}
+
+.ward-stat-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg;
+}
+
+.ward-stat-icon.occupancy {
+  @apply bg-gradient-to-br from-blue-100 to-indigo-100 text-blue-600;
+}
+
+.ward-stat-icon.available {
+  @apply bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-600;
+}
+
+.ward-stat-icon.occupied {
+  @apply bg-gradient-to-br from-red-100 to-rose-100 text-red-600;
+}
+
+.ward-stat-icon.maintenance {
+  @apply bg-gradient-to-br from-yellow-100 to-amber-100 text-yellow-600;
+}
+
+.ward-stat-value {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2;
+}
+
+.ward-stat-label {
+  @apply text-base text-slate-600 font-semibold;
+}
+
+.ward-stat-change {
+  @apply text-sm mt-3;
+}
+
+.ward-stat-change.positive {
+  @apply text-emerald-600;
+}
+
+.ward-stat-change.negative {
+  @apply text-red-600;
+}
+
+/* ===== WARD CARDS ===== */
+.wards-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.ward-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.ward-card-header {
+  @apply flex justify-between items-start mb-6;
+}
+
+.ward-card-title {
+  @apply text-2xl font-bold text-slate-800 mb-2;
+}
+
+.ward-card-type {
+  @apply text-base text-slate-600 bg-gradient-to-r from-slate-100 to-gray-100 px-3 py-2 rounded-full border border-slate-200;
+}
+
+.ward-card-status {
+  @apply px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.ward-card-status.active {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.ward-card-status.inactive {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.ward-card-status.maintenance {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.ward-card-status.closed {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.ward-card-details {
+  @apply space-y-3 mb-6;
+}
+
+.ward-detail-item {
+  @apply flex items-center space-x-3 text-base text-slate-600;
+}
+
+.ward-detail-icon {
+  @apply w-5 h-5 text-slate-500;
+}
+
+.ward-card-stats {
+  @apply flex justify-between mb-6 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 shadow-md;
+}
+
+.ward-stat-item {
+  @apply text-center;
+}
+
+.ward-stat-item-value {
+  @apply block text-2xl font-bold text-slate-800;
+}
+
+.ward-stat-item-label {
+  @apply text-sm font-semibold text-slate-600;
+}
+
+.ward-card-actions {
+  @apply flex space-x-3;
+}
+
+/* ===== ROOM LAYOUT ===== */
+.room-layout-container {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.room-layout-header {
+  @apply flex justify-between items-center mb-6 pb-6 border-b border-slate-200/50;
+}
+
+.room-layout-title {
+  @apply text-2xl font-bold text-slate-800;
+}
+
+.room-layout-info {
+  @apply flex space-x-6 text-base text-slate-600;
+}
+
+.room-layout-type {
+  @apply font-semibold bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-2 rounded-full border border-blue-200;
+}
+
+.room-layout-capacity {
+  @apply font-semibold;
+}
+
+.beds-grid {
+  @apply grid gap-6 mb-6;
+}
+
+.beds-grid.grid-2 {
+  @apply grid-cols-2;
+}
+
+.beds-grid.grid-4 {
+  @apply grid-cols-2 md:grid-cols-4;
+}
+
+.beds-grid.grid-6 {
+  @apply grid-cols-2 md:grid-cols-3 lg:grid-cols-6;
+}
+
+.beds-grid.grid-8 {
+  @apply grid-cols-2 md:grid-cols-4 lg:grid-cols-8;
+}
+
+.room-amenities {
+  @apply mt-6 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 shadow-md;
+}
+
+.room-amenities-title {
+  @apply text-base font-semibold text-slate-700 mb-3;
+}
+
+.room-amenities-list {
+  @apply flex flex-wrap gap-3;
+}
+
+.amenity-tag {
+  @apply px-3 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 text-sm rounded-full border border-blue-200;
+}
+
+.room-layout-actions {
+  @apply flex space-x-3 pt-6 border-t border-slate-200/50;
+}
+
+/* ===== BED CARDS ===== */
+.bed-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border-2 p-6 transition-all duration-300 hover:shadow-xl;
+}
+
+.bed-card.available {
+  @apply border-emerald-200 bg-gradient-to-br from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100;
+}
+
+.bed-card.occupied {
+  @apply border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100;
+}
+
+.bed-card.maintenance {
+  @apply border-yellow-200 bg-gradient-to-br from-yellow-50 to-amber-50 hover:from-yellow-100 hover:to-amber-100;
+}
+
+.bed-card.out-of-order {
+  @apply border-red-200 bg-gradient-to-br from-red-50 to-rose-50 hover:from-red-100 hover:to-rose-100;
+}
+
+.bed-card-header {
+  @apply flex justify-between items-start mb-4;
+}
+
+.bed-card-number {
+  @apply text-xl font-bold text-slate-800;
+}
+
+.bed-card-type {
+  @apply text-base text-slate-600;
+}
+
+.bed-card-status {
+  @apply px-3 py-1.5 rounded-full text-sm font-semibold;
+}
+
+.bed-card-status.available {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.bed-card-status.occupied {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.bed-card-status.maintenance {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.bed-card-status.out-of-order {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.bed-card-details {
+  @apply mb-4;
+}
+
+.patient-info {
+  @apply space-y-2;
+}
+
+.patient-name,
+.admission-date {
+  @apply flex items-center space-x-3 text-base text-slate-700;
+}
+
+.empty-bed {
+  @apply flex items-center justify-center space-x-3 text-slate-500 py-3;
+}
+
+.bed-card-actions {
+  @apply flex flex-wrap gap-3 mb-3;
+}
+
+.bed-maintenance-info {
+  @apply text-center pt-3 border-t border-slate-200/50;
+}
+
+/* ===== ADMISSION FORM ===== */
+.admission-form-overlay {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50;
+}
+
+.admission-form {
+  @apply bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto border border-white/20;
+}
+
+.admission-form-header {
+  @apply flex justify-between items-center p-8 border-b border-slate-200/50;
+}
+
+.admission-form-title {
+  @apply text-2xl font-bold text-slate-800;
+}
+
+.admission-form-close {
+  @apply w-10 h-10 rounded-2xl bg-gradient-to-br from-slate-100 to-gray-100 hover:from-slate-200 hover:to-gray-200 flex items-center justify-center transition-all duration-200 shadow-md hover:shadow-lg;
+}
+
+.admission-form-content {
+  @apply p-8;
+}
+
+.admission-form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 mb-8;
+}
+
+.admission-form-group {
+  @apply space-y-3;
+}
+
+.admission-form-group.full-width {
+  @apply md:col-span-2;
+}
+
+.admission-form-label {
+  @apply block text-sm font-semibold text-slate-700;
+}
+
+.admission-form-select,
+.admission-form-input,
+.admission-form-textarea {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.admission-form-textarea {
+  @apply resize-none;
+}
+
+.admission-form-actions {
+  @apply flex justify-end space-x-4 pt-6 border-t border-slate-200/50;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center space-x-3 shadow-lg hover:shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600 disabled:bg-slate-400 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-slate-500 to-gray-500 text-white hover:from-slate-600 hover:to-gray-600;
+}
+
+.btn-success {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:from-emerald-600 hover:to-green-600;
+}
+
+.btn-warning {
+  @apply bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-rose-500 text-white hover:from-red-600 hover:to-rose-600;
+}
+
+.btn-info {
+  @apply bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600;
+}
+
+.btn-sm {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn-lg {
+  @apply px-8 py-4 text-lg;
+}
+
+/* ===== LOADING STATES ===== */
+.loading-spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600;
+}
+
+.loading-overlay {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50;
+}
+
+.loading-content {
+  @apply bg-white/95 backdrop-blur-md rounded-2xl p-8 flex items-center space-x-4 shadow-2xl;
+}
+
+/* ===== ERROR STATES ===== */
+.error-message {
+  @apply bg-gradient-to-r from-red-50 to-rose-50 border border-red-200 text-red-800 px-6 py-4 rounded-2xl mb-6 shadow-md;
+}
+
+.error-icon {
+  @apply w-6 h-6 text-red-600;
+}
+
+/* ===== SUCCESS STATES ===== */
+.success-message {
+  @apply bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 text-emerald-800 px-6 py-4 rounded-2xl mb-6 shadow-md;
+}
+
+.success-icon {
+  @apply w-6 h-6 text-emerald-600;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .ward-stats-grid {
+    @apply grid-cols-2 gap-6;
+  }
+  
+  .wards-grid {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .beds-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .admission-form-grid {
+    @apply grid-cols-1 gap-4;
+  }
+}
+
+@media (max-width: 640px) {
+  .ward-stats-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .ward-card-actions {
+    @apply flex-col space-x-0 space-y-3;
+  }
+  
+  .room-layout-actions {
+    @apply flex-col space-x-0 space-y-3;
+  }
+  
+  .bed-card-actions {
+    @apply flex-col space-x-0 space-y-2;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+.focus-visible {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .ward-dashboard {
+    @apply bg-white;
+  }
+  
+  .ward-card,
+  .room-layout-container,
+  .bed-card {
+    @apply shadow-none border border-slate-300;
+  }
+  
+  .btn {
+    @apply hidden;
+  }
+}

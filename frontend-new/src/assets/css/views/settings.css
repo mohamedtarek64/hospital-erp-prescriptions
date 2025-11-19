@@ -1,0 +1,86 @@
+/* Settings Page Styles */
+.settings-page {
+  @apply p-6 bg-gray-50 min-h-screen;
+}
+
+.page-header {
+  @apply mb-8;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.settings-content {
+  @apply grid grid-cols-1 lg:grid-cols-4 gap-8;
+}
+
+.settings-tabs {
+  @apply bg-white rounded-xl shadow-lg border border-gray-200 p-4;
+}
+
+.tab-btn {
+  @apply w-full flex items-center gap-3 p-3 rounded-lg text-right text-gray-700 hover:bg-gray-50 transition-colors duration-200;
+}
+
+.tab-btn.active {
+  @apply bg-blue-50 text-blue-700 border-r-4 border-blue-500;
+}
+
+.tab-btn i {
+  @apply w-5 h-5;
+}
+
+.settings-panel {
+  @apply lg:col-span-3 bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+}
+
+.settings-section h2 {
+  @apply text-xl font-semibold text-gray-800 mb-6;
+}
+
+.form-group {
+  @apply mb-6;
+}
+
+.form-group label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.form-textarea {
+  @apply h-24 resize-none;
+}
+
+.checkbox-label {
+  @apply flex items-center gap-3 cursor-pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+}
+
+.settings-actions {
+  @apply flex gap-4 pt-6 border-t border-gray-200 mt-8;
+}
+
+.btn {
+  @apply px-6 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-outline {
+  @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+}

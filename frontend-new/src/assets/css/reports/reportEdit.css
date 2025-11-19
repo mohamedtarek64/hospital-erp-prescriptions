@@ -1,0 +1,235 @@
+/* Report Edit Component Styles - Modern Light Theme */
+.report-edit-container {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-8;
+}
+
+.report-edit-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-edit-title-section {
+  @apply flex items-center mb-6 lg:mb-0;
+}
+
+.report-edit-back-btn {
+  @apply flex items-center justify-center w-12 h-12 mr-6 bg-gradient-to-br from-slate-100 to-gray-100 hover:from-slate-200 hover:to-gray-200 text-slate-600 hover:text-slate-800 rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md hover:shadow-lg;
+}
+
+.report-edit-back-icon {
+  @apply w-6 h-6;
+}
+
+.report-edit-title {
+  @apply text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.report-edit-actions {
+  @apply flex flex-wrap gap-4;
+}
+
+.report-edit-action-btn {
+  @apply flex items-center px-6 py-3 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl;
+}
+
+.report-edit-save-btn {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white focus:ring-emerald-300;
+}
+
+.report-edit-cancel-btn {
+  @apply bg-gradient-to-r from-slate-500 to-gray-500 hover:from-slate-600 hover:to-gray-600 text-white focus:ring-slate-300;
+}
+
+.report-edit-action-icon {
+  @apply w-5 h-5 mr-3;
+}
+
+.report-edit-spinning {
+  @apply animate-spin;
+}
+
+.report-edit-form {
+  @apply space-y-10;
+}
+
+.report-edit-form-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-10;
+}
+
+.report-edit-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-edit-section-title {
+  @apply text-2xl font-bold text-slate-800 mb-8 pb-4 border-b border-slate-200/50;
+}
+
+.report-edit-field {
+  @apply mb-8;
+}
+
+.report-edit-label {
+  @apply block text-sm font-semibold text-slate-700 mb-3;
+}
+
+.report-edit-required {
+  @apply text-red-500;
+}
+
+.report-edit-input,
+.report-edit-textarea,
+.report-edit-select {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.report-edit-input-error {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+.report-edit-textarea {
+  @apply resize-y min-h-[120px];
+}
+
+.report-edit-error {
+  @apply block text-sm text-red-600 mt-2;
+}
+
+.report-edit-checkbox-label {
+  @apply flex items-center cursor-pointer;
+}
+
+.report-edit-checkbox {
+  @apply w-5 h-5 text-blue-600 bg-slate-100 border-slate-300 rounded focus:ring-blue-500 focus:ring-2;
+}
+
+.report-edit-checkbox-text {
+  @apply ml-3 text-base text-slate-700;
+}
+
+.report-edit-parameters {
+  @apply space-y-6;
+}
+
+.report-edit-parameter {
+  @apply p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 shadow-md hover:shadow-lg transition-all duration-200;
+}
+
+.report-edit-parameter-header {
+  @apply flex items-center mb-6;
+}
+
+.report-edit-parameter-name {
+  @apply flex-1 mr-4;
+}
+
+.report-edit-parameter-remove {
+  @apply flex items-center justify-center w-10 h-10 bg-gradient-to-br from-red-100 to-rose-100 hover:from-red-200 hover:to-rose-200 text-red-600 hover:text-red-800 rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 shadow-md hover:shadow-lg;
+}
+
+.report-edit-parameter-remove-icon {
+  @apply w-5 h-5;
+}
+
+.report-edit-parameter-fields {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.report-edit-parameter-label {
+  @apply col-span-1;
+}
+
+.report-edit-parameter-type {
+  @apply col-span-1;
+}
+
+.report-edit-parameter-default {
+  @apply col-span-1;
+}
+
+.report-edit-add-parameter {
+  @apply flex items-center justify-center w-full p-8 border-2 border-dashed border-slate-300 rounded-2xl text-slate-600 hover:text-slate-800 hover:border-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm hover:shadow-md;
+}
+
+.report-edit-add-parameter-icon {
+  @apply w-6 h-6 mr-3;
+}
+
+.report-edit-loading {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.report-edit-loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-6;
+}
+
+.report-edit-loading-text {
+  @apply text-slate-600 text-lg;
+}
+
+.report-edit-error {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.report-edit-error-icon {
+  @apply w-20 h-20 text-red-500 mb-6;
+}
+
+.report-edit-error-text {
+  @apply text-slate-700 mb-6 text-center text-lg;
+}
+
+.report-edit-error-retry-btn {
+  @apply px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .report-edit-form-grid {
+    @apply grid-cols-1 gap-8;
+  }
+}
+
+@media (max-width: 768px) {
+  .report-edit-container {
+    @apply p-6;
+  }
+  
+  .report-edit-header {
+    @apply p-6;
+  }
+  
+  .report-edit-title {
+    @apply text-2xl;
+  }
+  
+  .report-edit-actions {
+    @apply w-full;
+  }
+  
+  .report-edit-action-btn {
+    @apply flex-1 justify-center;
+  }
+  
+  .report-edit-parameter-fields {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .report-edit-section {
+    @apply p-6;
+  }
+}
+
+/* Form validation states */
+.report-edit-input:valid {
+  @apply border-emerald-300;
+}
+
+.report-edit-input:invalid {
+  @apply border-red-300;
+}
+
+/* Focus states */
+.report-edit-input:focus,
+.report-edit-textarea:focus,
+.report-edit-select:focus {
+  @apply shadow-lg;
+}

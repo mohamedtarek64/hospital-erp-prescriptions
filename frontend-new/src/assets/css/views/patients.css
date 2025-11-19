@@ -1,0 +1,101 @@
+/* Patients Page Styles */
+.patients-page {
+  @apply p-6 bg-gray-50 min-h-screen;
+}
+
+.page-header {
+  @apply mb-8;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.stats-cards {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply bg-white rounded-xl p-6 shadow-lg border border-gray-200;
+  @apply flex items-center space-x-4 space-x-reverse;
+}
+
+.stat-icon {
+  @apply w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center;
+}
+
+.stat-icon i {
+  @apply text-2xl text-blue-600;
+}
+
+.stat-content h3 {
+  @apply text-sm font-medium text-gray-600 mb-1;
+}
+
+.stat-number {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.patients-table-container {
+  @apply bg-white rounded-xl shadow-lg border border-gray-200;
+}
+
+.table-header {
+  @apply flex justify-between items-center p-6 border-b border-gray-200;
+}
+
+.table-header h2 {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.table-filters {
+  @apply flex gap-4 p-6 border-b border-gray-200;
+}
+
+.search-input {
+  @apply flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.table-wrapper {
+  @apply overflow-x-auto;
+}
+
+.patients-table {
+  @apply w-full;
+}
+
+.patients-table th {
+  @apply px-6 py-4 text-right text-sm font-medium text-gray-500 bg-gray-50 border-b border-gray-200;
+}
+
+.patients-table td {
+  @apply px-6 py-4 text-sm text-gray-800 border-b border-gray-200;
+}
+
+.department-badge {
+  @apply inline-flex px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800;
+}
+
+.action-buttons {
+  @apply flex gap-2;
+}
+
+.btn-icon {
+  @apply w-8 h-8 flex items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors duration-200;
+}

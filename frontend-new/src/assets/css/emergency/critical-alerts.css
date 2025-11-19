@@ -1,0 +1,398 @@
+/* Critical Alerts - Modern Light Theme */
+
+.critical-alerts {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50;
+  @apply p-6;
+}
+
+/* Header Styles */
+.alerts-header {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 mb-6;
+  @apply flex justify-between items-start;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2 flex items-center;
+}
+
+.page-title i {
+  @apply mr-3 text-blue-600;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.header-actions {
+  @apply flex gap-3;
+}
+
+/* Alert Statistics Section */
+.alert-stats-section {
+  @apply mb-8;
+}
+
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.stat-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply flex items-center space-x-4 hover:shadow-xl transition-shadow duration-200;
+}
+
+.stat-icon {
+  @apply w-12 h-12 rounded-full flex items-center justify-center text-white;
+}
+
+.stat-icon i {
+  @apply text-xl;
+}
+
+.stat-icon.active {
+  @apply bg-red-500;
+}
+
+.stat-icon.critical {
+  @apply bg-red-600;
+}
+
+.stat-icon.resolved {
+  @apply bg-green-500;
+}
+
+.stat-icon.response-time {
+  @apply bg-blue-500;
+}
+
+.stat-content {
+  @apply flex-1;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600;
+}
+
+/* Active Alerts Section */
+.active-alerts-section {
+  @apply mb-8;
+}
+
+.alerts-filters {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 mb-6;
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.filter-group {
+  @apply flex flex-col;
+}
+
+.filter-group label {
+  @apply text-sm font-medium text-gray-700 mb-2;
+}
+
+.filter-group select,
+.filter-group input {
+  @apply px-3 py-2 border border-gray-300 rounded-lg;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.alerts-list {
+  @apply space-y-4;
+}
+
+.alert-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply hover:shadow-xl transition-all duration-200;
+}
+
+.alert-card.alert-critical {
+  @apply border-l-4 border-red-500;
+}
+
+.alert-card.alert-high {
+  @apply border-l-4 border-orange-500;
+}
+
+.alert-card.alert-medium {
+  @apply border-l-4 border-yellow-500;
+}
+
+.alert-card.alert-low {
+  @apply border-l-4 border-green-500;
+}
+
+.alert-card.overdue {
+  @apply border-l-4 border-red-600 bg-red-50;
+}
+
+.alert-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.alert-type {
+  @apply flex items-center text-sm font-medium text-gray-600;
+}
+
+.alert-type i {
+  @apply mr-2 text-blue-600;
+}
+
+.alert-priority {
+  @apply flex flex-col items-end;
+}
+
+.priority-badge {
+  @apply px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.priority-critical {
+  @apply bg-red-100 text-red-800;
+}
+
+.priority-high {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.priority-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.priority-low {
+  @apply bg-green-100 text-green-800;
+}
+
+.alert-content {
+  @apply mb-4;
+}
+
+.alert-title {
+  @apply text-lg font-semibold text-gray-800 mb-2;
+}
+
+.alert-message {
+  @apply text-gray-600 mb-3;
+}
+
+.alert-meta {
+  @apply flex flex-wrap gap-4 text-sm text-gray-500;
+}
+
+.meta-item {
+  @apply flex items-center;
+}
+
+.meta-item i {
+  @apply mr-2 text-blue-600;
+}
+
+.alert-actions {
+  @apply flex gap-2;
+}
+
+/* Overdue Alerts Section */
+.overdue-alerts-section {
+  @apply mb-8;
+}
+
+.overdue-alerts-list {
+  @apply space-y-4;
+}
+
+/* Alert History Section */
+.alert-history-section {
+  @apply mb-8;
+}
+
+.history-filters {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 mb-6;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.alerts-table {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden;
+}
+
+.alerts-table table {
+  @apply w-full;
+}
+
+.alerts-table th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50;
+}
+
+.alerts-table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-800 border-b border-gray-200;
+}
+
+.alerts-table tbody tr:hover {
+  @apply bg-gray-50;
+}
+
+.alert-type-cell {
+  @apply flex items-center;
+}
+
+.alert-type-cell i {
+  @apply mr-2 text-blue-600;
+}
+
+.alert-title-cell {
+  @apply flex flex-col;
+}
+
+.alert-message-preview {
+  @apply text-xs text-gray-500 mt-1;
+}
+
+.status-badge {
+  @apply px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.status-active {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-acknowledged {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-resolved {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-dismissed {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.creator-info {
+  @apply text-sm text-gray-600;
+}
+
+.time-info {
+  @apply text-sm text-gray-600;
+}
+
+.response-time {
+  @apply text-sm text-gray-600;
+}
+
+.action-buttons {
+  @apply flex gap-2;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex justify-between items-center p-6 border-b border-gray-200;
+}
+
+.modal-header h3 {
+  @apply text-xl font-bold text-gray-800;
+}
+
+.modal-close {
+  @apply text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.modal-body {
+  @apply p-6;
+}
+
+.modal-footer {
+  @apply flex justify-end gap-3 p-6 border-t border-gray-200;
+}
+
+/* Form Styles */
+.form-group {
+  @apply mb-4;
+}
+
+.form-group label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Loading State */
+.loading-overlay {
+  @apply fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50;
+}
+
+.loading-spinner {
+  @apply text-center;
+}
+
+.loading-spinner i {
+  @apply text-4xl text-blue-600 mb-4;
+}
+
+.loading-spinner p {
+  @apply text-gray-600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .critical-alerts {
+    @apply p-4;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-1 md:grid-cols-2;
+  }
+  
+  .alerts-filters {
+    @apply grid-cols-1;
+  }
+  
+  .history-filters {
+    @apply grid-cols-1;
+  }
+  
+  .header-actions {
+    @apply flex-col gap-2;
+  }
+  
+  .alert-actions {
+    @apply flex-col;
+  }
+  
+  .alerts-table {
+    @apply overflow-x-auto;
+  }
+}
+
+/* Animation Classes */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}

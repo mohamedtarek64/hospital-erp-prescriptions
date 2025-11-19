@@ -1,0 +1,422 @@
+/* Report Scheduler Component Styles - Modern Light Theme */
+.report-scheduler-container {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-8;
+}
+
+.report-scheduler-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-scheduler-title-section {
+  @apply mb-6 lg:mb-0;
+}
+
+.report-scheduler-title {
+  @apply text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.report-scheduler-subtitle {
+  @apply text-slate-600 text-lg;
+}
+
+.report-scheduler-actions {
+  @apply flex flex-wrap gap-4;
+}
+
+.report-scheduler-action-btn {
+  @apply flex items-center px-6 py-3 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl;
+}
+
+.report-scheduler-create-btn {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white focus:ring-blue-300;
+}
+
+.report-scheduler-refresh-btn {
+  @apply bg-gradient-to-r from-slate-500 to-gray-500 hover:from-slate-600 hover:to-gray-600 text-white focus:ring-slate-300;
+}
+
+.report-scheduler-action-icon {
+  @apply w-5 h-5 mr-3;
+}
+
+.report-scheduler-spinning {
+  @apply animate-spin;
+}
+
+/* Statistics Cards */
+.report-scheduler-stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10;
+}
+
+.report-scheduler-stat-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border-l-4 border-blue-500 hover:shadow-2xl transition-all duration-300;
+}
+
+.report-scheduler-stat-icon {
+  @apply w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6 shadow-lg;
+}
+
+.report-scheduler-stat-icon svg {
+  @apply w-8 h-8;
+}
+
+.report-scheduler-stat-icon-active {
+  @apply bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-600;
+}
+
+.report-scheduler-stat-icon-pending {
+  @apply bg-gradient-to-br from-yellow-100 to-amber-100 text-yellow-600;
+}
+
+.report-scheduler-stat-icon-completed {
+  @apply bg-gradient-to-br from-purple-100 to-violet-100 text-purple-600;
+}
+
+.report-scheduler-stat-content {
+  @apply space-y-3;
+}
+
+.report-scheduler-stat-title {
+  @apply text-base font-semibold text-slate-600;
+}
+
+.report-scheduler-stat-value {
+  @apply text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+/* Filters */
+.report-scheduler-filters {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-10;
+}
+
+.report-scheduler-filters-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.report-scheduler-filter-group {
+  @apply space-y-3;
+}
+
+.report-scheduler-filter-label {
+  @apply block text-sm font-semibold text-slate-700;
+}
+
+.report-scheduler-filter-input,
+.report-scheduler-filter-select {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+/* Table */
+.report-scheduler-table-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-10;
+}
+
+.report-scheduler-table-header {
+  @apply flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8;
+}
+
+.report-scheduler-table-title {
+  @apply text-2xl font-bold text-slate-800 mb-6 sm:mb-0;
+}
+
+.report-scheduler-table-actions {
+  @apply flex flex-wrap gap-3;
+}
+
+.report-scheduler-bulk-action {
+  @apply px-4 py-2 bg-gradient-to-r from-slate-100 to-gray-100 hover:from-slate-200 hover:to-gray-200 text-slate-700 text-sm rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md;
+}
+
+.report-scheduler-table-container {
+  @apply overflow-x-auto;
+}
+
+.report-scheduler-table {
+  @apply w-full min-w-full;
+}
+
+.report-scheduler-table-th {
+  @apply px-8 py-6 text-right text-xs font-bold text-slate-600 uppercase tracking-wider border-b border-slate-200/50;
+}
+
+.report-scheduler-table-td {
+  @apply px-8 py-6 text-base text-slate-800 border-b border-slate-200/50;
+}
+
+.report-scheduler-table-row {
+  @apply hover:bg-gradient-to-r hover:from-slate-50/50 hover:to-blue-50/50 transition-all duration-200;
+}
+
+.report-scheduler-checkbox {
+  @apply w-5 h-5 text-blue-600 bg-slate-100 border-slate-300 rounded focus:ring-blue-500 focus:ring-2;
+}
+
+/* Report Info */
+.report-scheduler-report-info {
+  @apply space-y-2;
+}
+
+.report-scheduler-report-name {
+  @apply font-semibold text-slate-800;
+}
+
+.report-scheduler-report-description {
+  @apply text-sm text-slate-500;
+}
+
+/* Badges */
+.report-scheduler-frequency-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.report-scheduler-status-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold;
+}
+
+.report-scheduler-status-active {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.report-scheduler-status-paused {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.report-scheduler-status-completed {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.report-scheduler-status-failed {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.report-scheduler-status-pending {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.report-scheduler-status-unknown {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+/* Time Display */
+.report-scheduler-next-run,
+.report-scheduler-last-run {
+  @apply font-mono text-base;
+}
+
+/* Recipients */
+.report-scheduler-recipients {
+  @apply space-y-2;
+}
+
+.report-scheduler-recipients-count {
+  @apply text-base text-slate-600;
+}
+
+/* Actions */
+.report-scheduler-actions {
+  @apply flex items-center gap-3;
+}
+
+.report-scheduler-action {
+  @apply p-3 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md;
+}
+
+.report-scheduler-action svg {
+  @apply w-5 h-5;
+}
+
+.report-scheduler-action-edit {
+  @apply hover:text-blue-600 hover:bg-blue-50;
+}
+
+.report-scheduler-action-run {
+  @apply hover:text-emerald-600 hover:bg-emerald-50;
+}
+
+.report-scheduler-action-play {
+  @apply hover:text-emerald-600 hover:bg-emerald-50;
+}
+
+.report-scheduler-action-pause {
+  @apply hover:text-yellow-600 hover:bg-yellow-50;
+}
+
+.report-scheduler-action-delete {
+  @apply hover:text-red-600 hover:bg-red-50;
+}
+
+/* Pagination */
+.report-scheduler-pagination {
+  @apply flex items-center justify-between mt-8;
+}
+
+.report-scheduler-pagination-btn {
+  @apply px-4 py-2 bg-gradient-to-r from-slate-100 to-gray-100 hover:from-slate-200 hover:to-gray-200 text-slate-700 text-sm rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md;
+}
+
+.report-scheduler-pagination-pages {
+  @apply flex items-center gap-2;
+}
+
+.report-scheduler-pagination-page {
+  @apply px-4 py-2 text-sm rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm hover:shadow-md;
+}
+
+.report-scheduler-pagination-page-active {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg;
+}
+
+/* Recent Executions */
+.report-scheduler-recent-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-scheduler-recent-header {
+  @apply flex items-center justify-between mb-8;
+}
+
+.report-scheduler-recent-title {
+  @apply text-2xl font-bold text-slate-800;
+}
+
+.report-scheduler-recent-refresh {
+  @apply p-3 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm hover:shadow-md;
+}
+
+.report-scheduler-recent-refresh svg {
+  @apply w-5 h-5;
+}
+
+.report-scheduler-recent-list {
+  @apply space-y-6;
+}
+
+.report-scheduler-recent-item {
+  @apply flex items-center gap-6 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.report-scheduler-recent-icon {
+  @apply w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md;
+}
+
+.report-scheduler-recent-icon svg {
+  @apply w-6 h-6;
+}
+
+.report-scheduler-recent-content {
+  @apply flex-1 min-w-0;
+}
+
+.report-scheduler-recent-name {
+  @apply font-semibold text-slate-800 truncate;
+}
+
+.report-scheduler-recent-time,
+.report-scheduler-recent-duration {
+  @apply text-sm text-slate-500;
+}
+
+.report-scheduler-recent-status {
+  @apply flex-shrink-0;
+}
+
+.report-scheduler-execution-status {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold;
+}
+
+.report-scheduler-execution-success {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.report-scheduler-execution-failed {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.report-scheduler-execution-running {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.report-scheduler-execution-unknown {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+/* Loading State */
+.report-scheduler-loading {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.report-scheduler-loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-6;
+}
+
+.report-scheduler-loading-text {
+  @apply text-slate-600 text-lg;
+}
+
+/* Error State */
+.report-scheduler-error {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.report-scheduler-error-icon {
+  @apply w-20 h-20 text-red-500 mb-6;
+}
+
+.report-scheduler-error-text {
+  @apply text-slate-700 mb-6 text-center text-lg;
+}
+
+.report-scheduler-error-retry-btn {
+  @apply px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-scheduler-container {
+    @apply p-6;
+  }
+  
+  .report-scheduler-header {
+    @apply p-6;
+  }
+  
+  .report-scheduler-title {
+    @apply text-3xl;
+  }
+  
+  .report-scheduler-actions {
+    @apply w-full;
+  }
+  
+  .report-scheduler-action-btn {
+    @apply flex-1 justify-center;
+  }
+  
+  .report-scheduler-stats {
+    @apply grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  
+  .report-scheduler-filters-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .report-scheduler-table-container {
+    @apply -mx-4;
+  }
+  
+  .report-scheduler-table {
+    @apply min-w-[800px];
+  }
+  
+  .report-scheduler-table-header {
+    @apply flex-col items-start;
+  }
+  
+  .report-scheduler-table-actions {
+    @apply w-full mt-6;
+  }
+  
+  .report-scheduler-bulk-action {
+    @apply flex-1 text-center;
+  }
+}

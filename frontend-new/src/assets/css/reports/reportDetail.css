@@ -1,0 +1,235 @@
+/* Report Detail Component Styles - Modern Light Theme */
+.report-detail-container {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-8;
+}
+
+.report-detail-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-detail-title-section {
+  @apply flex items-center mb-6 lg:mb-0;
+}
+
+.report-detail-back-btn {
+  @apply flex items-center justify-center w-12 h-12 mr-6 bg-gradient-to-br from-slate-100 to-gray-100 hover:from-slate-200 hover:to-gray-200 text-slate-600 hover:text-slate-800 rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md hover:shadow-lg;
+}
+
+.report-detail-back-icon {
+  @apply w-6 h-6;
+}
+
+.report-detail-title {
+  @apply text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.report-detail-actions {
+  @apply flex flex-wrap gap-4;
+}
+
+.report-detail-action-btn {
+  @apply flex items-center px-6 py-3 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl;
+}
+
+.report-detail-edit-btn {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white focus:ring-blue-300;
+}
+
+.report-detail-generate-btn {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white focus:ring-emerald-300;
+}
+
+.report-detail-download-btn {
+  @apply bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white focus:ring-purple-300;
+}
+
+.report-detail-action-icon {
+  @apply w-5 h-5 mr-3;
+}
+
+.report-detail-spinning {
+  @apply animate-spin;
+}
+
+.report-detail-info {
+  @apply mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-detail-info-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.report-detail-info-item {
+  @apply flex flex-col;
+}
+
+.report-detail-info-label {
+  @apply text-base font-semibold text-slate-600 mb-2;
+}
+
+.report-detail-info-value {
+  @apply text-lg text-slate-800;
+}
+
+.report-detail-status {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.report-detail-status-scheduled {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.report-detail-status-public {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.report-detail-status-private {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.report-detail-status-unknown {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.report-detail-description {
+  @apply mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-detail-description-title {
+  @apply text-2xl font-bold text-slate-800 mb-6;
+}
+
+.report-detail-description-text {
+  @apply text-slate-700 leading-relaxed text-lg;
+}
+
+.report-detail-parameters {
+  @apply mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-detail-parameters-title {
+  @apply text-2xl font-bold text-slate-800 mb-6;
+}
+
+.report-detail-parameters-list {
+  @apply space-y-4;
+}
+
+.report-detail-parameter-item {
+  @apply flex items-center justify-between p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 shadow-md;
+}
+
+.report-detail-parameter-label {
+  @apply font-semibold text-slate-700;
+}
+
+.report-detail-parameter-value {
+  @apply text-slate-600;
+}
+
+.report-detail-history {
+  @apply mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-detail-history-title {
+  @apply text-2xl font-bold text-slate-800 mb-6;
+}
+
+.report-detail-history-list {
+  @apply space-y-4;
+}
+
+.report-detail-history-item {
+  @apply flex items-center justify-between p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.report-detail-history-info {
+  @apply flex flex-col;
+}
+
+.report-detail-history-date {
+  @apply font-semibold text-slate-800;
+}
+
+.report-detail-history-user {
+  @apply text-base text-slate-600;
+}
+
+.report-detail-history-actions {
+  @apply flex items-center;
+}
+
+.report-detail-history-download-btn {
+  @apply flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white text-sm rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md hover:shadow-lg;
+}
+
+.report-detail-history-icon {
+  @apply w-4 h-4 mr-2;
+}
+
+.report-detail-history-empty {
+  @apply text-center py-16;
+}
+
+.report-detail-history-empty-icon {
+  @apply w-20 h-20 mx-auto text-slate-400 mb-6;
+}
+
+.report-detail-history-empty-text {
+  @apply text-slate-600 text-lg;
+}
+
+.report-detail-loading {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.report-detail-loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-6;
+}
+
+.report-detail-loading-text {
+  @apply text-slate-600 text-lg;
+}
+
+.report-detail-error {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.report-detail-error-icon {
+  @apply w-20 h-20 text-red-500 mb-6;
+}
+
+.report-detail-error-text {
+  @apply text-slate-700 mb-6 text-center text-lg;
+}
+
+.report-detail-error-retry-btn {
+  @apply px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-detail-container {
+    @apply p-6;
+  }
+  
+  .report-detail-header {
+    @apply p-6;
+  }
+  
+  .report-detail-title {
+    @apply text-2xl;
+  }
+  
+  .report-detail-actions {
+    @apply w-full;
+  }
+  
+  .report-detail-action-btn {
+    @apply flex-1 justify-center;
+  }
+  
+  .report-detail-info-grid {
+    @apply grid-cols-1 gap-6;
+  }
+}

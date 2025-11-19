@@ -1,0 +1,315 @@
+/**
+ * Reports List Component Styles - Modern Light Theme
+ * Modern light theme with Tailwind CSS
+ */
+
+/* Reports List Container */
+.reports-list {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-8;
+}
+
+/* Header */
+.reports-list-header {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.reports-list-title {
+  @apply mb-6;
+}
+
+.reports-list-title-text {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.reports-list-title-description {
+  @apply text-slate-600 text-lg;
+}
+
+.reports-list-actions {
+  @apply flex items-center gap-4;
+}
+
+.reports-list-action-btn {
+  @apply px-6 py-3 rounded-xl font-semibold text-base transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl;
+}
+
+.reports-list-action-btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600;
+}
+
+.reports-list-action-btn-secondary {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 hover:from-slate-200 hover:to-gray-200;
+}
+
+.reports-list-action-btn-icon {
+  @apply w-5 h-5;
+}
+
+/* Filters */
+.reports-list-filters {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.reports-list-filter-group {
+  @apply flex flex-col;
+}
+
+.reports-list-filter-label {
+  @apply text-sm font-semibold text-slate-700 mb-3;
+}
+
+.reports-list-filter-input,
+.reports-list-filter-select {
+  @apply px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.reports-list-filter-actions {
+  @apply flex items-center gap-3;
+}
+
+.reports-list-filter-btn {
+  @apply px-6 py-3 rounded-xl font-semibold text-base transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.reports-list-filter-btn-clear {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 hover:from-slate-200 hover:to-gray-200;
+}
+
+.reports-list-filter-btn-export {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:from-emerald-600 hover:to-green-600;
+}
+
+/* Table */
+.reports-list-table-container {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden;
+}
+
+.reports-list-table {
+  @apply w-full;
+}
+
+.reports-list-table-header {
+  @apply bg-gradient-to-r from-slate-50 to-blue-50;
+}
+
+.reports-list-table-th {
+  @apply px-8 py-6 text-left text-xs font-bold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-all duration-200;
+}
+
+.reports-list-table-th-content {
+  @apply flex items-center gap-3;
+}
+
+.reports-list-sort-icon {
+  @apply w-5 h-5;
+}
+
+.reports-list-table-body {
+  @apply divide-y divide-slate-200/50;
+}
+
+.reports-list-table-row {
+  @apply hover:bg-gradient-to-r hover:from-slate-50/50 hover:to-blue-50/50 transition-all duration-200;
+}
+
+.reports-list-table-row-selected {
+  @apply bg-gradient-to-r from-blue-50 to-indigo-50;
+}
+
+.reports-list-table-td {
+  @apply px-8 py-6 text-base text-slate-800;
+}
+
+.reports-list-checkbox {
+  @apply rounded border-slate-300 text-blue-600 focus:ring-blue-500 w-5 h-5;
+}
+
+/* Report Info */
+.reports-list-report-info {
+  @apply flex items-center gap-4;
+}
+
+.reports-list-report-icon {
+  @apply w-12 h-12 bg-gradient-to-br from-blue-100 to-indigo-100 text-blue-600 rounded-2xl flex items-center justify-center shadow-md;
+}
+
+.reports-list-report-details {
+  @apply flex-1;
+}
+
+.reports-list-report-title {
+  @apply font-semibold text-slate-800;
+}
+
+.reports-list-report-description {
+  @apply text-slate-500 text-sm;
+}
+
+/* Badges */
+.reports-list-category-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.reports-list-type-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold;
+}
+
+.reports-list-type-badge-standard {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.reports-list-type-badge-custom {
+  @apply bg-gradient-to-r from-purple-100 to-violet-100 text-purple-800 border border-purple-200;
+}
+
+.reports-list-type-badge-scheduled {
+  @apply bg-gradient-to-r from-orange-100 to-amber-100 text-orange-800 border border-orange-200;
+}
+
+.reports-list-status-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold;
+}
+
+.reports-list-status-badge-active {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.reports-list-status-badge-inactive {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.reports-list-status-badge-scheduled {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.reports-list-count {
+  @apply font-semibold text-slate-800;
+}
+
+.reports-list-date {
+  @apply text-slate-500;
+}
+
+/* Actions */
+.reports-list-actions {
+  @apply flex items-center gap-3;
+}
+
+.reports-list-action {
+  @apply p-3 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.reports-list-action-generate {
+  @apply text-blue-600 hover:bg-blue-100;
+}
+
+.reports-list-action-edit {
+  @apply text-emerald-600 hover:bg-emerald-100;
+}
+
+.reports-list-action-download {
+  @apply text-purple-600 hover:bg-purple-100;
+}
+
+.reports-list-action-delete {
+  @apply text-red-600 hover:bg-red-100;
+}
+
+.reports-list-action svg {
+  @apply w-5 h-5;
+}
+
+/* Pagination */
+.reports-list-pagination {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mt-8 flex items-center justify-between;
+}
+
+.reports-list-pagination-info {
+  @apply flex-1;
+}
+
+.reports-list-pagination-text {
+  @apply text-base text-slate-700;
+}
+
+.reports-list-pagination-controls {
+  @apply flex items-center gap-3;
+}
+
+.reports-list-pagination-btn {
+  @apply px-4 py-2 text-base border border-slate-300 rounded-xl hover:bg-slate-50 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.reports-list-pagination-btn-active {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white border-transparent shadow-lg;
+}
+
+.reports-list-pagination-btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Loading States */
+.reports-list-loading {
+  @apply flex items-center justify-center py-16;
+}
+
+.reports-list-loading-spinner {
+  @apply animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600;
+}
+
+.reports-list-loading-text {
+  @apply text-slate-600 ml-4 text-lg;
+}
+
+/* Empty States */
+.reports-list-empty {
+  @apply text-center py-16;
+}
+
+.reports-list-empty-icon {
+  @apply w-20 h-20 text-slate-400 mx-auto mb-6;
+}
+
+.reports-list-empty-title {
+  @apply text-2xl font-bold text-slate-800 mb-3;
+}
+
+.reports-list-empty-description {
+  @apply text-slate-600 mb-8 text-lg;
+}
+
+.reports-list-empty-action {
+  @apply px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reports-list {
+    @apply p-6;
+  }
+  
+  .reports-list-header {
+    @apply p-6;
+  }
+  
+  .reports-list-filters {
+    @apply p-6;
+  }
+  
+  .reports-list-table-th,
+  .reports-list-table-td {
+    @apply px-4 py-4;
+  }
+  
+  .reports-list-actions {
+    @apply flex-col gap-2;
+  }
+  
+  .reports-list-pagination {
+    @apply flex-col gap-6 p-6;
+  }
+  
+  .reports-list-pagination-controls {
+    @apply flex-wrap;
+  }
+}

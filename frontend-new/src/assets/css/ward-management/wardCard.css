@@ -1,0 +1,125 @@
+/**
+ * Ward Card Component Styles - Modern Light Theme
+ * Specific styling for the ward card component
+ */
+
+/* ===== WARD CARD ===== */
+.ward-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl transition-all duration-300;
+}
+
+.ward-header {
+  @apply flex justify-between items-start mb-6;
+}
+
+.ward-info h3.ward-name {
+  @apply text-2xl font-bold text-slate-800 mb-2;
+}
+
+.ward-info p.ward-type {
+  @apply text-base text-slate-600;
+}
+
+.ward-status .status-badge {
+  @apply px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.ward-status .status-badge.active {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.ward-status .status-badge.inactive {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.ward-status .status-badge.maintenance {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.ward-status .status-badge.closed {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.ward-details {
+  @apply space-y-3 mb-6;
+}
+
+.detail-item {
+  @apply flex items-center space-x-3 text-base text-slate-600;
+}
+
+.detail-item .icon {
+  @apply w-5 h-5;
+}
+
+.ward-stats {
+  @apply flex justify-between mb-6 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 shadow-md;
+}
+
+.stat-item {
+  @apply text-center;
+}
+
+.stat-value {
+  @apply block text-2xl font-bold text-slate-800;
+}
+
+.stat-label {
+  @apply text-sm font-semibold text-slate-600;
+}
+
+.ward-actions {
+  @apply flex space-x-3;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg hover:shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-slate-500 to-gray-500 text-white hover:from-slate-600 hover:to-gray-600;
+}
+
+.btn-info {
+  @apply bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600;
+}
+
+.btn .icon {
+  @apply w-5 h-5;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .ward-actions {
+    @apply flex-col space-x-0 space-y-3;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ward-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.ward-card:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+.btn:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}

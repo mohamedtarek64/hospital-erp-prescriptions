@@ -1,0 +1,463 @@
+/* Incidents Management Styles */
+.incidents-container {
+  @apply p-6 bg-gradient-to-br from-red-50 to-orange-100 min-h-screen;
+}
+
+.incidents-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.incidents-title-section {
+  @apply mb-4 lg:mb-0;
+}
+
+.incidents-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.incidents-subtitle {
+  @apply text-lg text-gray-600;
+}
+
+.incidents-actions {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.incidents-create-btn {
+  @apply flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg font-medium hover:from-red-700 hover:to-orange-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 shadow-lg;
+}
+
+.incidents-refresh-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+}
+
+.incidents-create-icon,
+.incidents-refresh-icon {
+  @apply w-5 h-5;
+}
+
+/* Statistics Section */
+.incidents-stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.incidents-stat-card {
+  @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-200;
+}
+
+.incidents-stat-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+}
+
+.incidents-stat-icon-total {
+  @apply bg-gray-100 text-gray-600;
+}
+
+.incidents-stat-icon-critical {
+  @apply bg-red-100 text-red-600;
+}
+
+.incidents-stat-icon-resolved {
+  @apply bg-green-100 text-green-600;
+}
+
+.incidents-stat-icon-pending {
+  @apply bg-yellow-100 text-yellow-600;
+}
+
+.incidents-stat-content {
+  @apply space-y-1;
+}
+
+.incidents-stat-title {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.incidents-stat-value {
+  @apply text-3xl font-bold text-gray-800;
+}
+
+/* Filters Section */
+.incidents-filters {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.incidents-search {
+  @apply flex-1;
+}
+
+.incidents-search-input-wrapper {
+  @apply relative;
+}
+
+.incidents-search-icon {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+}
+
+.incidents-search-input {
+  @apply w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200;
+}
+
+.incidents-filter-controls {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.incidents-filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200;
+}
+
+/* Loading State */
+.incidents-loading {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.incidents-loading-spinner {
+  @apply w-12 h-12 border-4 border-red-200 border-t-red-600 rounded-full animate-spin mb-4;
+}
+
+.incidents-loading-text {
+  @apply text-lg text-gray-600;
+}
+
+/* Error State */
+.incidents-error {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg border border-red-200;
+}
+
+.incidents-error-icon {
+  @apply w-16 h-16 text-red-500 mb-4;
+}
+
+.incidents-error-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.incidents-error-message {
+  @apply text-gray-600 mb-4 text-center max-w-md;
+}
+
+.incidents-error-retry-btn {
+  @apply px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200;
+}
+
+/* Incidents List */
+.incidents-list {
+  @apply space-y-6;
+}
+
+.incidents-item {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer;
+}
+
+.incidents-item-header {
+  @apply flex items-start justify-between p-6 border-b border-gray-200;
+}
+
+.incidents-item-title-section {
+  @apply flex-1 min-w-0;
+}
+
+.incidents-item-title {
+  @apply text-lg font-semibold text-gray-800 mb-3 truncate;
+}
+
+.incidents-item-badges {
+  @apply flex flex-wrap gap-2;
+}
+
+.incidents-item-severity,
+.incidents-item-status,
+.incidents-item-type {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.incidents-item-severity-low {
+  @apply bg-green-100 text-green-800;
+}
+
+.incidents-item-severity-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.incidents-item-severity-high {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.incidents-item-severity-critical {
+  @apply bg-red-100 text-red-800;
+}
+
+.incidents-item-status-reported {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.incidents-item-status-investigating {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.incidents-item-status-resolved {
+  @apply bg-green-100 text-green-800;
+}
+
+.incidents-item-status-closed {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.incidents-item-type-patient_safety {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.incidents-item-type-medication_error {
+  @apply bg-red-100 text-red-800;
+}
+
+.incidents-item-type-equipment_failure {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.incidents-item-type-staff_injury {
+  @apply bg-pink-100 text-pink-800;
+}
+
+.incidents-item-type-other {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.incidents-item-actions {
+  @apply flex items-center gap-2 ml-4;
+}
+
+.incidents-item-action-btn {
+  @apply p-2 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.incidents-item-action-investigate {
+  @apply text-yellow-600 hover:bg-yellow-100 focus:ring-yellow-500;
+}
+
+.incidents-item-action-resolve {
+  @apply text-green-600 hover:bg-green-100 focus:ring-green-500;
+}
+
+.incidents-item-action-close {
+  @apply text-gray-600 hover:bg-gray-100 focus:ring-gray-500;
+}
+
+.incidents-item-action-default {
+  @apply text-gray-600 hover:bg-gray-100 focus:ring-gray-500;
+}
+
+.incidents-item-action-delete {
+  @apply text-red-600 hover:bg-red-100 focus:ring-red-500;
+}
+
+.incidents-item-action-icon {
+  @apply w-4 h-4;
+}
+
+.incidents-item-content {
+  @apply p-6;
+}
+
+.incidents-item-description {
+  @apply text-gray-600 mb-4 line-clamp-3;
+}
+
+.incidents-item-meta {
+  @apply space-y-2 mb-4;
+}
+
+.incidents-item-meta-item {
+  @apply flex items-center justify-between text-sm;
+}
+
+.incidents-item-meta-label {
+  @apply font-medium text-gray-500;
+}
+
+.incidents-item-meta-value {
+  @apply text-gray-800;
+}
+
+.incidents-item-analysis,
+.incidents-item-actions-section {
+  @apply mb-4;
+}
+
+.incidents-item-analysis-title,
+.incidents-item-actions-title {
+  @apply text-sm font-semibold text-gray-800 mb-2;
+}
+
+.incidents-item-analysis-text,
+.incidents-item-actions-text {
+  @apply text-sm text-gray-600 line-clamp-2;
+}
+
+/* Empty State */
+.incidents-empty {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.incidents-empty-icon {
+  @apply w-16 h-16 text-gray-400 mb-4;
+}
+
+.incidents-empty-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.incidents-empty-message {
+  @apply text-gray-600 mb-6 text-center max-w-md;
+}
+
+.incidents-empty-action-btn {
+  @apply px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg font-medium hover:from-red-700 hover:to-orange-700 transition-all duration-200;
+}
+
+/* Modal Styles */
+.incidents-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.incidents-modal {
+  @apply bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto;
+}
+
+.incidents-modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.incidents-modal-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.incidents-modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.incidents-modal-close svg {
+  @apply w-6 h-6;
+}
+
+.incidents-modal-form {
+  @apply p-6 space-y-6;
+}
+
+.incidents-modal-form-group {
+  @apply space-y-2;
+}
+
+.incidents-modal-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.incidents-modal-form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.incidents-modal-form-input,
+.incidents-modal-form-select,
+.incidents-modal-form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200;
+}
+
+.incidents-modal-form-textarea {
+  @apply resize-y min-h-[100px];
+}
+
+.incidents-modal-form-actions {
+  @apply flex items-center justify-end gap-3 pt-6 border-t border-gray-200;
+}
+
+.incidents-modal-form-cancel-btn {
+  @apply px-6 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+}
+
+.incidents-modal-form-save-btn {
+  @apply flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.incidents-modal-form-saving-spinner {
+  @apply w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .incidents-container {
+    @apply p-4;
+  }
+  
+  .incidents-header {
+    @apply p-4;
+  }
+  
+  .incidents-title {
+    @apply text-2xl;
+  }
+  
+  .incidents-stats {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .incidents-filters {
+    @apply p-4;
+  }
+  
+  .incidents-item-header {
+    @apply p-4;
+  }
+  
+  .incidents-item-content {
+    @apply p-4;
+  }
+  
+  .incidents-modal {
+    @apply max-w-full mx-4;
+  }
+  
+  .incidents-modal-form-row {
+    @apply grid-cols-1;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .incidents-container {
+    @apply bg-gradient-to-br from-gray-800 to-gray-700;
+  }
+  
+  .incidents-header,
+  .incidents-stat-card,
+  .incidents-filters,
+  .incidents-item,
+  .incidents-empty,
+  .incidents-modal {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .incidents-title,
+  .incidents-item-title,
+  .incidents-modal-title,
+  .incidents-empty-title {
+    @apply text-white;
+  }
+  
+  .incidents-subtitle,
+  .incidents-item-description,
+  .incidents-empty-message {
+    @apply text-gray-300;
+  }
+  
+  .incidents-search-input,
+  .incidents-filter-select,
+  .incidents-modal-form-input,
+  .incidents-modal-form-select,
+  .incidents-modal-form-textarea {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+  
+  .incidents-modal-form-label {
+    @apply text-gray-300;
+  }
+}

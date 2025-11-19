@@ -1,0 +1,418 @@
+/* Analytics Dashboard Component Styles */
+.analytics-dashboard-container {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6;
+}
+
+.analytics-dashboard-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 bg-white rounded-xl shadow-lg p-6;
+}
+
+.analytics-dashboard-title-section {
+  @apply mb-4 lg:mb-0;
+}
+
+.analytics-dashboard-title {
+  @apply text-3xl lg:text-4xl font-bold text-gray-800 mb-2;
+}
+
+.analytics-dashboard-subtitle {
+  @apply text-gray-600 text-lg;
+}
+
+.analytics-dashboard-actions {
+  @apply flex flex-col sm:flex-row gap-4;
+}
+
+.analytics-dashboard-date-range {
+  @apply flex items-center gap-3;
+}
+
+.analytics-dashboard-date-label {
+  @apply text-sm font-medium text-gray-700 whitespace-nowrap;
+}
+
+.analytics-dashboard-date-select {
+  @apply px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+.analytics-dashboard-refresh-btn {
+  @apply flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.analytics-dashboard-refresh-icon {
+  @apply w-4 h-4 mr-2;
+}
+
+.analytics-dashboard-spinning {
+  @apply animate-spin;
+}
+
+/* KPI Cards */
+.analytics-dashboard-kpis {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.analytics-dashboard-kpi-card {
+  @apply bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500 hover:shadow-xl transition-all duration-300;
+}
+
+.analytics-dashboard-kpi-positive {
+  @apply border-green-500;
+}
+
+.analytics-dashboard-kpi-negative {
+  @apply border-red-500;
+}
+
+.analytics-dashboard-kpi-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.analytics-dashboard-kpi-icon {
+  @apply w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600;
+}
+
+.analytics-dashboard-kpi-icon svg {
+  @apply w-6 h-6;
+}
+
+.analytics-dashboard-kpi-trend {
+  @apply flex items-center gap-1;
+}
+
+.analytics-dashboard-trend-icon {
+  @apply w-4 h-4;
+}
+
+.analytics-dashboard-trend-up {
+  @apply text-green-500;
+}
+
+.analytics-dashboard-trend-down {
+  @apply text-red-500;
+}
+
+.analytics-dashboard-trend-text {
+  @apply text-sm font-medium;
+}
+
+.analytics-dashboard-kpi-content {
+  @apply space-y-2;
+}
+
+.analytics-dashboard-kpi-title {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.analytics-dashboard-kpi-value {
+  @apply text-2xl lg:text-3xl font-bold text-gray-800;
+}
+
+.analytics-dashboard-kpi-description {
+  @apply text-sm text-gray-500;
+}
+
+/* Charts Section */
+.analytics-dashboard-charts {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8;
+}
+
+.analytics-dashboard-chart-card {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.analytics-dashboard-chart-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.analytics-dashboard-chart-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.analytics-dashboard-chart-actions {
+  @apply flex items-center gap-2;
+}
+
+.analytics-dashboard-chart-action {
+  @apply p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.analytics-dashboard-chart-action svg {
+  @apply w-4 h-4;
+}
+
+.analytics-dashboard-chart-container {
+  @apply relative h-64;
+}
+
+.analytics-dashboard-chart {
+  @apply w-full h-full;
+}
+
+/* Tables Section */
+.analytics-dashboard-tables {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+.analytics-dashboard-table-card {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.analytics-dashboard-table-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.analytics-dashboard-table-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.analytics-dashboard-table-export {
+  @apply flex items-center px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.analytics-dashboard-table-export svg {
+  @apply w-4 h-4 mr-1;
+}
+
+.analytics-dashboard-table-container {
+  @apply overflow-x-auto;
+}
+
+.analytics-dashboard-table {
+  @apply w-full;
+}
+
+.analytics-dashboard-table th {
+  @apply px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-200;
+}
+
+.analytics-dashboard-table td {
+  @apply px-4 py-3 text-sm text-gray-800 border-b border-gray-200;
+}
+
+.analytics-dashboard-table-rank {
+  @apply text-center;
+}
+
+.analytics-dashboard-rank-badge {
+  @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium text-white;
+}
+
+.analytics-dashboard-rank-gold {
+  @apply bg-yellow-500;
+}
+
+.analytics-dashboard-rank-silver {
+  @apply bg-gray-400;
+}
+
+.analytics-dashboard-rank-bronze {
+  @apply bg-orange-600;
+}
+
+.analytics-dashboard-rank-default {
+  @apply bg-gray-300 text-gray-700;
+}
+
+.analytics-dashboard-table-name {
+  @apply font-medium;
+}
+
+.analytics-dashboard-table-value {
+  @apply font-mono;
+}
+
+.analytics-dashboard-table-rating {
+  @apply text-center;
+}
+
+.analytics-dashboard-rating {
+  @apply flex flex-col items-center gap-1;
+}
+
+.analytics-dashboard-rating-stars {
+  @apply flex gap-0.5;
+}
+
+.analytics-dashboard-star {
+  @apply text-gray-300 text-sm;
+}
+
+.analytics-dashboard-star-filled {
+  @apply text-yellow-400;
+}
+
+.analytics-dashboard-rating-value {
+  @apply text-xs text-gray-500;
+}
+
+/* Activities */
+.analytics-dashboard-activities {
+  @apply space-y-4;
+}
+
+.analytics-dashboard-activity {
+  @apply flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200;
+}
+
+.analytics-dashboard-activity-icon {
+  @apply w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 flex-shrink-0;
+}
+
+.analytics-dashboard-activity-icon svg {
+  @apply w-5 h-5;
+}
+
+.analytics-dashboard-activity-content {
+  @apply flex-1 min-w-0;
+}
+
+.analytics-dashboard-activity-text {
+  @apply text-sm font-medium text-gray-800 truncate;
+}
+
+.analytics-dashboard-activity-time {
+  @apply text-xs text-gray-500;
+}
+
+.analytics-dashboard-activity-value {
+  @apply flex-shrink-0;
+}
+
+.analytics-dashboard-activity-amount {
+  @apply text-sm font-medium text-gray-800;
+}
+
+/* Loading State */
+.analytics-dashboard-loading {
+  @apply flex flex-col items-center justify-center py-12;
+}
+
+.analytics-dashboard-loading-spinner {
+  @apply w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4;
+}
+
+.analytics-dashboard-loading-text {
+  @apply text-gray-600;
+}
+
+/* Error State */
+.analytics-dashboard-error {
+  @apply flex flex-col items-center justify-center py-12;
+}
+
+.analytics-dashboard-error-icon {
+  @apply w-16 h-16 text-red-500 mb-4;
+}
+
+.analytics-dashboard-error-text {
+  @apply text-gray-700 mb-4 text-center;
+}
+
+.analytics-dashboard-error-retry-btn {
+  @apply px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .analytics-dashboard-charts {
+    @apply grid-cols-1;
+  }
+  
+  .analytics-dashboard-tables {
+    @apply grid-cols-1;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-dashboard-container {
+    @apply p-4;
+  }
+  
+  .analytics-dashboard-header {
+    @apply p-4;
+  }
+  
+  .analytics-dashboard-title {
+    @apply text-2xl;
+  }
+  
+  .analytics-dashboard-kpis {
+    @apply grid-cols-1 md:grid-cols-2;
+  }
+  
+  .analytics-dashboard-actions {
+    @apply w-full;
+  }
+  
+  .analytics-dashboard-date-range {
+    @apply w-full justify-between;
+  }
+  
+  .analytics-dashboard-date-select {
+    @apply flex-1;
+  }
+  
+  .analytics-dashboard-refresh-btn {
+    @apply w-full justify-center;
+  }
+  
+  .analytics-dashboard-chart-container {
+    @apply h-48;
+  }
+  
+  .analytics-dashboard-table-container {
+    @apply -mx-4;
+  }
+  
+  .analytics-dashboard-table {
+    @apply min-w-full;
+  }
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .analytics-dashboard-container {
+    @apply bg-gray-800;
+  }
+  
+  .analytics-dashboard-header,
+  .analytics-dashboard-kpi-card,
+  .analytics-dashboard-chart-card,
+  .analytics-dashboard-table-card {
+    @apply bg-gray-800;
+  }
+  
+  .analytics-dashboard-title,
+  .analytics-dashboard-chart-title,
+  .analytics-dashboard-table-title {
+    @apply text-white;
+  }
+  
+  .analytics-dashboard-subtitle,
+  .analytics-dashboard-kpi-title,
+  .analytics-dashboard-kpi-description,
+  .analytics-dashboard-loading-text,
+  .analytics-dashboard-error-text {
+    @apply text-gray-300;
+  }
+  
+  .analytics-dashboard-kpi-value,
+  .analytics-dashboard-activity-text,
+  .analytics-dashboard-activity-amount {
+    @apply text-gray-100;
+  }
+  
+  .analytics-dashboard-date-select {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+  
+  .analytics-dashboard-activity {
+    @apply bg-gray-700 hover:bg-gray-600;
+  }
+  
+  .analytics-dashboard-table th,
+  .analytics-dashboard-table td {
+    @apply border-gray-600 text-gray-300;
+  }
+}

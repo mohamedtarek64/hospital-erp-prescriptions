@@ -1,0 +1,392 @@
+/* Audits Management Styles */
+.audits-container {
+  @apply p-6 bg-gradient-to-br from-blue-50 to-cyan-100 min-h-screen;
+}
+
+.audits-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.audits-title-section {
+  @apply mb-4 lg:mb-0;
+}
+
+.audits-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.audits-subtitle {
+  @apply text-lg text-gray-600;
+}
+
+.audits-actions {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.audits-create-btn {
+  @apply flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg;
+}
+
+.audits-refresh-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+}
+
+.audits-create-icon,
+.audits-refresh-icon {
+  @apply w-5 h-5;
+}
+
+/* Filters Section */
+.audits-filters {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.audits-search {
+  @apply flex-1;
+}
+
+.audits-search-input-wrapper {
+  @apply relative;
+}
+
+.audits-search-icon {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+}
+
+.audits-search-input {
+  @apply w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
+}
+
+.audits-filter-controls {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.audits-filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
+}
+
+/* Loading State */
+.audits-loading {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.audits-loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4;
+}
+
+.audits-loading-text {
+  @apply text-lg text-gray-600;
+}
+
+/* Error State */
+.audits-error {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg border border-red-200;
+}
+
+.audits-error-icon {
+  @apply w-16 h-16 text-red-500 mb-4;
+}
+
+.audits-error-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.audits-error-message {
+  @apply text-gray-600 mb-4 text-center max-w-md;
+}
+
+.audits-error-retry-btn {
+  @apply px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200;
+}
+
+/* Audits Grid */
+.audits-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+.audits-card {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer;
+}
+
+.audits-card-header {
+  @apply flex items-start justify-between p-6 border-b border-gray-200;
+}
+
+.audits-card-title-section {
+  @apply flex-1 min-w-0;
+}
+
+.audits-card-title {
+  @apply text-lg font-semibold text-gray-800 mb-3 truncate;
+}
+
+.audits-card-badges {
+  @apply flex flex-wrap gap-2;
+}
+
+.audits-card-status,
+.audits-card-type {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.audits-card-status-scheduled {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.audits-card-status-in_progress {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.audits-card-status-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.audits-card-status-cancelled {
+  @apply bg-red-100 text-red-800;
+}
+
+.audits-card-type-internal {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.audits-card-type-external {
+  @apply bg-indigo-100 text-indigo-800;
+}
+
+.audits-card-actions {
+  @apply flex items-center gap-2 ml-4;
+}
+
+.audits-card-action-btn {
+  @apply p-2 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.audits-card-action-start {
+  @apply text-green-600 hover:bg-green-100 focus:ring-green-500;
+}
+
+.audits-card-action-complete {
+  @apply text-blue-600 hover:bg-blue-100 focus:ring-blue-500;
+}
+
+.audits-card-action-review {
+  @apply text-purple-600 hover:bg-purple-100 focus:ring-purple-500;
+}
+
+.audits-card-action-default {
+  @apply text-gray-600 hover:bg-gray-100 focus:ring-gray-500;
+}
+
+.audits-card-action-delete {
+  @apply text-red-600 hover:bg-red-100 focus:ring-red-500;
+}
+
+.audits-card-action-icon {
+  @apply w-4 h-4;
+}
+
+.audits-card-content {
+  @apply p-6;
+}
+
+.audits-card-description {
+  @apply text-gray-600 mb-4 line-clamp-3;
+}
+
+.audits-card-meta {
+  @apply space-y-2 mb-4;
+}
+
+.audits-card-meta-item {
+  @apply flex items-center justify-between text-sm;
+}
+
+.audits-card-meta-label {
+  @apply font-medium text-gray-500;
+}
+
+.audits-card-meta-value {
+  @apply text-gray-800;
+}
+
+.audits-card-findings,
+.audits-card-recommendations {
+  @apply mb-4;
+}
+
+.audits-card-findings-title,
+.audits-card-recommendations-title {
+  @apply text-sm font-semibold text-gray-800 mb-2;
+}
+
+.audits-card-findings-text,
+.audits-card-recommendations-text {
+  @apply text-sm text-gray-600 line-clamp-2;
+}
+
+/* Empty State */
+.audits-empty {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.audits-empty-icon {
+  @apply w-16 h-16 text-gray-400 mb-4;
+}
+
+.audits-empty-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.audits-empty-message {
+  @apply text-gray-600 mb-6 text-center max-w-md;
+}
+
+.audits-empty-action-btn {
+  @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-200;
+}
+
+/* Modal Styles */
+.audits-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.audits-modal {
+  @apply bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto;
+}
+
+.audits-modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.audits-modal-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.audits-modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.audits-modal-close svg {
+  @apply w-6 h-6;
+}
+
+.audits-modal-form {
+  @apply p-6 space-y-6;
+}
+
+.audits-modal-form-group {
+  @apply space-y-2;
+}
+
+.audits-modal-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.audits-modal-form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.audits-modal-form-input,
+.audits-modal-form-select,
+.audits-modal-form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
+}
+
+.audits-modal-form-textarea {
+  @apply resize-y min-h-[100px];
+}
+
+.audits-modal-form-actions {
+  @apply flex items-center justify-end gap-3 pt-6 border-t border-gray-200;
+}
+
+.audits-modal-form-cancel-btn {
+  @apply px-6 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+}
+
+.audits-modal-form-save-btn {
+  @apply flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.audits-modal-form-saving-spinner {
+  @apply w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .audits-container {
+    @apply p-4;
+  }
+  
+  .audits-header {
+    @apply p-4;
+  }
+  
+  .audits-title {
+    @apply text-2xl;
+  }
+  
+  .audits-filters {
+    @apply p-4;
+  }
+  
+  .audits-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .audits-card-header {
+    @apply p-4;
+  }
+  
+  .audits-card-content {
+    @apply p-4;
+  }
+  
+  .audits-modal {
+    @apply max-w-full mx-4;
+  }
+  
+  .audits-modal-form-row {
+    @apply grid-cols-1;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .audits-container {
+    @apply bg-gradient-to-br from-gray-800 to-gray-700;
+  }
+  
+  .audits-header,
+  .audits-filters,
+  .audits-card,
+  .audits-empty,
+  .audits-modal {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .audits-title,
+  .audits-card-title,
+  .audits-modal-title,
+  .audits-empty-title {
+    @apply text-white;
+  }
+  
+  .audits-subtitle,
+  .audits-card-description,
+  .audits-empty-message {
+    @apply text-gray-300;
+  }
+  
+  .audits-search-input,
+  .audits-filter-select,
+  .audits-modal-form-input,
+  .audits-modal-form-select,
+  .audits-modal-form-textarea {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+  
+  .audits-modal-form-label {
+    @apply text-gray-300;
+  }
+}

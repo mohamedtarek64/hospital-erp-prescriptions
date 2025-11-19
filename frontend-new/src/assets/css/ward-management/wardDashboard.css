@@ -1,0 +1,349 @@
+/**
+ * Ward Dashboard Component Styles - Modern Light Theme
+ * Specific styling for the ward dashboard component
+ */
+
+/* ===== WARD DASHBOARD CONTAINER ===== */
+.ward-dashboard {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-8;
+}
+
+/* ===== WARD DASHBOARD HEADER ===== */
+.ward-dashboard-header {
+  @apply flex justify-between items-center mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.ward-dashboard-title {
+  @apply flex-1;
+}
+
+.ward-dashboard-title-text {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.ward-dashboard-title-description {
+  @apply text-slate-600 text-lg;
+}
+
+.ward-dashboard-actions {
+  @apply flex space-x-4;
+}
+
+.ward-dashboard-action-btn {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center space-x-3 hover:transform hover:-translate-y-1 hover:shadow-xl;
+}
+
+.ward-dashboard-action-btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600 shadow-lg;
+}
+
+.ward-dashboard-action-btn-secondary {
+  @apply bg-gradient-to-r from-slate-500 to-gray-500 text-white hover:from-slate-600 hover:to-gray-600 shadow-lg;
+}
+
+.ward-dashboard-action-btn-icon {
+  @apply w-5 h-5;
+}
+
+/* ===== WARD DASHBOARD STATISTICS ===== */
+.ward-dashboard-stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10;
+}
+
+.ward-dashboard-stat-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.ward-dashboard-stat-card-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg;
+}
+
+.ward-dashboard-stat-card-icon svg {
+  @apply w-10 h-10 text-blue-600;
+}
+
+.ward-dashboard-stat-card-content {
+  @apply flex-1;
+}
+
+.ward-dashboard-stat-card-title {
+  @apply text-base font-semibold text-slate-600 mb-2;
+}
+
+.ward-dashboard-stat-card-value {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+/* ===== WARD DASHBOARD WARDS SECTION ===== */
+.ward-dashboard-wards {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.ward-dashboard-wards-header {
+  @apply flex justify-between items-center mb-8 pb-6 border-b border-slate-200/50;
+}
+
+.ward-dashboard-wards-title {
+  @apply text-3xl font-bold text-slate-800;
+}
+
+.ward-dashboard-wards-filters {
+  @apply flex space-x-4;
+}
+
+.ward-dashboard-filter-select {
+  @apply px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.ward-dashboard-wards-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+/* ===== WARD DASHBOARD WARD CARD ===== */
+.ward-dashboard-ward-card {
+  @apply bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 p-8 cursor-pointer transition-all duration-300 hover:shadow-xl hover:from-blue-50 hover:to-indigo-50 hover:border-blue-300 hover:transform hover:-translate-y-1;
+}
+
+.ward-dashboard-ward-card-header {
+  @apply flex justify-between items-start mb-6;
+}
+
+.ward-dashboard-ward-card-title {
+  @apply text-2xl font-bold text-slate-800 mb-2;
+}
+
+.ward-dashboard-ward-card-type {
+  @apply px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.ward-type-general {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.ward-type-ICU {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.ward-type-pediatric {
+  @apply bg-gradient-to-r from-pink-100 to-rose-100 text-pink-800 border border-pink-200;
+}
+
+.ward-type-maternity {
+  @apply bg-gradient-to-r from-purple-100 to-violet-100 text-purple-800 border border-purple-200;
+}
+
+.ward-type-surgical {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.ward-type-emergency {
+  @apply bg-gradient-to-r from-orange-100 to-amber-100 text-orange-800 border border-orange-200;
+}
+
+.ward-type-isolation {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.ward-type-cardiac {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.ward-type-neurology {
+  @apply bg-gradient-to-r from-indigo-100 to-blue-100 text-indigo-800 border border-indigo-200;
+}
+
+.ward-type-oncology {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.ward-dashboard-ward-card-content {
+  @apply space-y-6;
+}
+
+.ward-dashboard-ward-card-info {
+  @apply space-y-3;
+}
+
+.ward-dashboard-ward-card-info-item {
+  @apply flex items-center space-x-3 text-base text-slate-600;
+}
+
+.ward-dashboard-ward-card-info-icon {
+  @apply w-5 h-5 text-slate-500;
+}
+
+.ward-dashboard-ward-card-stats {
+  @apply flex justify-between p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200/50 shadow-md;
+}
+
+.ward-dashboard-ward-card-stat {
+  @apply text-center;
+}
+
+.ward-dashboard-ward-card-stat-label {
+  @apply block text-sm font-semibold text-slate-600 mb-2;
+}
+
+.ward-dashboard-ward-card-stat-value {
+  @apply block text-2xl font-bold text-slate-800;
+}
+
+.ward-dashboard-ward-card-status {
+  @apply flex justify-end;
+}
+
+.ward-dashboard-ward-card-status-badge {
+  @apply px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.status-active {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.status-inactive {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+.status-maintenance {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.status-closed {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+/* ===== LOADING STATE ===== */
+.ward-dashboard-loading {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.ward-dashboard-loading-spinner {
+  @apply animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mb-6;
+}
+
+.ward-dashboard-loading-text {
+  @apply text-slate-600 text-xl;
+}
+
+/* ===== ERROR STATE ===== */
+.ward-dashboard-error {
+  @apply flex flex-col items-center justify-center py-16 text-center;
+}
+
+.ward-dashboard-error-icon {
+  @apply w-20 h-20 text-red-500 mb-6;
+}
+
+.ward-dashboard-error-icon svg {
+  @apply w-full h-full;
+}
+
+.ward-dashboard-error-title {
+  @apply text-2xl font-bold text-slate-800 mb-3;
+}
+
+.ward-dashboard-error-message {
+  @apply text-slate-600 mb-6 max-w-md text-lg;
+}
+
+.ward-dashboard-error-retry-btn {
+  @apply px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .ward-dashboard {
+    @apply p-6;
+  }
+  
+  .ward-dashboard-header {
+    @apply flex-col space-y-6;
+  }
+  
+  .ward-dashboard-actions {
+    @apply w-full justify-center;
+  }
+  
+  .ward-dashboard-stats {
+    @apply grid-cols-2 gap-6;
+  }
+  
+  .ward-dashboard-wards-grid {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .ward-dashboard-wards-filters {
+    @apply flex-col space-x-0 space-y-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .ward-dashboard-stats {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .ward-dashboard-wards-header {
+    @apply flex-col space-y-6;
+  }
+  
+  .ward-dashboard-wards-filters {
+    @apply w-full;
+  }
+  
+  .ward-dashboard-filter-select {
+    @apply w-full;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ward-dashboard-ward-card {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.ward-dashboard-stat-card {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.ward-dashboard-ward-card:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+.ward-dashboard-action-btn:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+.ward-dashboard-filter-select:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .ward-dashboard {
+    @apply bg-white;
+  }
+  
+  .ward-dashboard-header,
+  .ward-dashboard-wards {
+    @apply shadow-none border border-slate-300;
+  }
+  
+  .ward-dashboard-action-btn {
+    @apply hidden;
+  }
+  
+  .ward-dashboard-wards-filters {
+    @apply hidden;
+  }
+}

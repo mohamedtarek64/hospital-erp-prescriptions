@@ -1,0 +1,563 @@
+/* Training Management Styles */
+.training-container {
+  @apply p-6 bg-gradient-to-br from-indigo-50 to-purple-100 min-h-screen;
+}
+
+.training-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.training-title-section {
+  @apply mb-4 lg:mb-0;
+}
+
+.training-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.training-subtitle {
+  @apply text-lg text-gray-600;
+}
+
+.training-actions {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.training-create-btn {
+  @apply flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 shadow-lg;
+}
+
+.training-refresh-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+}
+
+.training-create-icon,
+.training-refresh-icon {
+  @apply w-5 h-5;
+}
+
+/* Training Statistics */
+.training-stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.training-stat-card {
+  @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-200;
+}
+
+.training-stat-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+}
+
+.training-stat-icon-total {
+  @apply bg-gray-100 text-gray-600;
+}
+
+.training-stat-icon-completed {
+  @apply bg-green-100 text-green-600;
+}
+
+.training-stat-icon-pending {
+  @apply bg-blue-100 text-blue-600;
+}
+
+.training-stat-icon-overdue {
+  @apply bg-red-100 text-red-600;
+}
+
+.training-stat-content {
+  @apply space-y-1;
+}
+
+.training-stat-title {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.training-stat-value {
+  @apply text-3xl font-bold text-gray-800;
+}
+
+/* Tabs */
+.training-tabs {
+  @apply mb-8;
+}
+
+.training-tab-nav {
+  @apply flex space-x-1 bg-white rounded-2xl shadow-lg p-2 border border-gray-200;
+}
+
+.training-tab-btn {
+  @apply flex-1 px-6 py-3 text-sm font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+}
+
+.training-tab-btn-active {
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg;
+}
+
+.training-tab-btn:not(.training-tab-btn-active) {
+  @apply text-gray-600 hover:text-gray-800 hover:bg-gray-100;
+}
+
+/* Training Programs */
+.training-programs {
+  @apply space-y-6;
+}
+
+.training-filters {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.training-search {
+  @apply flex-1;
+}
+
+.training-search-input-wrapper {
+  @apply relative;
+}
+
+.training-search-icon {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+}
+
+.training-search-input {
+  @apply w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200;
+}
+
+.training-filter-controls {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.training-filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200;
+}
+
+.training-programs-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.training-program-card {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer;
+}
+
+.training-program-header {
+  @apply flex items-start justify-between p-6 border-b border-gray-200;
+}
+
+.training-program-title-section {
+  @apply flex-1 min-w-0;
+}
+
+.training-program-title {
+  @apply text-lg font-semibold text-gray-800 mb-2 truncate;
+}
+
+.training-program-status {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.training-program-status-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.training-program-status-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.training-program-status-overdue {
+  @apply bg-red-100 text-red-800;
+}
+
+.training-program-actions {
+  @apply flex items-center gap-2 ml-4;
+}
+
+.training-program-action-btn {
+  @apply p-2 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.training-program-action-assign {
+  @apply text-indigo-600 hover:bg-indigo-100 focus:ring-indigo-500;
+}
+
+.training-program-action-delete {
+  @apply text-red-600 hover:bg-red-100 focus:ring-red-500;
+}
+
+.training-program-action-icon {
+  @apply w-4 h-4;
+}
+
+.training-program-content {
+  @apply p-6;
+}
+
+.training-program-description {
+  @apply text-gray-600 mb-4 line-clamp-3;
+}
+
+.training-program-meta {
+  @apply space-y-2;
+}
+
+.training-program-meta-item {
+  @apply flex items-center justify-between text-sm;
+}
+
+.training-program-meta-label {
+  @apply font-medium text-gray-500;
+}
+
+.training-program-meta-value {
+  @apply text-gray-800;
+}
+
+/* Training Assignments */
+.training-assignments {
+  @apply space-y-6;
+}
+
+.training-assignments-table {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden;
+}
+
+.training-assignments-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.training-assignments-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.training-assignments-actions {
+  @apply flex items-center gap-3;
+}
+
+.training-export-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+}
+
+.training-export-icon {
+  @apply w-4 h-4;
+}
+
+.training-assignments-list {
+  @apply divide-y divide-gray-200;
+}
+
+.training-assignment-item {
+  @apply p-6 hover:bg-gray-50 transition-colors duration-200 cursor-pointer;
+}
+
+.training-assignment-header {
+  @apply flex items-start justify-between mb-4;
+}
+
+.training-assignment-info {
+  @apply flex-1 min-w-0;
+}
+
+.training-assignment-staff {
+  @apply text-lg font-semibold text-gray-800 mb-1;
+}
+
+.training-assignment-course {
+  @apply text-sm text-gray-600;
+}
+
+.training-assignment-status {
+  @apply flex-shrink-0 ml-4;
+}
+
+.training-assignment-status-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.training-assignment-status-assigned {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.training-assignment-status-in_progress {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.training-assignment-status-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.training-assignment-status-failed {
+  @apply bg-red-100 text-red-800;
+}
+
+.training-assignment-content {
+  @apply space-y-2;
+}
+
+.training-assignment-meta {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.training-assignment-meta-item {
+  @apply flex flex-col;
+}
+
+.training-assignment-meta-label {
+  @apply text-xs font-medium text-gray-500 mb-1;
+}
+
+.training-assignment-meta-value {
+  @apply text-sm text-gray-800;
+}
+
+/* Loading State */
+.training-loading {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.training-loading-spinner {
+  @apply w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mb-4;
+}
+
+.training-loading-text {
+  @apply text-lg text-gray-600;
+}
+
+/* Error State */
+.training-error {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg border border-red-200;
+}
+
+.training-error-icon {
+  @apply w-16 h-16 text-red-500 mb-4;
+}
+
+.training-error-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.training-error-message {
+  @apply text-gray-600 mb-4 text-center max-w-md;
+}
+
+.training-error-retry-btn {
+  @apply px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200;
+}
+
+/* Empty State */
+.training-empty {
+  @apply flex flex-col items-center justify-center py-12 bg-white rounded-2xl shadow-lg;
+}
+
+.training-empty-icon {
+  @apply w-16 h-16 text-gray-400 mb-4;
+}
+
+.training-empty-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.training-empty-message {
+  @apply text-gray-600 mb-6 text-center max-w-md;
+}
+
+.training-empty-action-btn {
+  @apply px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-all duration-200;
+}
+
+/* Modal Styles */
+.training-modal-overlay,
+.training-assignment-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.training-modal,
+.training-assignment-modal {
+  @apply bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto;
+}
+
+.training-modal-header,
+.training-assignment-modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.training-modal-title,
+.training-assignment-modal-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.training-modal-close,
+.training-assignment-modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.training-modal-close svg,
+.training-assignment-modal-close svg {
+  @apply w-6 h-6;
+}
+
+.training-modal-form,
+.training-assignment-modal-form {
+  @apply p-6 space-y-6;
+}
+
+.training-modal-form-group,
+.training-assignment-modal-form-group {
+  @apply space-y-2;
+}
+
+.training-modal-form-row,
+.training-assignment-modal-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.training-modal-form-label,
+.training-assignment-modal-form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.training-modal-form-input,
+.training-modal-form-select,
+.training-modal-form-textarea,
+.training-assignment-modal-form-input,
+.training-assignment-modal-form-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200;
+}
+
+.training-modal-form-textarea {
+  @apply resize-y min-h-[100px];
+}
+
+.training-modal-form-actions,
+.training-assignment-modal-form-actions {
+  @apply flex items-center justify-end gap-3 pt-6 border-t border-gray-200;
+}
+
+.training-modal-form-cancel-btn,
+.training-assignment-modal-form-cancel-btn {
+  @apply px-6 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+}
+
+.training-modal-form-save-btn,
+.training-assignment-modal-form-save-btn {
+  @apply flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.training-modal-form-saving-spinner,
+.training-assignment-modal-form-saving-spinner {
+  @apply w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .training-container {
+    @apply p-4;
+  }
+  
+  .training-header {
+    @apply p-4;
+  }
+  
+  .training-title {
+    @apply text-2xl;
+  }
+  
+  .training-stats {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .training-tab-nav {
+    @apply flex-col space-x-0 space-y-2;
+  }
+  
+  .training-filters {
+    @apply p-4;
+  }
+  
+  .training-programs-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .training-program-header {
+    @apply p-4;
+  }
+  
+  .training-program-content {
+    @apply p-4;
+  }
+  
+  .training-assignments-header {
+    @apply p-4;
+  }
+  
+  .training-assignment-item {
+    @apply p-4;
+  }
+  
+  .training-assignment-meta {
+    @apply grid-cols-1 gap-2;
+  }
+  
+  .training-modal,
+  .training-assignment-modal {
+    @apply max-w-full mx-4;
+  }
+  
+  .training-modal-form-row,
+  .training-assignment-modal-form-row {
+    @apply grid-cols-1;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .training-container {
+    @apply bg-gradient-to-br from-gray-800 to-gray-700;
+  }
+  
+  .training-header,
+  .training-stat-card,
+  .training-tab-nav,
+  .training-filters,
+  .training-program-card,
+  .training-assignments-table,
+  .training-empty,
+  .training-modal,
+  .training-assignment-modal {
+    @apply bg-gray-700 border-gray-600;
+  }
+  
+  .training-title,
+  .training-program-title,
+  .training-assignments-title,
+  .training-modal-title,
+  .training-assignment-modal-title,
+  .training-empty-title,
+  .training-assignment-staff {
+    @apply text-white;
+  }
+  
+  .training-subtitle,
+  .training-program-description,
+  .training-empty-message,
+  .training-assignment-course {
+    @apply text-gray-300;
+  }
+  
+  .training-search-input,
+  .training-filter-select,
+  .training-modal-form-input,
+  .training-modal-form-select,
+  .training-modal-form-textarea,
+  .training-assignment-modal-form-input,
+  .training-assignment-modal-form-select {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+  
+  .training-modal-form-label,
+  .training-assignment-modal-form-label {
+    @apply text-gray-300;
+  }
+  
+  .training-assignment-item:hover {
+    @apply bg-gray-700;
+  }
+}

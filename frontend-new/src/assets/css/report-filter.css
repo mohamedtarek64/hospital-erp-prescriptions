@@ -1,0 +1,134 @@
+/* Report Filter Styles */
+
+.report-filter {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+}
+
+.filter-header {
+  @apply flex justify-between items-center mb-6 pb-4 border-b border-gray-200;
+}
+
+.filter-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.filter-actions {
+  @apply flex space-x-3;
+}
+
+.filter-content {
+  @apply space-y-6;
+}
+
+.filter-section {
+  @apply space-y-4;
+}
+
+.section-title {
+  @apply text-md font-semibold text-gray-800 flex items-center justify-between;
+}
+
+.toggle-btn {
+  @apply p-1 rounded-lg hover:bg-gray-100 transition-colors;
+}
+
+.filter-group {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.filter-item {
+  @apply space-y-2;
+}
+
+.filter-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.filter-select,
+.filter-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.advanced-filters {
+  @apply mt-4 p-4 bg-gray-50 rounded-lg;
+}
+
+.quick-filters {
+  @apply flex flex-wrap gap-2;
+}
+
+.quick-filter-btn {
+  @apply px-3 py-1 text-sm rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors;
+}
+
+.quick-filter-btn.active {
+  @apply bg-blue-100 border-blue-300 text-blue-800;
+}
+
+.filter-summary {
+  @apply mt-6 p-4 bg-blue-50 rounded-lg;
+}
+
+.summary-header {
+  @apply flex justify-between items-center mb-3;
+}
+
+.summary-title {
+  @apply text-sm font-medium text-blue-800;
+}
+
+.clear-all-btn {
+  @apply text-sm text-blue-600 hover:text-blue-800 font-medium;
+}
+
+.active-filters {
+  @apply flex flex-wrap gap-2;
+}
+
+.active-filter {
+  @apply flex items-center space-x-2 px-3 py-1 bg-blue-100 rounded-full text-sm;
+}
+
+.filter-name {
+  @apply text-blue-800 font-medium;
+}
+
+.filter-value {
+  @apply text-blue-600;
+}
+
+.remove-filter-btn {
+  @apply text-blue-600 hover:text-blue-800 transition-colors;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors flex items-center space-x-2;
+}
+
+.btn-sm {
+  @apply px-3 py-1 text-sm rounded-lg;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-header {
+    @apply flex-col space-y-4;
+  }
+  
+  .filter-group {
+    @apply grid-cols-1;
+  }
+  
+  .quick-filters {
+    @apply flex-col space-y-2;
+  }
+  
+  .active-filters {
+    @apply flex-col space-y-2;
+  }
+}

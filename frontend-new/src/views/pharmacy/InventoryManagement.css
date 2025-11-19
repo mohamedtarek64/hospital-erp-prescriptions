@@ -1,0 +1,498 @@
+/* InventoryManagement Component Styles */
+
+.inventory-management {
+  @apply w-full max-w-7xl mx-auto p-6 space-y-8;
+}
+
+/* Header Section */
+.inventory-header {
+  @apply flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6;
+}
+
+.header-content {
+  @apply flex-1;
+}
+
+.main-title {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.subtitle {
+  @apply text-lg text-gray-600;
+}
+
+.header-actions {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+/* Statistics Overview */
+.stats-overview {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6;
+}
+
+.stat-card {
+  @apply bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+
+.stat-icon {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center mb-4;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-gray-900 mb-1;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600;
+}
+
+/* Alerts Section */
+.alerts-section {
+  @apply bg-white rounded-lg border border-gray-200 p-6 shadow-sm;
+}
+
+.section-title {
+  @apply text-xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-200;
+}
+
+.alerts-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+.alert-category {
+  @apply space-y-4;
+}
+
+.alert-category-title {
+  @apply flex items-center gap-2 text-lg font-medium mb-4;
+}
+
+.alert-items {
+  @apply space-y-3;
+}
+
+.alert-item {
+  @apply flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200;
+}
+
+.item-name {
+  @apply font-medium text-gray-900;
+}
+
+.item-quantity {
+  @apply text-sm text-gray-600;
+}
+
+.item-expiry {
+  @apply text-sm text-gray-600;
+}
+
+.item-status {
+  @apply text-sm text-red-600 font-medium;
+}
+
+.reorder-btn {
+  @apply px-3 py-1 bg-blue-600 text-white text-xs rounded-md hover:bg-blue-700 transition-colors duration-200;
+}
+
+.dispose-btn {
+  @apply px-3 py-1 bg-red-600 text-white text-xs rounded-md hover:bg-red-700 transition-colors duration-200;
+}
+
+/* Inventory Table Section */
+.inventory-table-section {
+  @apply bg-white rounded-lg border border-gray-200 shadow-sm;
+}
+
+.table-header {
+  @apply p-6 border-b border-gray-200;
+}
+
+.table-filters {
+  @apply flex flex-col lg:flex-row gap-4 mt-4;
+}
+
+.search-filter {
+  @apply relative flex-1;
+}
+
+.search-input {
+  @apply w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+}
+
+.filter-group {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.filter-select {
+  @apply px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Table Container */
+.table-container {
+  @apply overflow-x-auto;
+}
+
+.inventory-table {
+  @apply w-full min-w-full divide-y divide-gray-200;
+}
+
+.inventory-table thead {
+  @apply bg-gray-50;
+}
+
+.inventory-table th {
+  @apply px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.inventory-table tbody {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table-row {
+  @apply hover:bg-gray-50 transition-colors duration-150;
+}
+
+.inventory-table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+/* Action Buttons */
+.action-buttons {
+  @apply flex items-center gap-2;
+}
+
+.action-btn {
+  @apply p-2 rounded-md transition-colors duration-200;
+}
+
+.action-btn.edit {
+  @apply text-blue-600 hover:bg-blue-50;
+}
+
+.action-btn.view {
+  @apply text-green-600 hover:bg-green-50;
+}
+
+.action-btn.delete {
+  @apply text-red-600 hover:bg-red-50;
+}
+
+/* Pagination */
+.pagination {
+  @apply flex items-center justify-between px-6 py-4 border-t border-gray-200;
+}
+
+.pagination-btn {
+  @apply px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.pagination-info {
+  @apply text-sm text-gray-700;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.modal-title {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-md transition-colors duration-200;
+}
+
+/* Stock Adjustment Form */
+.stock-adjustment-form {
+  @apply p-6;
+}
+
+/* Inventory Report */
+.inventory-report {
+  @apply p-6;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-4 py-2;
+  @apply bg-blue-600 text-white text-sm font-medium rounded-md;
+  @apply hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  @apply transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-4 py-2;
+  @apply bg-gray-100 text-gray-700 text-sm font-medium rounded-md;
+  @apply hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+  @apply transition-colors duration-200;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-overview {
+    @apply grid-cols-2 lg:grid-cols-3;
+  }
+  
+  .alerts-grid {
+    @apply grid-cols-1 lg:grid-cols-2;
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-management {
+    @apply p-4 space-y-6;
+  }
+  
+  .stats-overview {
+    @apply grid-cols-1 sm:grid-cols-2;
+  }
+  
+  .alerts-grid {
+    @apply grid-cols-1;
+  }
+  
+  .table-filters {
+    @apply flex-col gap-3;
+  }
+  
+  .filter-group {
+    @apply flex-col;
+  }
+  
+  .pagination {
+    @apply flex-col gap-3;
+  }
+  
+  .header-actions {
+    @apply w-full;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    @apply w-full justify-center;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-overview {
+    @apply grid-cols-1;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    @apply px-3 py-2;
+  }
+  
+  .action-buttons {
+    @apply flex-col gap-1;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .inventory-management {
+    @apply bg-gray-900;
+  }
+  
+  .stat-card,
+  .alerts-section,
+  .inventory-table-section {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .main-title {
+    @apply text-gray-100;
+  }
+  
+  .subtitle {
+    @apply text-gray-400;
+  }
+  
+  .stat-value {
+    @apply text-gray-100;
+  }
+  
+  .stat-label {
+    @apply text-gray-400;
+  }
+  
+  .section-title {
+    @apply text-gray-100 border-gray-700;
+  }
+  
+  .alert-item {
+    @apply bg-gray-700 border-gray-600;
+  }
+  
+  .item-name {
+    @apply text-gray-100;
+  }
+  
+  .item-quantity,
+  .item-expiry,
+  .item-status {
+    @apply text-gray-400;
+  }
+  
+  .inventory-table thead {
+    @apply bg-gray-700;
+  }
+  
+  .inventory-table th {
+    @apply text-gray-300;
+  }
+  
+  .inventory-table tbody {
+    @apply bg-gray-800;
+  }
+  
+  .table-row {
+    @apply hover:bg-gray-700;
+  }
+  
+  .inventory-table td {
+    @apply text-gray-100;
+  }
+  
+  .modal-content {
+    @apply bg-gray-800;
+  }
+  
+  .modal-title {
+    @apply text-gray-100;
+  }
+  
+  .modal-header {
+    @apply border-gray-700;
+  }
+  
+  .search-input,
+  .filter-select {
+    @apply bg-gray-700 border-gray-600 text-gray-100 focus:ring-blue-400 focus:border-blue-400;
+  }
+  
+  .search-icon {
+    @apply text-gray-500;
+  }
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .search-input {
+  @apply pr-10 pl-4;
+}
+
+[dir="rtl"] .search-icon {
+  @apply right-3 left-auto;
+}
+
+[dir="rtl"] .inventory-table th,
+[dir="rtl"] .inventory-table td {
+  @apply text-right;
+}
+
+[dir="rtl"] .action-buttons {
+  @apply flex-row-reverse;
+}
+
+/* Focus States for Accessibility */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.search-input:focus-visible,
+.filter-select:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Hover Effects */
+.stat-card:hover {
+  @apply shadow-md;
+}
+
+.alert-item:hover {
+  @apply bg-gray-100;
+}
+
+[dir="rtl"] .alert-item:hover {
+  @apply bg-gray-100;
+}
+
+/* Animation for Statistics */
+.stat-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.stat-card:hover .stat-icon {
+  @apply scale-110;
+}
+
+/* Custom Scrollbar */
+.table-container::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+.table-container::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded hover:bg-gray-400;
+}
+
+/* Loading States */
+.isLoading {
+  @apply opacity-50 pointer-events-none;
+}
+
+/* Success States */
+.success {
+  @apply text-green-600;
+}
+
+/* Warning States */
+.warning {
+  @apply text-yellow-600;
+}
+
+/* Error States */
+.error {
+  @apply text-red-600;
+}
+
+/* Info States */
+.info {
+  @apply text-blue-600;
+}
+
+/* Print Styles */
+@media print {
+  .header-actions,
+  .btn-primary,
+  .btn-secondary,
+  .action-buttons,
+  .pagination {
+    @apply hidden;
+  }
+  
+  .inventory-management {
+    @apply p-0 space-y-4;
+  }
+  
+  .stat-card,
+  .alerts-section,
+  .inventory-table-section {
+    @apply border-none shadow-none;
+  }
+}

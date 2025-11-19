@@ -1,0 +1,265 @@
+/* Register Styles - Modern Light Theme */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom Components */
+@layer components {
+  /* Main Container */
+  .register-container {
+    @apply min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .register-form-container {
+    @apply max-w-md w-full space-y-8;
+  }
+
+  /* Header Section */
+  .register-header {
+    @apply text-center;
+  }
+  
+  .register-logo {
+    @apply mx-auto h-16 w-16 flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 shadow-lg;
+  }
+  
+  .register-logo-icon {
+    @apply h-10 w-10 text-white;
+  }
+  
+  .register-title {
+    @apply mt-6 text-center text-3xl font-extrabold text-gray-800 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+  
+  .register-subtitle {
+    @apply mt-3 text-center text-sm text-gray-600;
+  }
+  
+  .register-link {
+    @apply font-medium text-blue-600 hover:text-blue-700 transition-all duration-200;
+  }
+
+  /* Form */
+  .register-form {
+    @apply mt-8 space-y-6;
+  }
+  
+  .register-input-group {
+    @apply space-y-4;
+  }
+  
+  .register-form-group {
+    @apply space-y-2;
+  }
+  
+  .register-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .register-input {
+    @apply appearance-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+    @apply bg-white;
+  }
+  
+  .register-select {
+    @apply block w-full py-3 px-4 border border-gray-300 bg-white rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  }
+  
+  .register-input:focus,
+  .register-select:focus {
+    @apply ring-2 ring-blue-500 border-blue-500 shadow-lg;
+  }
+
+  /* Error Message */
+  .register-error {
+    @apply bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg transition-all duration-200;
+  }
+
+  /* Submit Button */
+  .register-submit-btn {
+    @apply relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  .register-submit-btn:hover:not(:disabled) {
+    @apply transform scale-105;
+  }
+  
+  .register-submit-btn:focus {
+    @apply ring-2 ring-offset-2 ring-blue-500;
+  }
+
+  /* Loading State */
+  .register-loading {
+    @apply absolute left-0 inset-y-0 flex items-center pl-3;
+  }
+  
+  .register-loading-spinner {
+    @apply animate-spin h-5 w-5 text-white;
+  }
+
+  /* Password Strength Indicator */
+  .password-strength {
+    @apply mt-2;
+  }
+  
+  .password-strength-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+  
+  .password-strength-fill {
+    @apply h-full transition-all duration-300;
+  }
+  
+  .password-strength-weak {
+    @apply bg-red-500;
+  }
+  
+  .password-strength-medium {
+    @apply bg-yellow-500;
+  }
+  
+  .password-strength-strong {
+    @apply bg-green-500;
+  }
+  
+  .password-strength-text {
+    @apply text-xs text-gray-600 mt-1;
+  }
+
+  /* Form Card */
+  .register-card {
+    @apply bg-white rounded-xl shadow-xl border border-gray-100 p-8;
+    @apply bg-gradient-to-br from-white to-gray-50;
+  }
+  
+  /* Terms and Conditions */
+  .register-terms {
+    @apply flex items-start;
+  }
+  
+  .register-terms-checkbox {
+    @apply h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1;
+  }
+  
+  .register-terms-label {
+    @apply mr-2 block text-sm text-gray-700;
+  }
+  
+  .register-terms-link {
+    @apply text-blue-600 hover:text-blue-700 underline;
+  }
+  
+  /* Login Link */
+  .register-login-link {
+    @apply text-center text-sm;
+  }
+  
+  .register-login-text {
+    @apply text-gray-600;
+  }
+  
+  .register-login-btn {
+    @apply font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200;
+  }
+  
+  /* Success Message */
+  .register-success {
+    @apply bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg transition-all duration-200;
+  }
+  
+  /* Validation Messages */
+  .register-validation {
+    @apply text-xs mt-1;
+  }
+  
+  .register-validation-error {
+    @apply text-red-600;
+  }
+  
+  .register-validation-success {
+    @apply text-green-600;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .register-container {
+    @apply px-4;
+  }
+  
+  .register-card {
+    @apply p-6;
+  }
+  
+  .register-title {
+    @apply text-2xl;
+  }
+}
+
+/* Animation Classes */
+.register-fade-enter-active,
+.register-fade-leave-active {
+  @apply transition-opacity duration-300;
+}
+
+.register-fade-enter-from,
+.register-fade-leave-to {
+  @apply opacity-0;
+}
+
+.register-slide-enter-active,
+.register-slide-leave-active {
+  @apply transition-transform duration-300;
+}
+
+.register-slide-enter-from {
+  @apply transform translate-y-4;
+}
+
+.register-slide-leave-to {
+  @apply transform -translate-y-4;
+}
+
+/* Hover Effects */
+.register-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.register-submit-btn:hover {
+  @apply transform scale-105;
+}
+
+/* Focus States */
+.register-input:focus,
+.register-select:focus,
+.register-submit-btn:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Loading Animation */
+@keyframes registerPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.register-loading-pulse {
+  animation: registerPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Password Strength Animation */
+@keyframes strengthGrow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.password-strength-fill {
+  animation: strengthGrow 0.5s ease-out;
+}

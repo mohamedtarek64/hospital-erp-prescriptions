@@ -1,0 +1,362 @@
+/* Medical Record View Styles - Modern Light Theme */
+
+.medical-record-view {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6;
+}
+
+/* Loading State */
+.loading-container {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4;
+}
+
+.loading-text {
+  @apply text-gray-600 text-lg;
+}
+
+/* Error State */
+.error-container {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.error-icon {
+  @apply text-6xl mb-4;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-gray-800 mb-2;
+}
+
+.error-message {
+  @apply text-gray-600 mb-6 text-center;
+}
+
+/* Medical Record Content */
+.medical-record-content {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200;
+}
+
+/* Record Header */
+.record-header {
+  @apply flex items-center justify-between p-8 border-b border-gray-200;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.header-content {
+  @apply flex-1;
+}
+
+.breadcrumb {
+  @apply flex items-center gap-2 text-sm text-gray-600 mb-4;
+}
+
+.breadcrumb-link {
+  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+}
+
+.breadcrumb-separator {
+  @apply text-gray-400;
+}
+
+.breadcrumb-current {
+  @apply text-gray-800 font-medium;
+}
+
+.record-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.record-meta {
+  @apply flex gap-6 text-sm text-gray-600;
+}
+
+.record-number,
+.record-date {
+  @apply flex items-center gap-2;
+}
+
+.header-actions {
+  @apply flex gap-4;
+}
+
+/* Status Banner */
+.status-banner {
+  @apply p-4 border-l-4 rounded-r-lg;
+}
+
+.status-active {
+  @apply bg-green-50 border-green-500 text-green-800;
+}
+
+.status-completed {
+  @apply bg-blue-50 border-blue-500 text-blue-800;
+}
+
+.status-pending {
+  @apply bg-yellow-50 border-yellow-500 text-yellow-800;
+}
+
+.status-cancelled {
+  @apply bg-red-50 border-red-500 text-red-800;
+}
+
+.status-default {
+  @apply bg-gray-50 border-gray-500 text-gray-800;
+}
+
+/* Record Content */
+.record-content {
+  @apply p-8 space-y-8;
+}
+
+/* Content Sections */
+.content-section {
+  @apply bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 border border-gray-200;
+}
+
+.section-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.section-title {
+  @apply text-xl font-bold text-gray-800 flex items-center gap-3;
+}
+
+.section-title::before {
+  content: '';
+  @apply w-1 h-6 bg-gradient-to-b from-blue-600 to-indigo-600 rounded-full;
+}
+
+.section-actions {
+  @apply flex gap-2;
+}
+
+/* Info Grid */
+.info-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.info-item {
+  @apply space-y-2;
+}
+
+.info-label {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.info-value {
+  @apply text-base text-gray-800 font-medium;
+}
+
+/* Priority and Status Badges */
+.priority-badge,
+.status-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.priority-low {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.priority-medium {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.priority-high {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.priority-urgent {
+  @apply bg-red-100 text-red-800;
+}
+
+.priority-default {
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Content Areas */
+.content-area {
+  @apply bg-white rounded-lg p-4 border border-gray-200;
+}
+
+.content-text {
+  @apply text-gray-800 whitespace-pre-line leading-relaxed;
+}
+
+/* Timeline */
+.timeline {
+  @apply space-y-4;
+}
+
+.timeline-item {
+  @apply flex gap-4;
+}
+
+.timeline-marker {
+  @apply w-4 h-4 bg-blue-600 rounded-full mt-2 flex-shrink-0;
+}
+
+.timeline-content {
+  @apply flex-1 bg-white rounded-lg p-4 border border-gray-200;
+}
+
+.timeline-date {
+  @apply text-sm text-gray-600 mb-2;
+}
+
+.timeline-title {
+  @apply font-semibold text-gray-800 mb-2;
+}
+
+.timeline-description {
+  @apply text-gray-600;
+}
+
+/* Attachments */
+.attachments-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.attachment-item {
+  @apply bg-white rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow duration-200;
+}
+
+.attachment-icon {
+  @apply w-8 h-8 text-blue-600 mb-2;
+}
+
+.attachment-name {
+  @apply font-medium text-gray-800 mb-1;
+}
+
+.attachment-size {
+  @apply text-sm text-gray-600;
+}
+
+/* Action Buttons */
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg hover:shadow-xl hover:scale-105;
+}
+
+.btn-outline {
+  @apply bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400;
+}
+
+.btn-sm {
+  @apply px-3 py-1 text-sm;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medical-record-view {
+    @apply p-4;
+  }
+  
+  .record-header {
+    @apply flex-col gap-4 p-6;
+  }
+  
+  .header-actions {
+    @apply w-full justify-center;
+  }
+  
+  .record-meta {
+    @apply flex-col gap-2;
+  }
+  
+  .info-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .section-header {
+    @apply flex-col gap-4;
+  }
+  
+  .section-actions {
+    @apply w-full justify-center;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.medical-record-content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.content-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Hover Effects */
+.attachment-item:hover {
+  @apply shadow-lg;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Focus States */
+.btn:focus {
+  @apply ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Modern Glass Effect */
+.medical-record-content {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Print Styles */
+@media print {
+  .header-actions,
+  .section-actions {
+    @apply hidden;
+  }
+  
+  .medical-record-view {
+    @apply p-0;
+  }
+  
+  .medical-record-content {
+    @apply shadow-none border-none;
+  }
+  
+  .content-section {
+    @apply shadow-none border border-gray-300;
+  }
+}
+
+/* Custom Scrollbar */
+.record-content::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.record-content::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.record-content::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}

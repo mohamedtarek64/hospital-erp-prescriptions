@@ -1,0 +1,228 @@
+/* Pharmacy Dashboard Section Styles - Modern Light Theme */
+
+/* Pharmacy Statistics Card */
+.pharmacy-stats {
+  @apply border-l-4 border-l-blue-500 bg-gradient-to-r from-blue-50 to-indigo-50;
+}
+
+.pharmacy-stats .dashboard-card-title {
+  @apply text-blue-700;
+}
+
+.pharmacy-stats .card-icon {
+  @apply text-blue-600;
+}
+
+/* Pharmacy Overview Section */
+.pharmacy-overview {
+  @apply mt-8;
+}
+
+/* Pharmacy Feature Cards */
+.pharmacy-overview .feature-card {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 
+         border border-blue-200 
+         hover:border-blue-300
+         transition-all duration-300 ease-in-out;
+}
+
+.pharmacy-overview .feature-card:hover {
+  @apply transform translate-y-[-4px] shadow-lg shadow-blue-100;
+}
+
+.pharmacy-overview .feature-icon {
+  @apply w-12 h-12 bg-blue-100 text-blue-600 
+         rounded-lg flex items-center justify-center
+         transition-all duration-300 ease-in-out;
+}
+
+.pharmacy-overview .feature-card:hover .feature-icon {
+  @apply bg-blue-200 text-blue-700
+         transform scale-110;
+}
+
+.pharmacy-overview .feature-title {
+  @apply text-blue-800 font-semibold;
+}
+
+.pharmacy-overview .feature-description {
+  @apply text-blue-600;
+}
+
+/* Pharmacy Statistics Items */
+.pharmacy-stats .stat-item .stat-value.warning {
+  @apply text-orange-600 font-bold;
+}
+
+.pharmacy-stats .stat-item .stat-value {
+  @apply text-blue-600 font-bold;
+}
+
+/* Pharmacy Navigation Links */
+.pharmacy-overview .feature-card {
+  @apply cursor-pointer;
+}
+
+.pharmacy-overview .feature-card:hover {
+  @apply ring-2 ring-blue-200;
+}
+
+/* Pharmacy Section Header */
+.dashboard-section:has(.pharmacy-overview) .dashboard-section-header {
+  @apply border-l-4 border-l-blue-500 pl-4;
+}
+
+.dashboard-section:has(.pharmacy-overview) .dashboard-section-title {
+  @apply text-blue-800;
+}
+
+.dashboard-section:has(.pharmacy-overview) .dashboard-section-description {
+  @apply text-blue-600;
+}
+
+/* Pharmacy Status Badges */
+.pharmacy-overview .status-badge.completed {
+  @apply bg-blue-100 text-blue-800
+         border border-blue-200;
+}
+
+/* Pharmacy Feature Grid Responsiveness */
+@media (max-width: 768px) {
+  .pharmacy-overview .features-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .pharmacy-overview .feature-card {
+    @apply p-4;
+  }
+  
+  .pharmacy-overview .feature-icon {
+    @apply w-10 h-10;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pharmacy-overview .features-grid {
+    @apply grid-cols-2 gap-6;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pharmacy-overview .features-grid {
+    @apply grid-cols-3 gap-8;
+  }
+}
+
+/* Pharmacy Animation Enhancements */
+.pharmacy-overview .feature-card {
+  @apply animate-fade-in-up;
+}
+
+.pharmacy-overview .feature-card:nth-child(1) { animation-delay: 0.1s; }
+.pharmacy-overview .feature-card:nth-child(2) { animation-delay: 0.2s; }
+.pharmacy-overview .feature-card:nth-child(3) { animation-delay: 0.3s; }
+.pharmacy-overview .feature-card:nth-child(4) { animation-delay: 0.4s; }
+.pharmacy-overview .feature-card:nth-child(5) { animation-delay: 0.5s; }
+.pharmacy-overview .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Pharmacy Hover Effects */
+.pharmacy-overview .feature-card:hover .feature-title {
+  @apply text-blue-900;
+}
+
+.pharmacy-overview .feature-card:hover .feature-description {
+  @apply text-blue-700;
+}
+
+/* Pharmacy Focus States */
+.pharmacy-overview .feature-card:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Pharmacy Loading States */
+.pharmacy-overview.loading .feature-card {
+  @apply animate-pulse;
+}
+
+/* Pharmacy Error States */
+.pharmacy-overview.error .feature-card {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Pharmacy Success States */
+.pharmacy-overview.success .feature-card {
+  @apply border-blue-300;
+}
+
+/* Pharmacy Print Styles */
+@media print {
+  .pharmacy-overview .feature-card {
+    @apply border border-gray-300 bg-white;
+  }
+  
+  .pharmacy-overview .feature-icon {
+    @apply bg-gray-100 text-gray-600;
+  }
+  
+  .pharmacy-overview .feature-title {
+    @apply text-gray-800;
+  }
+  
+  .pharmacy-overview .feature-description {
+    @apply text-gray-600;
+  }
+}
+
+/* Pharmacy Accessibility */
+.pharmacy-overview .feature-card:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white;
+}
+
+/* Pharmacy High Contrast Mode */
+@media (prefers-contrast: high) {
+  .pharmacy-overview .feature-card {
+    @apply border-2 border-blue-600;
+  }
+  
+  .pharmacy-overview .feature-icon {
+    @apply bg-blue-600 text-white;
+  }
+  
+  .pharmacy-overview .feature-title {
+    @apply text-blue-900;
+  }
+}
+
+/* Pharmacy Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .pharmacy-overview .feature-card {
+    @apply transition-none transform-none;
+  }
+  
+  .pharmacy-overview .feature-card:hover {
+    @apply transform-none;
+  }
+  
+  .pharmacy-overview .feature-icon {
+    @apply transition-none;
+  }
+  
+  .pharmacy-overview .feature-card:hover .feature-icon {
+    @apply transform-none;
+  }
+}

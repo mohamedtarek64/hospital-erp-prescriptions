@@ -1,0 +1,456 @@
+/* Dashboard Widgets Component Styles */
+.dashboard-widgets-container {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6;
+}
+
+.dashboard-widgets-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 bg-white rounded-xl shadow-lg p-6;
+}
+
+.dashboard-widgets-title-section {
+  @apply mb-4 lg:mb-0;
+}
+
+.dashboard-widgets-title {
+  @apply text-3xl lg:text-4xl font-bold text-gray-800 mb-2;
+}
+
+.dashboard-widgets-subtitle {
+  @apply text-gray-600 text-lg;
+}
+
+.dashboard-widgets-actions {
+  @apply flex flex-wrap gap-3;
+}
+
+.dashboard-widgets-action-btn {
+  @apply flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.dashboard-widgets-reset-btn {
+  @apply bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500;
+}
+
+.dashboard-widgets-save-btn {
+  @apply bg-green-600 hover:bg-green-700 text-white focus:ring-green-500;
+}
+
+.dashboard-widgets-action-icon {
+  @apply w-4 h-4 mr-2;
+}
+
+.dashboard-widgets-spinning {
+  @apply animate-spin;
+}
+
+/* Widget Categories */
+.dashboard-widgets-categories {
+  @apply space-y-8 mb-8;
+}
+
+.dashboard-widgets-category {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.dashboard-widgets-category-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.dashboard-widgets-category-description {
+  @apply text-gray-600 mb-6;
+}
+
+.dashboard-widgets-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Widget Cards */
+.dashboard-widgets-widget {
+  @apply bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 cursor-move;
+}
+
+.dashboard-widgets-widget-active {
+  @apply border-blue-500 bg-blue-50;
+}
+
+.dashboard-widgets-widget-dragging {
+  @apply opacity-50 transform rotate-2;
+}
+
+.dashboard-widgets-widget-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.dashboard-widgets-widget-icon {
+  @apply w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600;
+}
+
+.dashboard-widgets-widget-icon svg {
+  @apply w-5 h-5;
+}
+
+.dashboard-widgets-widget-toggle {
+  @apply flex items-center;
+}
+
+.dashboard-widgets-widget-checkbox {
+  @apply sr-only;
+}
+
+.dashboard-widgets-widget-label {
+  @apply relative inline-flex items-center cursor-pointer;
+}
+
+.dashboard-widgets-widget-switch {
+  @apply relative w-11 h-6 bg-gray-200 rounded-full transition-colors duration-200;
+}
+
+.dashboard-widgets-widget-switch::before {
+  @apply absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform duration-200;
+  content: '';
+}
+
+.dashboard-widgets-widget-checkbox:checked + .dashboard-widgets-widget-label .dashboard-widgets-widget-switch {
+  @apply bg-blue-600;
+}
+
+.dashboard-widgets-widget-checkbox:checked + .dashboard-widgets-widget-label .dashboard-widgets-widget-switch::before {
+  @apply transform translate-x-5;
+}
+
+.dashboard-widgets-widget-content {
+  @apply space-y-3;
+}
+
+.dashboard-widgets-widget-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.dashboard-widgets-widget-description {
+  @apply text-sm text-gray-600;
+}
+
+.dashboard-widgets-widget-preview {
+  @apply bg-gray-50 rounded-lg p-3;
+}
+
+.dashboard-widgets-preview-content {
+  @apply flex items-center justify-between;
+}
+
+.dashboard-widgets-preview-chart {
+  @apply w-8 h-8 bg-blue-200 rounded;
+}
+
+.dashboard-widgets-preview-text {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.dashboard-widgets-widget-actions {
+  @apply flex items-center gap-2 mt-4;
+}
+
+.dashboard-widgets-widget-action {
+  @apply p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.dashboard-widgets-widget-action svg {
+  @apply w-4 h-4;
+}
+
+/* Layout Section */
+.dashboard-widgets-layout {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.dashboard-widgets-layout-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.dashboard-widgets-layout-description {
+  @apply text-gray-600 mb-6;
+}
+
+.dashboard-widgets-layout-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px];
+}
+
+.dashboard-widgets-layout-item {
+  @apply bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 cursor-move;
+}
+
+.dashboard-widgets-layout-item-dragging {
+  @apply opacity-50 transform rotate-1;
+}
+
+.dashboard-widgets-layout-item-header {
+  @apply flex items-center gap-3 mb-4;
+}
+
+.dashboard-widgets-layout-item-icon {
+  @apply w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600;
+}
+
+.dashboard-widgets-layout-item-icon svg {
+  @apply w-4 h-4;
+}
+
+.dashboard-widgets-layout-item-title {
+  @apply flex-1 text-sm font-semibold text-gray-800;
+}
+
+.dashboard-widgets-layout-item-actions {
+  @apply flex items-center gap-1;
+}
+
+.dashboard-widgets-layout-action {
+  @apply p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.dashboard-widgets-layout-action-remove {
+  @apply hover:text-red-600 hover:bg-red-50;
+}
+
+.dashboard-widgets-layout-action svg {
+  @apply w-3 h-3;
+}
+
+.dashboard-widgets-layout-item-content {
+  @apply space-y-3;
+}
+
+.dashboard-widgets-layout-preview {
+  @apply bg-gray-50 rounded-lg p-3;
+}
+
+.dashboard-widgets-layout-preview-chart {
+  @apply w-full h-16 bg-blue-200 rounded mb-2;
+}
+
+.dashboard-widgets-layout-preview-text {
+  @apply text-xs text-gray-600 text-center;
+}
+
+/* Drop Zone */
+.dashboard-widgets-drop-zone {
+  @apply col-span-full flex flex-col items-center justify-center p-12 border-2 border-dashed border-gray-300 rounded-lg text-center;
+}
+
+.dashboard-widgets-drop-icon {
+  @apply w-16 h-16 text-gray-400 mb-4;
+}
+
+.dashboard-widgets-drop-text {
+  @apply text-gray-600 text-lg;
+}
+
+/* Modal */
+.dashboard-widgets-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+}
+
+.dashboard-widgets-modal {
+  @apply bg-white rounded-xl shadow-xl max-w-md w-full max-h-[90vh] overflow-hidden;
+}
+
+.dashboard-widgets-modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.dashboard-widgets-modal-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.dashboard-widgets-modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.dashboard-widgets-modal-close svg {
+  @apply w-5 h-5;
+}
+
+.dashboard-widgets-modal-content {
+  @apply p-6 overflow-y-auto;
+}
+
+.dashboard-widgets-config-form {
+  @apply space-y-4;
+}
+
+.dashboard-widgets-config-field {
+  @apply space-y-2;
+}
+
+.dashboard-widgets-config-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.dashboard-widgets-config-input,
+.dashboard-widgets-config-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+.dashboard-widgets-config-checkbox-label {
+  @apply flex items-center cursor-pointer;
+}
+
+.dashboard-widgets-config-checkbox {
+  @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2;
+}
+
+.dashboard-widgets-config-checkbox-text {
+  @apply ml-2 text-sm text-gray-700;
+}
+
+.dashboard-widgets-modal-footer {
+  @apply flex items-center justify-end gap-3 p-6 border-t border-gray-200;
+}
+
+.dashboard-widgets-modal-btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.dashboard-widgets-modal-btn-cancel {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-700 focus:ring-gray-500;
+}
+
+.dashboard-widgets-modal-btn-save {
+  @apply bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500;
+}
+
+/* Loading State */
+.dashboard-widgets-loading {
+  @apply flex flex-col items-center justify-center py-12;
+}
+
+.dashboard-widgets-loading-spinner {
+  @apply w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4;
+}
+
+.dashboard-widgets-loading-text {
+  @apply text-gray-600;
+}
+
+/* Error State */
+.dashboard-widgets-error {
+  @apply flex flex-col items-center justify-center py-12;
+}
+
+.dashboard-widgets-error-icon {
+  @apply w-16 h-16 text-red-500 mb-4;
+}
+
+.dashboard-widgets-error-text {
+  @apply text-gray-700 mb-4 text-center;
+}
+
+.dashboard-widgets-error-retry-btn {
+  @apply px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-widgets-layout-grid {
+    @apply grid-cols-1 md:grid-cols-2;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-widgets-container {
+    @apply p-4;
+  }
+  
+  .dashboard-widgets-header {
+    @apply p-4;
+  }
+  
+  .dashboard-widgets-title {
+    @apply text-2xl;
+  }
+  
+  .dashboard-widgets-actions {
+    @apply w-full;
+  }
+  
+  .dashboard-widgets-action-btn {
+    @apply flex-1 justify-center;
+  }
+  
+  .dashboard-widgets-grid {
+    @apply grid-cols-1;
+  }
+  
+  .dashboard-widgets-layout-grid {
+    @apply grid-cols-1;
+  }
+  
+  .dashboard-widgets-modal {
+    @apply mx-4;
+  }
+}
+
+/* Drag and Drop States */
+.dashboard-widgets-widget:hover {
+  @apply transform scale-105;
+}
+
+.dashboard-widgets-layout-item:hover {
+  @apply transform scale-105;
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .dashboard-widgets-container {
+    @apply bg-gray-800;
+  }
+  
+  .dashboard-widgets-header,
+  .dashboard-widgets-category,
+  .dashboard-widgets-layout,
+  .dashboard-widgets-widget,
+  .dashboard-widgets-layout-item,
+  .dashboard-widgets-modal {
+    @apply bg-gray-800;
+  }
+  
+  .dashboard-widgets-title,
+  .dashboard-widgets-category-title,
+  .dashboard-widgets-layout-title,
+  .dashboard-widgets-widget-title,
+  .dashboard-widgets-layout-item-title,
+  .dashboard-widgets-modal-title {
+    @apply text-white;
+  }
+  
+  .dashboard-widgets-subtitle,
+  .dashboard-widgets-category-description,
+  .dashboard-widgets-layout-description,
+  .dashboard-widgets-widget-description,
+  .dashboard-widgets-loading-text,
+  .dashboard-widgets-error-text {
+    @apply text-gray-300;
+  }
+  
+  .dashboard-widgets-widget,
+  .dashboard-widgets-layout-item {
+    @apply border-gray-600;
+  }
+  
+  .dashboard-widgets-widget-active {
+    @apply border-blue-400 bg-blue-900;
+  }
+  
+  .dashboard-widgets-widget-preview,
+  .dashboard-widgets-layout-preview {
+    @apply bg-gray-700;
+  }
+  
+  .dashboard-widgets-drop-zone {
+    @apply border-gray-600;
+  }
+  
+  .dashboard-widgets-config-input,
+  .dashboard-widgets-config-select {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+}

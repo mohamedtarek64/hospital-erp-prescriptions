@@ -1,0 +1,144 @@
+/* Chart Widget Styles */
+
+.chart-widget {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+}
+
+.widget-header {
+  @apply flex justify-between items-start mb-6 pb-4 border-b border-gray-200;
+}
+
+.widget-title {
+  @apply flex-1;
+}
+
+.title {
+  @apply text-lg font-semibold text-gray-800 mb-1;
+}
+
+.subtitle {
+  @apply text-sm text-gray-600;
+}
+
+.widget-actions {
+  @apply flex space-x-2;
+}
+
+.btn-icon {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors;
+}
+
+.chart-filters {
+  @apply mb-6;
+}
+
+.filter-group {
+  @apply flex space-x-4;
+}
+
+.filter-select {
+  @apply px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.chart-container {
+  @apply relative;
+}
+
+.chart-loading {
+  @apply h-64 flex items-center justify-center;
+}
+
+.loading-spinner {
+  @apply text-center;
+}
+
+.loading-text {
+  @apply text-gray-600 mt-2;
+}
+
+.chart-error {
+  @apply h-64 flex flex-col items-center justify-center text-center;
+}
+
+.error-text {
+  @apply text-red-600 mt-2;
+}
+
+.chart-wrapper {
+  @apply h-64;
+}
+
+.chart-legend {
+  @apply mt-4;
+}
+
+.legend-items {
+  @apply flex flex-wrap gap-4 justify-center;
+}
+
+.legend-item {
+  @apply flex items-center space-x-2;
+}
+
+.legend-color {
+  @apply w-3 h-3 rounded-full;
+}
+
+.legend-label {
+  @apply text-sm text-gray-600;
+}
+
+.legend-value {
+  @apply text-sm font-medium text-gray-800;
+}
+
+.chart-summary {
+  @apply mt-4;
+}
+
+.summary-grid {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.summary-item {
+  @apply text-center;
+}
+
+.summary-label {
+  @apply text-xs text-gray-500 uppercase tracking-wide;
+}
+
+.summary-value {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.widget-footer {
+  @apply mt-4 pt-4 border-t border-gray-200;
+}
+
+.widget-description {
+  @apply text-sm text-gray-600;
+}
+
+.no-data-message {
+  @apply h-64 flex items-center justify-center text-gray-500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .widget-header {
+    @apply flex-col space-y-4;
+  }
+  
+  .filter-group {
+    @apply flex-col space-y-4;
+  }
+  
+  .summary-grid {
+    @apply grid-cols-1;
+  }
+  
+  .legend-items {
+    @apply flex-col space-y-2;
+  }
+}

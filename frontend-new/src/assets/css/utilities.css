@@ -1,0 +1,463 @@
+/* Custom Utilities CSS - Modern Light Theme */
+
+/* Text Utilities */
+.text-gradient {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.text-gradient-success {
+  @apply bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent;
+}
+
+.text-gradient-warning {
+  @apply bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent;
+}
+
+.text-gradient-danger {
+  @apply bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-soft {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Background Utilities */
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-blue-50 to-indigo-50;
+}
+
+.bg-gradient-secondary {
+  @apply bg-gradient-to-br from-white via-blue-50 to-indigo-50;
+}
+
+.bg-gradient-accent {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500;
+}
+
+.bg-gradient-success {
+  @apply bg-gradient-to-r from-green-50 to-emerald-50;
+}
+
+.bg-gradient-warning {
+  @apply bg-gradient-to-r from-yellow-50 to-orange-50;
+}
+
+.bg-gradient-danger {
+  @apply bg-gradient-to-r from-red-50 to-pink-50;
+}
+
+.bg-gradient-card {
+  @apply bg-gradient-to-br from-white to-gray-50;
+}
+
+.bg-gradient-header {
+  @apply bg-gradient-to-r from-white to-blue-50;
+}
+
+/* Border Utilities */
+.border-gradient {
+  border-image: linear-gradient(to right, #3b82f6, #6366f1) 1;
+}
+
+.border-dashed-gradient {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #3b82f6, #6366f1) border-box;
+  border: 2px dashed transparent;
+}
+
+.border-soft {
+  @apply border border-gray-100;
+}
+
+.border-medium {
+  @apply border border-gray-200;
+}
+
+.border-strong {
+  @apply border border-gray-300;
+}
+
+/* Shadow Utilities */
+.shadow-soft {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-strong {
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-card {
+  @apply shadow-lg;
+}
+
+.shadow-card-hover {
+  @apply shadow-xl;
+}
+
+.shadow-button {
+  @apply shadow-md;
+}
+
+.shadow-button-hover {
+  @apply shadow-lg;
+}
+
+/* Animation Utilities */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Hover Utilities */
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-300 hover:shadow-lg;
+}
+
+.hover-card {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.hover-button {
+  @apply transition-all duration-200 hover:scale-105 hover:shadow-lg;
+}
+
+.hover-link {
+  @apply transition-colors duration-200 hover:text-blue-700;
+}
+
+/* Focus Utilities */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.focus-ring-offset {
+  @apply focus:ring-offset-2;
+}
+
+.focus-input {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.focus-button {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Responsive Utilities */
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-spacing {
+  @apply py-8 sm:py-12 lg:py-16;
+}
+
+.padding-responsive {
+  @apply p-4 sm:p-6 lg:p-8;
+}
+
+.margin-responsive {
+  @apply m-4 sm:m-6 lg:m-8;
+}
+
+/* Grid Utilities */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid-responsive {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+.grid-responsive-2 {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2;
+}
+
+.grid-responsive-3 {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+/* Flex Utilities */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-start {
+  @apply flex items-center justify-start;
+}
+
+.flex-end {
+  @apply flex items-center justify-end;
+}
+
+/* Spacing Utilities */
+.space-responsive {
+  @apply space-y-4 sm:space-y-6 lg:space-y-8;
+}
+
+.gap-responsive {
+  @apply gap-4 sm:gap-6 lg:gap-8;
+}
+
+/* Typography Utilities */
+.text-responsive {
+  @apply text-sm sm:text-base lg:text-lg;
+}
+
+.text-responsive-lg {
+  @apply text-base sm:text-lg lg:text-xl;
+}
+
+.text-responsive-xl {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+/* Color Utilities */
+.text-primary {
+  @apply text-blue-600;
+}
+
+.text-secondary {
+  @apply text-gray-600;
+}
+
+.text-success {
+  @apply text-green-600;
+}
+
+.text-warning {
+  @apply text-yellow-600;
+}
+
+.text-danger {
+  @apply text-red-600;
+}
+
+.bg-primary {
+  @apply bg-blue-50;
+}
+
+.bg-secondary {
+  @apply bg-gray-50;
+}
+
+.bg-success {
+  @apply bg-green-50;
+}
+
+.bg-warning {
+  @apply bg-yellow-50;
+}
+
+.bg-danger {
+  @apply bg-red-50;
+}
+
+/* Border Radius Utilities */
+.rounded-card {
+  @apply rounded-xl;
+}
+
+.rounded-button {
+  @apply rounded-lg;
+}
+
+.rounded-input {
+  @apply rounded-lg;
+}
+
+.rounded-badge {
+  @apply rounded-full;
+}
+
+/* Transition Utilities */
+.transition-fast {
+  @apply transition-all duration-150;
+}
+
+.transition-normal {
+  @apply transition-all duration-300;
+}
+
+.transition-slow {
+  @apply transition-all duration-500;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Print Utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-break-avoid {
+    page-break-inside: avoid;
+  }
+  
+  .print-shadow-none {
+    box-shadow: none !important;
+  }
+  
+  .print-border {
+    border: 1px solid #000 !important;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .space-x-2 > * + * {
+  @apply mr-2 ml-0;
+}
+
+[dir="rtl"] .space-x-3 > * + * {
+  @apply mr-3 ml-0;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  @apply mr-4 ml-0;
+}
+
+[dir="rtl"] .space-x-6 > * + * {
+  @apply mr-6 ml-0;
+}
+
+[dir="rtl"] .space-x-8 > * + * {
+  @apply mr-8 ml-0;
+}
+
+/* Accessibility Utilities */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+.screen-reader-only {
+  @apply sr-only;
+}
+
+.focus-visible {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Loading Utilities */
+.loading-spinner {
+  @apply animate-spin rounded-full border-4 border-gray-200 border-t-blue-600;
+}
+
+.loading-dots {
+  @apply inline-flex space-x-1;
+}
+
+.loading-dot {
+  @apply w-2 h-2 bg-gray-400 rounded-full animate-pulse;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}

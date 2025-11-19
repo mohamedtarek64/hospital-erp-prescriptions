@@ -1,0 +1,365 @@
+/**
+ * Bed Allocation Styles
+ * Styles for bed allocation management
+ */
+
+/* Bed Allocation Container */
+.bed-allocation-container {
+  @apply p-6 bg-gray-50 min-h-screen;
+}
+
+/* Header */
+.allocation-header {
+  @apply flex justify-between items-center mb-6;
+}
+
+.allocation-title {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.header-actions {
+  @apply flex space-x-3;
+}
+
+/* Stats Cards */
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-4 mb-6;
+}
+
+.stat-card {
+  @apply bg-white rounded-lg shadow-sm p-4;
+}
+
+.stat-icon {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center mb-3;
+}
+
+.stat-icon.available {
+  @apply bg-green-100 text-green-600;
+}
+
+.stat-icon.occupied {
+  @apply bg-red-100 text-red-600;
+}
+
+.stat-icon.maintenance {
+  @apply bg-yellow-100 text-yellow-600;
+}
+
+.stat-number {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600;
+}
+
+/* Filters */
+.filters-section {
+  @apply bg-white rounded-lg shadow-sm p-4 mb-6;
+}
+
+.filters-title {
+  @apply text-lg font-semibold text-gray-800 mb-4;
+}
+
+.filters-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.filter-group {
+  @apply space-y-2;
+}
+
+.filter-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.filter-select,
+.filter-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Beds Grid */
+.beds-section {
+  @apply bg-white rounded-lg shadow-sm p-4;
+}
+
+.beds-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.beds-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.beds-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+}
+
+/* Bed Card */
+.bed-card {
+  @apply border rounded-lg p-4 transition-all duration-200 hover:shadow-md;
+}
+
+.bed-card.available {
+  @apply border-green-200 bg-green-50;
+}
+
+.bed-card.occupied {
+  @apply border-red-200 bg-red-50;
+}
+
+.bed-card.maintenance {
+  @apply border-yellow-200 bg-yellow-50;
+}
+
+.bed-header {
+  @apply flex justify-between items-center mb-2;
+}
+
+.bed-number {
+  @apply font-semibold text-gray-800;
+}
+
+.bed-status {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.bed-status.available {
+  @apply bg-green-100 text-green-800;
+}
+
+.bed-status.occupied {
+  @apply bg-red-100 text-red-800;
+}
+
+.bed-status.maintenance {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.bed-info {
+  @apply space-y-1 text-sm text-gray-600;
+}
+
+.bed-patient {
+  @apply font-medium text-gray-800;
+}
+
+.bed-ward {
+  @apply text-gray-600;
+}
+
+.bed-duration {
+  @apply text-gray-500;
+}
+
+.bed-actions {
+  @apply flex space-x-2 mt-3;
+}
+
+.bed-btn {
+  @apply px-3 py-1 text-xs rounded-md font-medium transition-colors;
+}
+
+.bed-btn.primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.bed-btn.success {
+  @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+.bed-btn.warning {
+  @apply bg-yellow-600 text-white hover:bg-yellow-700;
+}
+
+.bed-btn.danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+/* Modal */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl max-w-md w-full mx-4 max-h-screen overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex justify-between items-center p-4 border-b border-gray-200;
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.modal-close {
+  @apply p-2 text-gray-400 hover:text-gray-600 transition-colors;
+}
+
+.modal-body {
+  @apply p-4 space-y-4;
+}
+
+.modal-actions {
+  @apply flex justify-end space-x-3 p-4 border-t border-gray-200;
+}
+
+/* Form Elements */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-textarea {
+  @apply resize-none;
+}
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-warning {
+  @apply bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Loading States */
+.loading {
+  @apply opacity-50 pointer-events-none;
+}
+
+.loading-spinner {
+  @apply animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600;
+}
+
+/* Error States */
+.error-message {
+  @apply text-red-600 text-sm mt-1;
+}
+
+.error-state {
+  @apply flex flex-col items-center justify-center py-8 text-gray-500;
+}
+
+/* Empty States */
+.empty-state {
+  @apply flex flex-col items-center justify-center py-8 text-gray-500;
+}
+
+.empty-icon {
+  @apply w-16 h-16 text-gray-300 mb-4;
+}
+
+.empty-title {
+  @apply text-lg font-medium text-gray-600 mb-2;
+}
+
+.empty-description {
+  @apply text-sm text-gray-500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .beds-grid {
+    @apply grid-cols-1;
+  }
+  
+  .filters-grid {
+    @apply grid-cols-1;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-2;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bed-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Hover Effects */
+.bed-card:hover {
+  @apply transform -translate-y-1;
+}
+
+/* Status Indicators */
+.status-indicator {
+  @apply w-3 h-3 rounded-full;
+}
+
+.status-indicator.available {
+  @apply bg-green-500;
+}
+
+.status-indicator.occupied {
+  @apply bg-red-500;
+}
+
+.status-indicator.maintenance {
+  @apply bg-yellow-500;
+}
+
+/* Priority Indicators */
+.priority-indicator {
+  @apply w-2 h-2 rounded-full;
+}
+
+.priority-indicator.low {
+  @apply bg-green-400;
+}
+
+.priority-indicator.medium {
+  @apply bg-yellow-400;
+}
+
+.priority-indicator.high {
+  @apply bg-orange-400;
+}
+
+.priority-indicator.urgent {
+  @apply bg-red-400;
+}

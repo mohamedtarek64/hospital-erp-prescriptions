@@ -1,0 +1,430 @@
+/* Test Results Management System Styles - Modern Light Theme */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom Components */
+@layer components {
+  /* Header Styles */
+  .test-results-header {
+    @apply bg-white shadow-lg border-b border-gray-100;
+    @apply bg-gradient-to-r from-white to-blue-50;
+  }
+  
+  .test-results-header-content {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .test-results-header-inner {
+    @apply flex justify-between items-center h-16;
+  }
+  
+  .test-results-title {
+    @apply text-2xl font-bold text-gray-800 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+  
+  .add-test-result-btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md hover:shadow-lg transition-all duration-200;
+  }
+  
+  .add-test-result-icon {
+    @apply h-5 w-5 mr-2;
+  }
+
+  /* Search and Filters */
+  .test-filters-container {
+    @apply bg-white overflow-hidden shadow-lg rounded-xl border border-gray-100;
+    @apply bg-gradient-to-br from-white to-gray-50;
+  }
+  
+  .test-filters-content {
+    @apply px-6 py-6;
+  }
+  
+  .test-filters-grid {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4;
+  }
+  
+  .test-filter-group {
+    @apply space-y-2;
+  }
+  
+  .test-filter-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .test-filter-input {
+    @apply block w-full pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+    @apply bg-white text-gray-800 placeholder-gray-500;
+  }
+  
+  .test-filter-select {
+    @apply mt-1 block w-full py-3 px-4 border border-gray-300 bg-white rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  }
+  
+  .test-search-container {
+    @apply relative;
+  }
+  
+  .test-search-icon {
+    @apply absolute inset-y-0 right-0 pr-3 flex items-center;
+  }
+  
+  .clear-test-filters-btn {
+    @apply w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200;
+  }
+
+  /* Test Results List */
+  .test-results-list-container {
+    @apply bg-white overflow-hidden shadow-lg rounded-xl border border-gray-100;
+    @apply bg-gradient-to-br from-white to-gray-50;
+  }
+  
+  .test-results-list-content {
+    @apply px-6 py-6;
+  }
+  
+  .test-results-table {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+  
+  .test-results-table-header {
+    @apply bg-gray-50;
+  }
+  
+  .test-results-table-header-cell {
+    @apply px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+  
+  .test-results-table-row {
+    @apply hover:bg-gray-50 transition-colors duration-200;
+  }
+  
+  .test-results-table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-800;
+  }
+  
+  .test-results-table-cell-patient {
+    @apply text-sm font-medium text-gray-800;
+  }
+  
+  .test-results-table-cell-test {
+    @apply text-sm text-gray-600;
+  }
+  
+  .test-results-table-cell-date {
+    @apply text-sm text-gray-600;
+  }
+  
+  .test-results-table-cell-status {
+    @apply text-sm;
+  }
+  
+  .test-results-table-cell-actions {
+    @apply text-sm font-medium;
+  }
+
+  /* Test Status Badges */
+  .test-status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .test-status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .test-status-completed {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .test-status-abnormal {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .test-status-critical {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  /* Action Buttons */
+  .test-action-btn {
+    @apply text-gray-400 hover:text-gray-600 transition-colors duration-200;
+  }
+  
+  .test-action-btn-view {
+    @apply text-blue-600 hover:text-blue-700;
+  }
+  
+  .test-action-btn-edit {
+    @apply text-green-600 hover:text-green-700;
+  }
+  
+  .test-action-btn-delete {
+    @apply text-red-600 hover:text-red-700;
+  }
+
+  /* Test Result Card */
+  .test-result-card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300;
+    @apply bg-gradient-to-br from-white to-gray-50;
+  }
+  
+  .test-result-card:hover {
+    @apply transform -translate-y-1;
+  }
+  
+  .test-result-card-header {
+    @apply flex items-center justify-between mb-4;
+  }
+  
+  .test-result-card-patient {
+    @apply text-lg font-semibold text-gray-800;
+  }
+  
+  .test-result-card-test {
+    @apply text-sm text-gray-600;
+  }
+  
+  .test-result-card-date {
+    @apply text-sm text-gray-600;
+  }
+  
+  .test-result-card-status {
+    @apply px-3 py-1 text-xs font-medium rounded-full;
+  }
+
+  /* Test Result Details */
+  .test-result-details {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+    @apply bg-gradient-to-br from-white to-gray-50;
+  }
+  
+  .test-result-details-header {
+    @apply border-b border-gray-200 pb-4 mb-6;
+  }
+  
+  .test-result-details-title {
+    @apply text-xl font-semibold text-gray-800;
+  }
+  
+  .test-result-details-meta {
+    @apply flex flex-wrap gap-4 text-sm text-gray-600 mt-2;
+  }
+  
+  .test-result-details-content {
+    @apply space-y-6;
+  }
+  
+  .test-result-section {
+    @apply space-y-4;
+  }
+  
+  .test-result-section-title {
+    @apply text-lg font-medium text-gray-800 border-b border-gray-200 pb-2;
+  }
+  
+  .test-result-values {
+    @apply space-y-3;
+  }
+  
+  .test-result-value {
+    @apply flex justify-between items-center py-2 border-b border-gray-100;
+  }
+  
+  .test-result-label {
+    @apply text-sm font-medium text-gray-700;
+  }
+  
+  .test-result-value-text {
+    @apply text-sm text-gray-800;
+  }
+  
+  .test-result-value-abnormal {
+    @apply text-red-600 font-semibold;
+  }
+  
+  .test-result-value-normal {
+    @apply text-green-600;
+  }
+
+  /* Pagination */
+  .test-pagination-container {
+    @apply bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6;
+  }
+  
+  .test-pagination-info {
+    @apply text-sm text-gray-700;
+  }
+  
+  .test-pagination-controls {
+    @apply flex-1 flex justify-end sm:justify-end;
+  }
+  
+  .test-pagination-btn {
+    @apply relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-all duration-200;
+  }
+  
+  .test-pagination-btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+  
+  .test-pagination-current {
+    @apply relative inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-lg text-blue-600 bg-blue-50;
+  }
+
+  /* Empty State */
+  .test-empty-state {
+    @apply text-center py-12;
+  }
+  
+  .test-empty-icon {
+    @apply mx-auto h-12 w-12 text-gray-400;
+  }
+  
+  .test-empty-title {
+    @apply mt-2 text-sm font-medium text-gray-800;
+  }
+  
+  .test-empty-description {
+    @apply mt-1 text-sm text-gray-600;
+  }
+  
+  .test-empty-action {
+    @apply mt-6;
+  }
+
+  /* Loading State */
+  .test-loading-container {
+    @apply flex items-center justify-center py-12;
+  }
+  
+  .test-loading-spinner {
+    @apply animate-spin h-8 w-8 border-4 border-blue-200 border-t-blue-600 rounded-full;
+  }
+  
+  .test-loading-text {
+    @apply mr-3 text-sm text-gray-600;
+  }
+
+  /* Modal Styles */
+  .test-modal {
+    @apply fixed inset-0 z-50 overflow-y-auto;
+  }
+  
+  .test-modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 transition-opacity;
+  }
+  
+  .test-modal-container {
+    @apply flex min-h-full items-center justify-center p-4;
+  }
+  
+  .test-modal-content {
+    @apply bg-white rounded-xl shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto;
+  }
+  
+  .test-modal-header {
+    @apply flex justify-between items-center p-6 border-b border-gray-200;
+  }
+  
+  .test-modal-title {
+    @apply text-xl font-semibold text-gray-800;
+  }
+  
+  .test-modal-close {
+    @apply text-gray-400 hover:text-gray-600 transition-colors duration-200;
+  }
+  
+  .test-modal-body {
+    @apply p-6;
+  }
+  
+  .test-modal-footer {
+    @apply flex justify-end space-x-3 space-x-reverse p-6 border-t border-gray-200;
+  }
+
+  /* Form Elements */
+  .test-form-group {
+    @apply space-y-2 mb-6;
+  }
+  
+  .test-form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .test-form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+    @apply bg-white text-gray-800 placeholder-gray-500;
+  }
+  
+  .test-form-select {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+    @apply bg-white text-gray-800;
+  }
+  
+  .test-form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+    @apply bg-white text-gray-800 placeholder-gray-500;
+    resize: vertical;
+  }
+  
+  .test-form-error {
+    @apply text-sm text-red-600 mt-1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .test-filters-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .test-results-table-header-cell,
+  .test-results-table-cell {
+    @apply px-3 py-2;
+  }
+  
+  .test-modal-content {
+    @apply mx-4;
+  }
+}
+
+/* Animation Classes */
+.test-fade-enter-active,
+.test-fade-leave-active {
+  @apply transition-opacity duration-300;
+}
+
+.test-fade-enter-from,
+.test-fade-leave-to {
+  @apply opacity-0;
+}
+
+.test-slide-enter-active,
+.test-slide-leave-active {
+  @apply transition-transform duration-300;
+}
+
+.test-slide-enter-from {
+  @apply transform translate-y-4;
+}
+
+.test-slide-leave-to {
+  @apply transform -translate-y-4;
+}
+
+/* Hover Effects */
+.test-result-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.add-test-result-btn:hover {
+  @apply transform scale-105;
+}
+
+/* Focus States */
+.test-form-input:focus,
+.test-form-select:focus,
+.test-form-textarea:focus,
+.add-test-result-btn:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}

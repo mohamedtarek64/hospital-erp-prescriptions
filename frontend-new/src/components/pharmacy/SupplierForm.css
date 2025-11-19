@@ -1,0 +1,433 @@
+/* SupplierForm Component Styles */
+
+.supplier-form {
+  @apply w-full max-w-4xl mx-auto;
+}
+
+.form-container {
+  @apply space-y-6 p-6;
+}
+
+/* Form Sections */
+.form-section {
+  @apply bg-white rounded-lg border border-gray-200 p-6 shadow-sm;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200;
+}
+
+/* Form Rows */
+.form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+/* Form Groups */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+/* Form Inputs */
+.form-input,
+.form-select,
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  @apply transition-colors duration-200;
+  @apply text-right;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  @apply border-blue-500 ring-blue-500;
+}
+
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  @apply text-gray-400;
+}
+
+/* Textarea specific styles */
+.form-textarea {
+  @apply min-h-[80px];
+  resize: vertical;
+}
+
+/* Error Messages */
+.error-message {
+  @apply text-sm text-red-600 mt-1 block;
+}
+
+/* Form Actions */
+.form-actions {
+  @apply flex flex-col sm:flex-row gap-3 justify-end pt-6 border-t border-gray-200;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-4 py-2;
+  @apply bg-blue-600 text-white text-sm font-medium rounded-md;
+  @apply hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply transition-colors duration-200;
+  @apply min-w-[120px];
+}
+
+.btn-primary:hover:not(:disabled) {
+  @apply bg-blue-700;
+}
+
+.btn-primary:focus {
+  @apply ring-2 ring-offset-2 ring-blue-500;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-4 py-2;
+  @apply bg-gray-100 text-gray-700 text-sm font-medium rounded-md;
+  @apply hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+  @apply transition-colors duration-200;
+  @apply min-w-[120px];
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-200;
+}
+
+.btn-secondary:focus {
+  @apply ring-2 ring-offset-2 ring-gray-500;
+}
+
+/* Button Icons */
+.btn-primary svg,
+.btn-secondary svg {
+  @apply ml-2;
+}
+
+/* Loading State */
+.btn-primary:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    @apply p-4;
+  }
+  
+  .form-section {
+    @apply p-4;
+  }
+  
+  .form-row {
+    @apply grid-cols-1 gap-3;
+  }
+  
+  .form-actions {
+    @apply flex-col gap-3;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    @apply w-full justify-center;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .form-section {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .section-title {
+    @apply text-gray-100 border-gray-700;
+  }
+  
+  .form-label {
+    @apply text-gray-300;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply bg-gray-700 border-gray-600 text-gray-100;
+    @apply focus:ring-blue-400 focus:border-blue-400;
+  }
+  
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    @apply text-gray-500;
+  }
+  
+  .form-actions {
+    @apply border-gray-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-700 text-gray-300 hover:bg-gray-600;
+  }
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .btn-primary svg,
+[dir="rtl"] .btn-secondary svg {
+  @apply ml-0 mr-2;
+}
+
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-select,
+[dir="rtl"] .form-textarea {
+  @apply text-right;
+}
+
+/* Focus States for Accessibility */
+.form-input:focus-visible,
+.form-select:focus-visible,
+.form-textarea:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Hover Effects */
+.form-input:hover:not(:focus),
+.form-select:hover:not(:focus),
+.form-textarea:hover:not(:focus) {
+  @apply border-gray-400;
+}
+
+/* Animation for Form Sections */
+.form-section {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.form-section:hover {
+  @apply shadow-md;
+}
+
+/* Custom Scrollbar for Textarea */
+.form-textarea::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.form-textarea::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+
+.form-textarea::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded hover:bg-gray-400;
+}
+
+/* Form Validation Visual Feedback */
+.form-input:valid:not(:placeholder-shown) {
+  @apply border-green-500;
+}
+
+.form-input:invalid:not(:placeholder-shown) {
+  @apply border-red-500;
+}
+
+/* Success State */
+.form-input.success {
+  @apply border-green-500 focus:ring-green-500 focus:border-green-500;
+}
+
+/* Warning State */
+.form-input.warning {
+  @apply border-yellow-500 focus:ring-yellow-500 focus:border-yellow-500;
+}
+
+/* Info State */
+.form-input.info {
+  @apply border-blue-500 focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Disabled State */
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  @apply bg-gray-100 text-gray-500 cursor-not-allowed;
+}
+
+/* Readonly State */
+.form-input[readonly],
+.form-textarea[readonly] {
+  @apply bg-gray-50 text-gray-700 cursor-default;
+}
+
+/* Required Field Indicator */
+.form-label.required::after {
+  content: " *";
+  @apply text-red-500;
+}
+
+/* Field Help Text */
+.help-text {
+  @apply text-sm text-gray-500 mt-1;
+}
+
+/* Field Group with Icon */
+.field-with-icon {
+  @apply relative;
+}
+
+.field-with-icon .form-input,
+.field-with-icon .form-select {
+  @apply pl-10;
+}
+
+.field-with-icon .icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+/* Compact Form Variant */
+.form-container.compact {
+  @apply space-y-4;
+}
+
+.form-container.compact .form-section {
+  @apply p-4;
+}
+
+.form-container.compact .section-title {
+  @apply text-base mb-3;
+}
+
+/* Large Form Variant */
+.form-container.large {
+  @apply space-y-8;
+}
+
+.form-container.large .form-section {
+  @apply p-8;
+}
+
+.form-container.large .section-title {
+  @apply text-xl mb-6;
+}
+
+/* Inline Form Variant */
+.form-container.inline .form-row {
+  @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.form-container.inline .form-group {
+  @apply space-y-1;
+}
+
+/* Form Grid Layouts */
+.form-grid-3 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.form-grid-4 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+/* Field Sizes */
+.form-input.small {
+  @apply px-2 py-1 text-sm;
+}
+
+.form-input.large {
+  @apply px-4 py-3 text-lg;
+}
+
+/* Custom Select Styling */
+.form-select {
+  @apply appearance-none bg-no-repeat;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+  @apply pr-10;
+}
+
+[dir="rtl"] .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: left 0.5rem center;
+  @apply pl-10 pr-3;
+}
+
+/* Form Progress Indicator */
+.form-progress {
+  @apply w-full bg-gray-200 rounded-full h-2 mb-6;
+}
+
+.form-progress-bar {
+  @apply bg-blue-600 h-2 rounded-full transition-all duration-300;
+}
+
+/* Form Steps */
+.form-steps {
+  @apply flex items-center justify-between mb-6;
+}
+
+.form-step {
+  @apply flex items-center;
+}
+
+.form-step-number {
+  @apply w-8 h-8 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center text-sm font-medium;
+}
+
+.form-step-number.active {
+  @apply bg-blue-600 text-white;
+}
+
+.form-step-number.completed {
+  @apply bg-green-500 text-white;
+}
+
+.form-step-label {
+  @apply ml-2 text-sm text-gray-600;
+}
+
+.form-step-label.active {
+  @apply text-blue-600 font-medium;
+}
+
+.form-step-label.completed {
+  @apply text-green-600;
+}
+
+/* Form Summary */
+.form-summary {
+  @apply bg-gray-50 rounded-lg p-4 mb-6;
+}
+
+.form-summary-title {
+  @apply text-lg font-medium text-gray-900 mb-3;
+}
+
+.form-summary-item {
+  @apply flex justify-between py-2 border-b border-gray-200 last:border-b-0;
+}
+
+.form-summary-label {
+  @apply text-gray-600;
+}
+
+.form-summary-value {
+  @apply text-gray-900 font-medium;
+}
+
+/* Print Styles */
+@media print {
+  .form-actions,
+  .btn-primary,
+  .btn-secondary {
+    @apply hidden;
+  }
+  
+  .form-section {
+    @apply border-none shadow-none;
+  }
+}

@@ -1,0 +1,430 @@
+/* Inventory Chart Styles */
+.inventory-chart {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden;
+  direction: rtl;
+}
+
+/* Chart Header */
+.chart-header {
+  @apply flex flex-col md:flex-row items-start md:items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700;
+}
+
+.chart-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white mb-4 md:mb-0;
+}
+
+.chart-controls {
+  @apply flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 sm:space-x-reverse;
+}
+
+.chart-type-select,
+.time-range-select {
+  @apply px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm 
+         bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm
+         focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
+         dark:focus:ring-blue-400 dark:focus:border-blue-400
+         transition-colors duration-200;
+}
+
+.btn-refresh {
+  @apply inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 
+         text-white text-sm font-medium rounded-md transition-colors duration-200
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Chart Statistics */
+.chart-statistics {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-gray-50 dark:bg-gray-700;
+}
+
+.stat-item {
+  @apply bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-600 text-center;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-gray-900 dark:text-white;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600 dark:text-gray-400 mt-1;
+}
+
+.stat-icon {
+  @apply w-8 h-8 mx-auto mb-2 text-blue-600 dark:text-blue-400;
+}
+
+/* Chart Content */
+.chart-content {
+  @apply p-6;
+}
+
+.chart-section {
+  @apply space-y-4;
+}
+
+.chart-section-title {
+  @apply text-lg font-medium text-gray-900 dark:text-white text-center;
+}
+
+.chart-canvas {
+  @apply relative h-96 w-full bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-600 p-4;
+}
+
+/* Loading State */
+.chart-loading {
+  @apply flex items-center justify-center h-96;
+}
+
+.loading-spinner {
+  @apply w-12 h-12 text-blue-600 dark:text-blue-400 animate-spin;
+}
+
+.loading-text {
+  @apply text-gray-600 dark:text-gray-400 mt-4;
+}
+
+/* Error State */
+.chart-error {
+  @apply flex flex-col items-center justify-center h-96 text-center;
+}
+
+.error-icon {
+  @apply w-16 h-16 text-red-500 dark:text-red-400 mb-4;
+}
+
+.error-text {
+  @apply text-lg font-medium text-gray-900 dark:text-white mb-2;
+}
+
+.error-description {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.retry-button {
+  @apply mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md 
+         transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+}
+
+/* Export Options */
+.export-options {
+  @apply flex flex-wrap items-center justify-center space-x-4 space-x-reverse p-6 bg-gray-50 dark:bg-gray-700 border-t border-gray-200 dark:border-gray-600;
+}
+
+.export-button {
+  @apply inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 
+         text-white text-sm font-medium rounded-md transition-colors duration-200
+         focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+}
+
+.export-button.primary {
+  @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.export-button.success {
+  @apply bg-green-600 hover:bg-green-700 focus:ring-green-500;
+}
+
+.export-button.warning {
+  @apply bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500;
+}
+
+/* Chart Type Specific Styles */
+.chart-type-select option[value="stock-levels"]::after {
+  content: " - مستويات المخزون";
+}
+
+.chart-type-select option[value="category-breakdown"]::after {
+  content: " - توزيع الفئات";
+}
+
+.chart-type-select option[value="supplier-analysis"]::after {
+  content: " - تحليل الموردين";
+}
+
+.chart-type-select option[value="expiry-timeline"]::after {
+  content: " - جدول انتهاء الصلاحية";
+}
+
+.chart-type-select option[value="stock-movements"]::after {
+  content: " - حركة المخزون";
+}
+
+/* Time Range Specific Styles */
+.time-range-select option[value="7"]::after {
+  content: " - آخر 7 أيام";
+}
+
+.time-range-select option[value="30"]::after {
+  content: " - آخر 30 يوم";
+}
+
+.time-range-select option[value="90"]::after {
+  content: " - آخر 3 أشهر";
+}
+
+.time-range-select option[value="365"]::after {
+  content: " - آخر سنة";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-header {
+    @apply p-4;
+  }
+  
+  .chart-content {
+    @apply p-4;
+  }
+  
+  .chart-statistics {
+    @apply p-4;
+  }
+  
+  .export-options {
+    @apply p-4;
+  }
+  
+  .chart-canvas {
+    @apply h-64;
+  }
+  
+  .chart-loading,
+  .chart-error {
+    @apply h-64;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart-controls {
+    @apply w-full;
+  }
+  
+  .chart-type-select,
+  .time-range-select {
+    @apply w-full;
+  }
+  
+  .btn-refresh {
+    @apply w-full justify-center;
+  }
+  
+  .export-options {
+    @apply flex-col space-y-3 space-x-0;
+  }
+  
+  .export-button {
+    @apply w-full justify-center;
+  }
+}
+
+/* Dark Mode Enhancements */
+.dark .chart-header {
+  @apply bg-gray-700 border-gray-600;
+}
+
+.dark .chart-statistics {
+  @apply bg-gray-700;
+}
+
+.dark .export-options {
+  @apply bg-gray-700 border-gray-600;
+}
+
+.dark .stat-item {
+  @apply bg-gray-800 border-gray-600;
+}
+
+.dark .chart-canvas {
+  @apply bg-gray-800 border-gray-600;
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .chart-controls {
+  @apply space-x-reverse;
+}
+
+[dir="rtl"] .export-options {
+  @apply space-x-reverse;
+}
+
+/* Focus States */
+.chart-type-select:focus,
+.time-range-select:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800;
+}
+
+/* Hover Effects */
+.stat-item:hover {
+  @apply border-gray-300 dark:border-gray-500 shadow-md transform translate-y-[-2px];
+}
+
+.export-button:hover {
+  @apply transform scale-105;
+}
+
+/* Animation Classes */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chart Canvas Enhancements */
+.chart-canvas canvas {
+  @apply max-w-full h-auto;
+}
+
+/* Statistics Grid Enhancements */
+.stat-item:nth-child(1) .stat-icon {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.stat-item:nth-child(2) .stat-icon {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.stat-item:nth-child(3) .stat-icon {
+  @apply text-yellow-600 dark:text-yellow-400;
+}
+
+.stat-item:nth-child(4) .stat-icon {
+  @apply text-red-600 dark:text-red-400;
+}
+
+/* Enhanced Loading Animation */
+.chart-loading {
+  @apply relative;
+}
+
+.chart-loading::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-blue-100 dark:via-blue-900 to-transparent;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Chart Type Indicators */
+.chart-type-indicator {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.chart-type-indicator.stock-levels {
+  @apply bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200;
+}
+
+.chart-type-indicator.category-breakdown {
+  @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+}
+
+.chart-type-indicator.supplier-analysis {
+  @apply bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200;
+}
+
+.chart-type-indicator.expiry-timeline {
+  @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+}
+
+.chart-type-indicator.stock-movements {
+  @apply bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200;
+}
+
+/* Enhanced Export Buttons */
+.export-button-group {
+  @apply flex flex-wrap gap-2;
+}
+
+.export-button.small {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.export-button.large {
+  @apply px-6 py-3 text-base;
+}
+
+/* Chart Legend Enhancements */
+.chart-legend {
+  @apply mt-4 flex flex-wrap justify-center gap-4;
+}
+
+.legend-item {
+  @apply flex items-center space-x-2 space-x-reverse;
+}
+
+.legend-color {
+  @apply w-4 h-4 rounded-full;
+}
+
+.legend-label {
+  @apply text-sm text-gray-700 dark:text-gray-300;
+}
+
+/* Print Styles */
+@media print {
+  .inventory-chart {
+    @apply shadow-none border-none;
+  }
+  
+  .chart-controls,
+  .export-options {
+    @apply hidden;
+  }
+  
+  .chart-canvas {
+    @apply border-none;
+  }
+  
+  .chart-statistics {
+    @apply border-none bg-transparent;
+  }
+  
+  .stat-item {
+    @apply border-none bg-transparent;
+  }
+}
+
+/* Accessibility Enhancements */
+.chart-type-select:focus + label,
+.time-range-select:focus + label {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .chart-canvas {
+    @apply border-2 border-black dark:border-white;
+  }
+  
+  .stat-item {
+    @apply border-2 border-black dark:border-white;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin {
+    animation: none;
+  }
+  
+  .stat-item:hover {
+    @apply transform-none;
+  }
+  
+  .export-button:hover {
+    @apply transform-none;
+  }
+}

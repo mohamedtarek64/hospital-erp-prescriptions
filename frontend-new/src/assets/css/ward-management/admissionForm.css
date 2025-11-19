@@ -1,0 +1,121 @@
+/**
+ * Admission Form Component Styles
+ * Specific styling for the admission form component
+ */
+
+/* ===== ADMISSION FORM ===== */
+.admission-form-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.admission-form {
+  @apply bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto;
+}
+
+.form-header {
+  @apply flex justify-between items-center p-6 border-b border-gray-200;
+}
+
+.form-title {
+  @apply text-xl font-bold text-gray-800;
+}
+
+.close-btn {
+  @apply w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200;
+}
+
+.close-btn .icon {
+  @apply text-gray-600;
+}
+
+.form-content {
+  @apply p-6;
+}
+
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-6;
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.form-group.full-width {
+  @apply md:col-span-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-select,
+.form-input,
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
+}
+
+.form-textarea {
+  @apply resize-none;
+}
+
+.form-actions {
+  @apply flex justify-end space-x-3 pt-4 border-t border-gray-200;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 text-white hover:bg-gray-700;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .admission-form {
+    @apply mx-4 max-h-[95vh];
+  }
+  
+  .form-grid {
+    @apply grid-cols-1;
+  }
+  
+  .form-actions {
+    @apply flex-col space-x-0 space-y-2;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.admission-form {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.admission-form:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+.btn:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+.form-select:focus,
+.form-input:focus,
+.form-textarea:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}

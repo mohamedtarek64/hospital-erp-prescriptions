@@ -1,0 +1,368 @@
+/* Patient Admission Styles */
+
+.patient-admission {
+  @apply min-h-screen bg-gray-50 p-6;
+}
+
+/* Page Header */
+.page-header {
+  @apply flex justify-between items-start mb-8;
+}
+
+.header-content {
+  @apply flex-1;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.header-actions {
+  @apply flex-shrink-0;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex items-center space-x-4;
+}
+
+.stat-icon {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center;
+}
+
+.stat-content {
+  @apply flex-1;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600 mt-1;
+}
+
+/* Filters Section */
+.filters-section {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8;
+}
+
+.filter-group {
+  @apply flex flex-wrap items-center gap-4;
+}
+
+.search-box {
+  @apply relative flex-1 min-w-64;
+}
+
+.search-input {
+  @apply w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.filter-select {
+  @apply px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Table Container */
+.table-container {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.loading-state {
+  @apply h-64 flex items-center justify-center;
+}
+
+.loading-spinner {
+  @apply text-center;
+}
+
+.loading-text {
+  @apply text-gray-600 mt-2;
+}
+
+.error-state {
+  @apply h-64 flex flex-col items-center justify-center text-center;
+}
+
+.error-text {
+  @apply text-red-600 mt-2;
+}
+
+/* Admissions Table */
+.admissions-table {
+  @apply overflow-x-auto;
+}
+
+.table {
+  @apply w-full;
+}
+
+.table-header {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 border-b border-gray-200;
+}
+
+.table-row {
+  @apply hover:bg-gray-50 transition-colors cursor-pointer;
+}
+
+.table-row:nth-child(even) {
+  @apply bg-white;
+}
+
+.table-row:nth-child(odd) {
+  @apply bg-gray-50;
+}
+
+.table-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900 border-b border-gray-200;
+}
+
+/* Patient Info */
+.patient-info {
+  @apply flex items-center space-x-3;
+}
+
+.patient-avatar {
+  @apply flex-shrink-0;
+}
+
+.avatar-img {
+  @apply w-10 h-10 rounded-full object-cover;
+}
+
+.patient-details {
+  @apply flex-1;
+}
+
+.patient-name {
+  @apply font-medium text-gray-900;
+}
+
+.patient-id {
+  @apply text-sm text-gray-500;
+}
+
+/* Ward Info */
+.ward-info {
+  @apply space-y-1;
+}
+
+.ward-name {
+  @apply font-medium text-gray-900;
+}
+
+.room-number {
+  @apply text-sm text-gray-500;
+}
+
+/* Bed Info */
+.bed-info {
+  @apply space-y-1;
+}
+
+.bed-number {
+  @apply font-medium text-gray-900;
+}
+
+.bed-type {
+  @apply text-sm text-gray-500;
+}
+
+/* Date Info */
+.date-info {
+  @apply space-y-1;
+}
+
+.admission-date {
+  @apply font-medium text-gray-900;
+}
+
+.admission-time {
+  @apply text-sm text-gray-500;
+}
+
+/* Status Badge */
+.status-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-admitted {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-discharged {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.status-transferred {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-default {
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Action Buttons */
+.action-buttons {
+  @apply flex space-x-2;
+}
+
+.btn-icon {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors;
+}
+
+/* Empty State */
+.empty-state {
+  @apply h-64 flex flex-col items-center justify-center text-center;
+}
+
+.empty-text {
+  @apply text-lg font-medium text-gray-800 mb-2;
+}
+
+.empty-subtext {
+  @apply text-sm text-gray-600;
+}
+
+/* Pagination */
+.pagination {
+  @apply flex justify-between items-center p-4 border-t border-gray-200;
+}
+
+.pagination-info {
+  @apply flex-shrink-0;
+}
+
+.pagination-text {
+  @apply text-sm text-gray-600;
+}
+
+.pagination-controls {
+  @apply flex items-center space-x-2;
+}
+
+.pagination-btn {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.page-numbers {
+  @apply flex space-x-1;
+}
+
+.page-number {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center text-sm text-gray-600 hover:bg-gray-100 transition-colors;
+}
+
+.page-number.active {
+  @apply bg-blue-600 text-white;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-xl shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto;
+}
+
+.modal-content.large {
+  @apply max-w-4xl;
+}
+
+.modal-header {
+  @apply flex justify-between items-center p-6 border-b border-gray-200;
+}
+
+.modal-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.btn-close {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center text-gray-400 hover:bg-gray-100 transition-colors;
+}
+
+.modal-body {
+  @apply p-6;
+}
+
+/* Admission Details */
+.admission-details {
+  @apply space-y-6;
+}
+
+.detail-section {
+  @apply space-y-4;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-gray-800 border-b border-gray-200 pb-2;
+}
+
+.detail-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.detail-item {
+  @apply flex justify-between items-center py-2;
+}
+
+.detail-item label {
+  @apply font-medium text-gray-700;
+}
+
+.detail-item span {
+  @apply text-gray-900;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors flex items-center space-x-2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    @apply flex-col space-y-4;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-1;
+  }
+  
+  .filter-group {
+    @apply flex-col space-y-4;
+  }
+  
+  .search-box {
+    @apply min-w-full;
+  }
+  
+  .pagination {
+    @apply flex-col space-y-4;
+  }
+  
+  .detail-grid {
+    @apply grid-cols-1;
+  }
+  
+  .modal-content {
+    @apply mx-2;
+  }
+}

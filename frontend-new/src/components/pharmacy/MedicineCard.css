@@ -1,0 +1,166 @@
+/* Medicine Card CSS */
+.medicine-card {
+  @apply bg-white rounded-lg shadow-md border border-gray-200 p-6 transition-all duration-300 hover:shadow-lg hover:border-blue-300;
+}
+
+.medicine-card--low-stock {
+  @apply border-orange-300 bg-orange-50;
+}
+
+.medicine-card--out-of-stock {
+  @apply border-red-300 bg-red-50;
+}
+
+.medicine-card__header {
+  @apply flex justify-between items-start mb-4;
+}
+
+.medicine-card__icon {
+  @apply text-blue-600 bg-blue-100 p-2 rounded-full;
+}
+
+.medicine-card__status {
+  @apply flex-shrink-0;
+}
+
+.status-badge {
+  @apply px-3 py-1 text-xs font-medium rounded-full;
+}
+
+.status-badge--in_stock {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-badge--low_stock {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.status-badge--out_of_stock {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-badge--expired {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.medicine-card__content {
+  @apply mb-6;
+}
+
+.medicine-card__title {
+  @apply text-lg font-semibold text-gray-900 mb-2;
+}
+
+.medicine-card__category {
+  @apply text-sm text-blue-600 font-medium mb-1;
+}
+
+.medicine-card__manufacturer {
+  @apply text-sm text-gray-600 mb-4;
+}
+
+.medicine-card__details {
+  @apply space-y-2;
+}
+
+.detail-item {
+  @apply flex justify-between items-center text-sm;
+}
+
+.detail-label {
+  @apply text-gray-600 font-medium;
+}
+
+.detail-value {
+  @apply text-gray-900 font-semibold;
+}
+
+.medicine-card__actions {
+  @apply flex gap-2 flex-wrap;
+}
+
+.action-btn {
+  @apply flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.action-btn--edit {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.action-btn--edit:disabled {
+  @apply bg-gray-400 text-gray-200 cursor-not-allowed;
+}
+
+.action-btn--dispense {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.action-btn--dispense:disabled {
+  @apply bg-gray-400 text-gray-200 cursor-not-allowed;
+}
+
+.action-btn--delete {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+.action-btn--delete:disabled {
+  @apply bg-gray-400 text-gray-200 cursor-not-allowed;
+}
+
+/* Hover effects */
+.medicine-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.action-btn:not(:disabled):hover {
+  @apply transform scale-105;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .medicine-card {
+    @apply p-4;
+  }
+  
+  .medicine-card__actions {
+    @apply flex-col;
+  }
+  
+  .action-btn {
+    @apply justify-center w-full;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .medicine-card {
+    @apply bg-gray-800 border-gray-700 text-white;
+  }
+  
+  .medicine-card__title {
+    @apply text-white;
+  }
+  
+  .medicine-card__manufacturer {
+    @apply text-gray-400;
+  }
+  
+  .detail-label {
+    @apply text-gray-400;
+  }
+  
+  .detail-value {
+    @apply text-white;
+  }
+}
+
+/* Print styles */
+@media print {
+  .medicine-card {
+    @apply shadow-none border border-gray-300;
+  }
+  
+  .medicine-card__actions {
+    @apply hidden;
+  }
+}

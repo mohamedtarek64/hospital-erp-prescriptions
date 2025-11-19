@@ -1,0 +1,297 @@
+/**
+ * Report Builder Component Styles - Modern Light Theme
+ * Modern light theme with Tailwind CSS
+ */
+
+/* Report Builder Container */
+.report-builder {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-8;
+}
+
+/* Header */
+.report-builder-header {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.report-builder-title {
+  @apply mb-6;
+}
+
+.report-builder-title-text {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.report-builder-title-description {
+  @apply text-slate-600 text-lg;
+}
+
+.report-builder-actions {
+  @apply flex items-center gap-4;
+}
+
+.report-builder-action-btn {
+  @apply px-6 py-3 rounded-xl font-semibold text-base transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl;
+}
+
+.report-builder-action-btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600;
+}
+
+.report-builder-action-btn-secondary {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 hover:from-slate-200 hover:to-gray-200;
+}
+
+.report-builder-action-btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.report-builder-action-btn-icon {
+  @apply w-5 h-5;
+}
+
+/* Form */
+.report-builder-form {
+  @apply space-y-8;
+}
+
+.report-builder-form-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.report-builder-form-section-title {
+  @apply text-2xl font-bold text-slate-800 mb-8 pb-4 border-b border-slate-200/50;
+}
+
+.report-builder-form-group {
+  @apply mb-6;
+}
+
+.report-builder-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.report-builder-form-label {
+  @apply block text-sm font-semibold text-slate-700 mb-3;
+}
+
+.report-builder-form-input,
+.report-builder-form-select,
+.report-builder-form-textarea {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.report-builder-form-input-error {
+  @apply border-red-300 focus:ring-red-500 focus:border-red-500;
+}
+
+.report-builder-form-error {
+  @apply text-red-600 text-sm mt-2;
+}
+
+.report-builder-form-checkbox {
+  @apply flex items-center gap-3 cursor-pointer;
+}
+
+.report-builder-form-checkbox input[type="checkbox"] {
+  @apply rounded border-slate-300 text-blue-600 focus:ring-blue-500 w-5 h-5;
+}
+
+.report-builder-form-checkbox-text {
+  @apply text-base text-slate-700;
+}
+
+/* Fields */
+.report-builder-fields {
+  @apply space-y-6;
+}
+
+.report-builder-field {
+  @apply bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 border border-slate-200/50 shadow-md hover:shadow-lg transition-all duration-200;
+}
+
+.report-builder-field-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.report-builder-field-title {
+  @apply text-xl font-bold text-slate-800;
+}
+
+.report-builder-field-remove {
+  @apply p-3 text-red-600 hover:bg-red-100 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.report-builder-field-remove svg {
+  @apply w-5 h-5;
+}
+
+.report-builder-add-field {
+  @apply w-full p-8 border-2 border-dashed border-slate-300 rounded-2xl text-slate-600 hover:border-blue-500 hover:text-blue-600 transition-all duration-200 flex items-center justify-center gap-3 shadow-sm hover:shadow-md;
+}
+
+.report-builder-add-field-icon {
+  @apply w-6 h-6;
+}
+
+/* Preview */
+.report-builder-preview {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mt-8;
+}
+
+.report-builder-preview-title {
+  @apply text-2xl font-bold text-slate-800 mb-8 pb-4 border-b border-slate-200/50;
+}
+
+.report-builder-preview-content {
+  @apply space-y-6;
+}
+
+.report-builder-preview-header {
+  @apply pb-6 border-b border-slate-200/50;
+}
+
+.report-builder-preview-report-title {
+  @apply text-3xl font-bold text-slate-800 mb-3;
+}
+
+.report-builder-preview-report-description {
+  @apply text-slate-600 text-lg;
+}
+
+.report-builder-preview-fields {
+  @apply space-y-4;
+}
+
+.report-builder-preview-field {
+  @apply flex items-center justify-between p-4 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50;
+}
+
+.report-builder-preview-field-label {
+  @apply font-semibold text-slate-700;
+}
+
+.report-builder-preview-field-value {
+  @apply text-slate-500 text-base;
+}
+
+/* Loading States */
+.report-builder-loading {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50;
+}
+
+.report-builder-loading-spinner {
+  @apply animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600;
+}
+
+.report-builder-loading-text {
+  @apply text-white ml-4 text-lg;
+}
+
+/* Form Validation */
+.report-builder-form-group.has-error .report-builder-form-input,
+.report-builder-form-group.has-error .report-builder-form-select,
+.report-builder-form-group.has-error .report-builder-form-textarea {
+  @apply border-red-300 focus:ring-red-500 focus:border-red-500;
+}
+
+.report-builder-form-group.has-error .report-builder-form-label {
+  @apply text-red-700;
+}
+
+/* Field Types */
+.report-builder-field-type-text {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200;
+}
+
+.report-builder-field-type-number {
+  @apply bg-gradient-to-br from-emerald-50 to-green-50 border-emerald-200;
+}
+
+.report-builder-field-type-date {
+  @apply bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200;
+}
+
+.report-builder-field-type-boolean {
+  @apply bg-gradient-to-br from-yellow-50 to-amber-50 border-yellow-200;
+}
+
+.report-builder-field-type-select {
+  @apply bg-gradient-to-br from-pink-50 to-rose-50 border-pink-200;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-builder {
+    @apply p-6;
+  }
+  
+  .report-builder-header {
+    @apply p-6;
+  }
+  
+  .report-builder-form-section {
+    @apply p-6;
+  }
+  
+  .report-builder-form-row {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .report-builder-actions {
+    @apply flex-col gap-3;
+  }
+  
+  .report-builder-action-btn {
+    @apply w-full justify-center;
+  }
+}
+
+/* Animation */
+.report-builder-field {
+  @apply transition-all duration-200;
+}
+
+.report-builder-field:hover {
+  @apply shadow-lg;
+}
+
+.report-builder-form-section {
+  @apply transition-all duration-200;
+}
+
+.report-builder-form-section:hover {
+  @apply shadow-2xl;
+}
+
+/* Focus States */
+.report-builder-form-input:focus,
+.report-builder-form-select:focus,
+.report-builder-form-textarea:focus {
+  @apply ring-2 ring-blue-500 border-transparent;
+}
+
+.report-builder-action-btn:focus {
+  @apply ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Disabled States */
+.report-builder-form-input:disabled,
+.report-builder-form-select:disabled,
+.report-builder-form-textarea:disabled {
+  @apply bg-slate-100 cursor-not-allowed;
+}
+
+.report-builder-action-btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Success States */
+.report-builder-form-group.has-success .report-builder-form-input,
+.report-builder-form-group.has-success .report-builder-form-select,
+.report-builder-form-group.has-success .report-builder-form-textarea {
+  @apply border-emerald-300 focus:ring-emerald-500 focus:border-emerald-500;
+}
+
+.report-builder-form-group.has-success .report-builder-form-label {
+  @apply text-emerald-700;
+}

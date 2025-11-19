@@ -1,0 +1,308 @@
+/* HR Dashboard Styles - Modern Light Theme */
+
+.hr-dashboard {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  @apply bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-200;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.dashboard-header h1 {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard-header p {
+  @apply text-gray-600 text-lg;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.stat-icon {
+  @apply w-16 h-16 rounded-xl flex items-center justify-center mb-4;
+}
+
+.stat-icon.bg-blue-100 {
+  background-color: #dbeafe;
+}
+
+.stat-icon.bg-green-100 {
+  background-color: #dcfce7;
+}
+
+.stat-icon.bg-yellow-100 {
+  background-color: #fef3c7;
+}
+
+.stat-icon.bg-purple-100 {
+  background-color: #f3e8ff;
+}
+
+.stat-icon i {
+  @apply text-2xl;
+}
+
+.stat-content {
+  @apply text-center;
+}
+
+.stat-value {
+  @apply text-3xl font-bold text-gray-800 mb-1;
+}
+
+.stat-label {
+  @apply text-gray-600 font-medium;
+}
+
+/* Charts Section */
+.charts-section {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8;
+}
+
+.chart-container {
+  @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.chart-title {
+  @apply text-xl font-bold text-gray-800 mb-6 flex items-center gap-3;
+}
+
+.chart-title::before {
+  content: '';
+  @apply w-1 h-6 bg-gradient-to-b from-blue-600 to-indigo-600 rounded-full;
+}
+
+.chart-placeholder {
+  @apply h-64 flex items-center justify-center bg-gray-50 rounded-xl;
+}
+
+/* Recent Activities */
+.recent-activities {
+  @apply bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-200;
+}
+
+.section-title {
+  @apply text-xl font-bold text-gray-800 mb-6 flex items-center gap-3;
+}
+
+.section-title::before {
+  content: '';
+  @apply w-1 h-6 bg-gradient-to-b from-blue-600 to-indigo-600 rounded-full;
+}
+
+.activity-list {
+  @apply space-y-4;
+}
+
+.activity-item {
+  @apply flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200;
+}
+
+.activity-icon {
+  @apply w-10 h-10 rounded-full flex items-center justify-center;
+}
+
+.activity-icon i {
+  @apply text-lg;
+}
+
+.activity-content {
+  @apply flex-1;
+}
+
+.activity-text {
+  @apply text-gray-800 font-medium mb-1;
+}
+
+.activity-time {
+  @apply text-sm text-gray-600;
+}
+
+/* Quick Actions */
+.quick-actions {
+  @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+}
+
+.action-buttons {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.action-btn {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex flex-col items-center gap-3;
+}
+
+.action-btn i {
+  @apply text-2xl;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Loading State */
+.loading-container {
+  @apply flex items-center justify-center py-16;
+}
+
+.loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin;
+}
+
+.loading-text {
+  @apply text-gray-600 text-lg mt-4;
+}
+
+/* Error State */
+.error-container {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.error-icon {
+  @apply text-6xl text-red-500 mb-4;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-gray-800 mb-2;
+}
+
+.error-message {
+  @apply text-gray-600 text-center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hr-dashboard {
+    @apply p-4;
+  }
+  
+  .dashboard-header {
+    @apply p-6;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .charts-section {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .action-buttons {
+    @apply grid-cols-1 gap-3;
+  }
+  
+  .activity-item {
+    @apply flex-col text-center;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hr-dashboard > * {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.stat-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.chart-container,
+.recent-activities,
+.quick-actions {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Hover Effects */
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.activity-item:hover {
+  @apply shadow-md;
+}
+
+/* Focus States */
+.action-btn:focus {
+  @apply ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Modern Glass Effect */
+.dashboard-header,
+.stat-card,
+.chart-container,
+.recent-activities,
+.quick-actions {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Chart Styling */
+.chart-placeholder canvas {
+  @apply max-w-full max-h-full;
+}
+
+/* Icon Colors */
+.fa-users {
+  @apply text-blue-600;
+}
+
+.fa-user-check {
+  @apply text-green-600;
+}
+
+.fa-calendar-times {
+  @apply text-yellow-600;
+}
+
+.fa-clock {
+  @apply text-purple-600;
+}
+
+.fa-user-plus {
+  @apply text-green-600;
+}
+
+.fa-calendar-check {
+  @apply text-blue-600;
+}
+
+.fa-money-bill-wave {
+  @apply text-green-600;
+}
+
+/* Custom Scrollbar */
+.activity-list::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.activity-list::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}

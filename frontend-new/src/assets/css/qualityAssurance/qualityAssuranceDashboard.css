@@ -1,0 +1,317 @@
+/* Quality Assurance Dashboard Styles - Modern Light Theme */
+.quality-assurance-dashboard-container {
+  @apply p-8 bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-screen;
+}
+
+.quality-assurance-dashboard-header {
+  @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mb-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.quality-assurance-dashboard-title-section {
+  @apply mb-6 lg:mb-0;
+}
+
+.quality-assurance-dashboard-title {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.quality-assurance-dashboard-subtitle {
+  @apply text-lg text-slate-600;
+}
+
+.quality-assurance-dashboard-actions {
+  @apply flex flex-col sm:flex-row gap-4;
+}
+
+.quality-assurance-dashboard-refresh-btn,
+.quality-assurance-dashboard-report-btn {
+  @apply flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-lg hover:shadow-xl;
+}
+
+.quality-assurance-dashboard-refresh-btn {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 hover:from-slate-200 hover:to-gray-200 focus:ring-slate-300;
+}
+
+.quality-assurance-dashboard-report-btn {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600 focus:ring-blue-300;
+}
+
+.quality-assurance-dashboard-refresh-icon,
+.quality-assurance-dashboard-report-icon {
+  @apply w-5 h-5;
+}
+
+.quality-assurance-dashboard-loading {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.quality-assurance-dashboard-loading-spinner {
+  @apply w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-6;
+}
+
+.quality-assurance-dashboard-loading-text {
+  @apply text-lg text-slate-600;
+}
+
+.quality-assurance-dashboard-error {
+  @apply flex flex-col items-center justify-center py-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-red-200;
+}
+
+.quality-assurance-dashboard-error-icon {
+  @apply w-20 h-20 text-red-500 mb-6;
+}
+
+.quality-assurance-dashboard-error-title {
+  @apply text-2xl font-bold text-slate-800 mb-3;
+}
+
+.quality-assurance-dashboard-error-message {
+  @apply text-slate-600 mb-6 text-center max-w-md text-lg;
+}
+
+.quality-assurance-dashboard-error-retry-btn {
+  @apply px-8 py-4 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-xl hover:from-red-600 hover:to-rose-600 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.quality-assurance-dashboard-content {
+  @apply space-y-10;
+}
+
+/* Statistics Section */
+.quality-assurance-dashboard-stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.quality-assurance-dashboard-stat-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-300;
+}
+
+.quality-assurance-dashboard-stat-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg;
+}
+
+.quality-assurance-dashboard-stat-icon-standards {
+  @apply bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-600;
+}
+
+.quality-assurance-dashboard-stat-icon-audits {
+  @apply bg-gradient-to-br from-blue-100 to-indigo-100 text-blue-600;
+}
+
+.quality-assurance-dashboard-stat-icon-incidents {
+  @apply bg-gradient-to-br from-red-100 to-rose-100 text-red-600;
+}
+
+.quality-assurance-dashboard-stat-icon-compliance {
+  @apply bg-gradient-to-br from-purple-100 to-violet-100 text-purple-600;
+}
+
+.quality-assurance-dashboard-stat-content {
+  @apply space-y-2;
+}
+
+.quality-assurance-dashboard-stat-title {
+  @apply text-base font-semibold text-slate-600;
+}
+
+.quality-assurance-dashboard-stat-value {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.quality-assurance-dashboard-stat-subtitle {
+  @apply text-base text-slate-500;
+}
+
+/* Alerts Section */
+.quality-assurance-dashboard-alerts {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20;
+}
+
+.quality-assurance-dashboard-section-title {
+  @apply text-2xl font-bold text-slate-800 mb-8;
+}
+
+.quality-assurance-dashboard-alerts-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.quality-assurance-dashboard-alert-card {
+  @apply flex items-start gap-4 p-6 rounded-2xl border-l-4 shadow-md hover:shadow-lg transition-all duration-200;
+}
+
+.quality-assurance-dashboard-alert-error {
+  @apply bg-gradient-to-br from-red-50 to-rose-50 border-red-500;
+}
+
+.quality-assurance-dashboard-alert-warning {
+  @apply bg-gradient-to-br from-yellow-50 to-amber-50 border-yellow-500;
+}
+
+.quality-assurance-dashboard-alert-info {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-500;
+}
+
+.quality-assurance-dashboard-alert-icon {
+  @apply w-8 h-8 flex-shrink-0 mt-1;
+}
+
+.quality-assurance-dashboard-alert-error .quality-assurance-dashboard-alert-icon {
+  @apply text-red-500;
+}
+
+.quality-assurance-dashboard-alert-warning .quality-assurance-dashboard-alert-icon {
+  @apply text-yellow-500;
+}
+
+.quality-assurance-dashboard-alert-info .quality-assurance-dashboard-alert-icon {
+  @apply text-blue-500;
+}
+
+.quality-assurance-dashboard-alert-content {
+  @apply flex-1;
+}
+
+.quality-assurance-dashboard-alert-title {
+  @apply font-semibold text-slate-800 mb-2;
+}
+
+.quality-assurance-dashboard-alert-message {
+  @apply text-base text-slate-600 mb-3;
+}
+
+.quality-assurance-dashboard-alert-count {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold;
+}
+
+.quality-assurance-dashboard-alert-error .quality-assurance-dashboard-alert-count {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.quality-assurance-dashboard-alert-warning .quality-assurance-dashboard-alert-count {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.quality-assurance-dashboard-alert-info .quality-assurance-dashboard-alert-count {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+/* Quick Actions Section */
+.quality-assurance-dashboard-actions-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20;
+}
+
+.quality-assurance-dashboard-actions-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6;
+}
+
+.quality-assurance-dashboard-action-btn {
+  @apply flex flex-col items-center gap-4 p-8 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:from-blue-50 hover:to-indigo-100 hover:border-blue-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md hover:shadow-lg;
+}
+
+.quality-assurance-dashboard-action-icon {
+  @apply w-10 h-10 text-slate-600;
+}
+
+.quality-assurance-dashboard-action-btn:hover .quality-assurance-dashboard-action-icon {
+  @apply text-blue-600;
+}
+
+.quality-assurance-dashboard-action-text {
+  @apply text-base font-semibold text-slate-700 text-center;
+}
+
+.quality-assurance-dashboard-action-btn:hover .quality-assurance-dashboard-action-text {
+  @apply text-blue-700;
+}
+
+/* Recent Activities Section */
+.quality-assurance-dashboard-activities {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20;
+}
+
+.quality-assurance-dashboard-activities-list {
+  @apply space-y-6;
+}
+
+.quality-assurance-dashboard-activity-item {
+  @apply flex items-start gap-6 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.quality-assurance-dashboard-activity-icon {
+  @apply w-12 h-12 bg-white/80 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0 mt-1 shadow-md;
+}
+
+.quality-assurance-dashboard-activity-content {
+  @apply flex-1 min-w-0;
+}
+
+.quality-assurance-dashboard-activity-title {
+  @apply font-semibold text-slate-800 mb-2;
+}
+
+.quality-assurance-dashboard-activity-description {
+  @apply text-base text-slate-600 mb-3;
+}
+
+.quality-assurance-dashboard-activity-meta {
+  @apply flex items-center gap-6 text-sm text-slate-500;
+}
+
+.quality-assurance-dashboard-activity-user {
+  @apply font-semibold;
+}
+
+.quality-assurance-dashboard-activity-date {
+  @apply text-base text-slate-500;
+}
+
+.quality-assurance-dashboard-activity-status {
+  @apply flex-shrink-0;
+}
+
+.quality-assurance-dashboard-activity-status-badge {
+  @apply px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.quality-assurance-dashboard-activity-status-success {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.quality-assurance-dashboard-activity-status-warning {
+  @apply bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border border-yellow-200;
+}
+
+.quality-assurance-dashboard-activity-status-error {
+  @apply bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200;
+}
+
+.quality-assurance-dashboard-activity-status-info {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .quality-assurance-dashboard-container {
+    @apply p-6;
+  }
+  
+  .quality-assurance-dashboard-header {
+    @apply p-6;
+  }
+  
+  .quality-assurance-dashboard-title {
+    @apply text-3xl;
+  }
+  
+  .quality-assurance-dashboard-stats {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .quality-assurance-dashboard-actions-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .quality-assurance-dashboard-action-btn {
+    @apply p-6;
+  }
+}

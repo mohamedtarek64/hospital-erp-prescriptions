@@ -1,0 +1,247 @@
+/* Dashboard Styles - Enhanced Hospital Management System */
+
+/* Import Enhanced Dashboard Styles */
+@import './dashboard-enhanced.css';
+@import './dashboard/sidebar-enhanced.css';
+@import './dashboard/topNavigation.css';
+
+/* Custom Components - Enhanced Dashboard */
+.dashboard-main {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50;
+}
+
+.dashboard-content {
+  @apply flex-1 overflow-hidden;
+}
+
+.dashboard-loading {
+  @apply flex items-center justify-center min-h-screen;
+}
+
+.dashboard-loading-spinner {
+  @apply w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin;
+}
+
+/* Dashboard Layout Utilities */
+.dashboard-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.dashboard-spacing {
+  @apply py-8 sm:py-12;
+}
+
+/* Dashboard Grid Utilities */
+.dashboard-grid-1 { @apply grid-cols-1; }
+.dashboard-grid-2 { @apply grid-cols-1 md:grid-cols-2; }
+.dashboard-grid-3 { @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3; }
+.dashboard-grid-4 { @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4; }
+
+/* Dashboard Spacing Utilities */
+.dashboard-gap-4 { @apply gap-4; }
+.dashboard-gap-6 { @apply gap-6; }
+.dashboard-gap-8 { @apply gap-8; }
+
+/* Dashboard Responsive Utilities */
+.dashboard-responsive {
+  @apply max-w-7xl mx-auto py-8 sm:px-6 lg:px-8;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300;
+  @apply bg-gradient-to-br from-white to-gray-50;
+}
+
+.dashboard-card-header {
+  @apply border-b border-gray-200 pb-4 mb-4;
+}
+
+.dashboard-card-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.dashboard-card-content {
+  @apply space-y-4;
+}
+
+/* Dashboard Statistics */
+.dashboard-stat {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300;
+  @apply bg-gradient-to-br from-white to-blue-50;
+}
+
+.dashboard-stat-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white;
+}
+
+.dashboard-stat-value {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.dashboard-stat-label {
+  @apply text-sm font-medium text-gray-600;
+}
+
+/* Dashboard Buttons */
+.dashboard-btn {
+  @apply inline-flex items-center px-4 py-2 border text-sm font-medium rounded-lg transition-all duration-200;
+}
+
+.dashboard-btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md hover:shadow-lg;
+}
+
+.dashboard-btn-secondary {
+  @apply bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 shadow-md hover:shadow-lg;
+}
+
+.dashboard-btn-success {
+  @apply bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-md hover:shadow-lg;
+}
+
+.dashboard-btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 shadow-md hover:shadow-lg;
+}
+
+/* Dashboard Forms */
+.dashboard-form-input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  @apply bg-white text-gray-800 placeholder-gray-500;
+}
+
+.dashboard-form-select {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  @apply bg-white text-gray-800;
+}
+
+.dashboard-form-textarea {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  @apply bg-white text-gray-800 placeholder-gray-500;
+  resize: vertical;
+}
+
+/* Dashboard Alerts */
+.dashboard-alert {
+  @apply p-4 rounded-lg border-l-4;
+}
+
+.dashboard-alert-success {
+  @apply bg-green-50 border-green-400 text-green-800;
+}
+
+.dashboard-alert-warning {
+  @apply bg-yellow-50 border-yellow-400 text-yellow-800;
+}
+
+.dashboard-alert-error {
+  @apply bg-red-50 border-red-400 text-red-800;
+}
+
+.dashboard-alert-info {
+  @apply bg-blue-50 border-blue-400 text-blue-800;
+}
+
+/* Dashboard Navigation */
+.dashboard-nav {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100;
+  @apply bg-gradient-to-r from-white to-gray-50;
+}
+
+.dashboard-nav-item {
+  @apply px-4 py-3 text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200;
+}
+
+.dashboard-nav-item-active {
+  @apply text-blue-700 bg-blue-50 border-r-2 border-blue-500;
+}
+
+/* Dashboard Welcome Section */
+.dashboard-welcome {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-8 mb-8;
+  @apply bg-gradient-to-r from-white to-blue-50;
+}
+
+.dashboard-welcome-title {
+  @apply text-3xl font-bold text-gray-800 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.dashboard-welcome-subtitle {
+  @apply text-lg text-gray-600 mt-2;
+}
+
+/* Dashboard Feature Cards */
+.dashboard-feature-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer;
+  @apply bg-gradient-to-br from-white to-gray-50;
+}
+
+.dashboard-feature-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.dashboard-feature-icon {
+  @apply w-16 h-16 rounded-xl flex items-center justify-center mb-4;
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white;
+}
+
+.dashboard-feature-title {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.dashboard-feature-description {
+  @apply text-gray-600;
+}
+
+/* Dashboard Print Styles */
+@media print {
+  .sidebar,
+  .mobile-menu-btn {
+    display: none !important;
+  }
+  
+  /* Ensure text is readable */
+  * {
+    @apply text-black bg-white;
+  }
+}
+
+/* Dashboard Hover Effects */
+.dashboard-card:hover,
+.dashboard-stat:hover,
+.dashboard-feature-card:hover {
+  @apply transform -translate-y-1;
+}
+
+/* Dashboard Focus States */
+.dashboard-btn:focus,
+.dashboard-form-input:focus,
+.dashboard-form-select:focus,
+.dashboard-form-textarea:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Dashboard Animation Classes */
+.dashboard-fade-enter-active,
+.dashboard-fade-leave-active {
+  @apply transition-opacity duration-300;
+}
+
+.dashboard-fade-enter-from,
+.dashboard-fade-leave-to {
+  @apply opacity-0;
+}
+
+.dashboard-slide-enter-active,
+.dashboard-slide-leave-active {
+  @apply transition-transform duration-300;
+}
+
+.dashboard-slide-enter-from {
+  @apply transform translate-x-full;
+}
+
+.dashboard-slide-leave-to {
+  @apply transform -translate-x-full;
+}

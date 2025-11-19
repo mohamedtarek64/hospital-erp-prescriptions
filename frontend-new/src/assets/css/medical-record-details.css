@@ -1,0 +1,272 @@
+/* Medical Record Details Styles - Modern Light Theme */
+
+.min-h-screen {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-100;
+}
+
+.main-content {
+  @apply ml-64 p-6;
+}
+
+/* Top Navigation */
+.top-nav {
+  @apply bg-white rounded-2xl shadow-lg mb-8 border border-gray-200;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.top-nav-content {
+  @apply flex justify-between items-center p-6;
+}
+
+.top-nav-title {
+  @apply text-2xl font-bold text-gray-800;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.top-nav-user {
+  @apply flex flex-col items-end;
+}
+
+.top-nav-user-name {
+  @apply font-semibold text-gray-800;
+}
+
+.top-nav-user-role {
+  @apply text-sm text-gray-600;
+}
+
+/* Medical Records Content */
+.medical-records-content {
+  @apply space-y-6;
+}
+
+.medical-record-details {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200;
+}
+
+/* Details Header */
+.details-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 flex items-center gap-2;
+}
+
+.btn-icon {
+  @apply w-4 h-4;
+}
+
+.details-title {
+  @apply text-xl font-bold text-gray-800;
+}
+
+/* Details Content */
+.details-content {
+  @apply p-6 space-y-6;
+}
+
+.details-section {
+  @apply bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 border border-gray-200;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-gray-800 mb-4 flex items-center gap-3;
+}
+
+.section-title::before {
+  content: '';
+  @apply w-1 h-6 bg-gradient-to-b from-blue-600 to-indigo-600 rounded-full;
+}
+
+.details-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.detail-item {
+  @apply flex flex-col space-y-1;
+}
+
+.detail-label {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.detail-value {
+  @apply text-base text-gray-800 font-medium;
+}
+
+/* Status and Priority Badges */
+.status-badge,
+.priority-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+/* Content Areas */
+.diagnosis-content,
+.prescription-content,
+.notes-content {
+  @apply bg-white rounded-lg p-4 border border-gray-200;
+}
+
+.diagnosis-text,
+.prescription-text,
+.notes-text {
+  @apply text-gray-800 whitespace-pre-line leading-relaxed;
+}
+
+/* Action Buttons */
+.action-buttons {
+  @apply flex gap-4 justify-end pt-6 border-t border-gray-200;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+}
+
+.btn-outline {
+  @apply bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-200;
+}
+
+/* Loading State */
+.loading-container {
+  @apply flex items-center justify-center py-16;
+}
+
+.loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin;
+}
+
+.loading-text {
+  @apply text-gray-600 text-lg mt-4;
+}
+
+/* Error State */
+.error-container {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.error-icon {
+  @apply text-6xl text-red-500 mb-4;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-gray-800 mb-2;
+}
+
+.error-message {
+  @apply text-gray-600 text-center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    @apply ml-0 p-4;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-nav-content {
+    @apply flex-col gap-4;
+  }
+  
+  .top-nav-user {
+    @apply items-center;
+  }
+  
+  .details-header {
+    @apply flex-col gap-4;
+  }
+  
+  .details-grid {
+    @apply grid-cols-1;
+  }
+  
+  .action-buttons {
+    @apply flex-col;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    @apply w-full justify-center;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.medical-record-details {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.details-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Hover Effects */
+.details-section:hover {
+  @apply shadow-lg;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Focus States */
+.btn-secondary:focus,
+.btn-primary:focus,
+.btn-outline:focus {
+  @apply ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Modern Glass Effect */
+.top-nav,
+.medical-record-details {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Print Styles */
+@media print {
+  .top-nav,
+  .action-buttons,
+  .btn-secondary {
+    @apply hidden;
+  }
+  
+  .main-content {
+    @apply ml-0 p-0;
+  }
+  
+  .medical-record-details {
+    @apply shadow-none border-none;
+  }
+  
+  .details-section {
+    @apply shadow-none border border-gray-300;
+  }
+}
+
+/* Custom Scrollbar */
+.details-content::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.details-content::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.details-content::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}

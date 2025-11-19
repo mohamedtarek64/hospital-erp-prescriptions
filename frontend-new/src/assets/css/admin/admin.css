@@ -1,0 +1,1074 @@
+/**
+ * Admin CSS - Modern Light Theme
+ * 
+ * Main styles for admin components with modern design
+ */
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  @apply p-8 space-y-8;
+}
+
+.dashboard-header {
+  @apply flex items-center justify-between mb-8;
+}
+
+.header-content {
+  @apply flex-1;
+}
+
+.dashboard-title {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.dashboard-subtitle {
+  @apply text-lg text-slate-600;
+}
+
+.header-actions {
+  @apply flex items-center space-x-4;
+}
+
+.btn-refresh {
+  @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl text-sm font-medium hover:from-blue-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-refresh:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Overview Grid */
+.overview-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10;
+}
+
+.overview-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300;
+}
+
+.card-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg;
+}
+
+.card-content {
+  @apply space-y-3;
+}
+
+.card-title {
+  @apply text-xl font-bold text-slate-800;
+}
+
+.card-stats {
+  @apply flex items-baseline space-x-3;
+}
+
+.stat-number {
+  @apply text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.stat-label {
+  @apply text-sm font-medium text-slate-500;
+}
+
+.card-details {
+  @apply flex flex-col space-y-2;
+}
+
+.detail-item {
+  @apply flex items-center text-sm font-medium text-slate-600;
+}
+
+/* System Health Section */
+.system-health-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-10;
+}
+
+.section-header {
+  @apply mb-8;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-slate-800 flex items-center;
+}
+
+.health-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.health-card {
+  @apply flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.health-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md;
+}
+
+.health-content {
+  @apply flex-1 min-w-0;
+}
+
+.health-title {
+  @apply text-base font-bold text-slate-800 mb-3;
+}
+
+.health-status {
+  @apply flex items-center space-x-3 mb-3;
+}
+
+.status-indicator {
+  @apply w-3 h-3 rounded-full shadow-sm;
+}
+
+.status-text {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+.health-details {
+  @apply text-sm text-slate-600 leading-relaxed;
+}
+
+/* Quick Actions Section */
+.quick-actions-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-10;
+}
+
+.actions-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6;
+}
+
+.action-card {
+  @apply flex flex-col items-center p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-blue-300 hover:shadow-lg hover:scale-105;
+}
+
+.action-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-lg;
+}
+
+.action-content {
+  @apply text-center;
+}
+
+.action-title {
+  @apply text-base font-bold text-slate-800 mb-2;
+}
+
+.action-description {
+  @apply text-sm text-slate-600;
+}
+
+/* Recent Activity Section */
+.recent-activity-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.activity-list {
+  @apply space-y-6;
+}
+
+.loading-state {
+  @apply flex items-center justify-center py-12 text-slate-500;
+}
+
+.empty-state {
+  @apply flex flex-col items-center justify-center py-16 text-slate-500;
+}
+
+.error-state {
+  @apply flex flex-col items-center justify-center py-16 text-red-500;
+}
+
+.btn-retry {
+  @apply mt-6 inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.activity-items {
+  @apply space-y-4;
+}
+
+.activity-item {
+  @apply flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.activity-icon {
+  @apply w-12 h-12 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md;
+}
+
+.activity-content {
+  @apply flex-1 min-w-0;
+}
+
+.activity-description {
+  @apply text-base font-medium text-slate-800 mb-2;
+}
+
+.activity-meta {
+  @apply flex items-center space-x-6 text-sm text-slate-600;
+}
+
+.activity-user {
+  @apply font-semibold;
+}
+
+.activity-time {
+  @apply;
+}
+
+/* Error State */
+.error-state {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.error-content {
+  @apply text-center;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-slate-800 mb-4;
+}
+
+.error-message {
+  @apply text-slate-600 mb-6 text-lg;
+}
+
+/* Page Header */
+.page-header {
+  @apply flex items-center justify-between mb-8;
+}
+
+.page-title {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.page-subtitle {
+  @apply text-lg text-slate-600;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm border border-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-white focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-warning {
+  @apply inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-semibold hover:from-amber-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-danger {
+  @apply inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-xl font-semibold hover:from-red-600 hover:to-rose-600 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-success {
+  @apply inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-green-600 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+/* Filters Section */
+.filters-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.filters-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6;
+}
+
+.filter-group {
+  @apply space-y-3;
+}
+
+.filter-label {
+  @apply block text-sm font-semibold text-slate-700;
+}
+
+.search-input {
+  @apply relative;
+}
+
+.search-icon {
+  @apply absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400;
+}
+
+.input-field {
+  @apply w-full pl-12 pr-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.select-field {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.filter-actions {
+  @apply flex items-end;
+}
+
+/* Table Styles */
+.table-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden;
+}
+
+.table-container {
+  @apply overflow-x-auto;
+}
+
+.table-wrapper {
+  @apply min-w-full;
+}
+
+.data-table {
+  @apply min-w-full divide-y divide-slate-200/50;
+}
+
+.table-header {
+  @apply px-8 py-6 bg-gradient-to-r from-slate-50 to-blue-50 text-left text-xs font-bold text-slate-600 uppercase tracking-wider;
+}
+
+.table-row {
+  @apply hover:bg-gradient-to-r hover:from-slate-50/50 hover:to-blue-50/50 transition-all duration-200;
+}
+
+.table-cell {
+  @apply px-8 py-6 whitespace-nowrap text-sm text-slate-800;
+}
+
+/* User Info */
+.user-info {
+  @apply flex items-center space-x-4;
+}
+
+.user-avatar {
+  @apply w-12 h-12 bg-gradient-to-br from-slate-100 to-blue-100 rounded-2xl flex items-center justify-center shadow-md;
+}
+
+.user-details {
+  @apply flex flex-col;
+}
+
+.user-name {
+  @apply font-bold text-slate-800;
+}
+
+.user-id {
+  @apply text-xs text-slate-500;
+}
+
+.email {
+  @apply text-slate-800;
+}
+
+/* Roles */
+.roles-container {
+  @apply flex flex-wrap gap-2;
+}
+
+.role-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.no-roles {
+  @apply text-xs text-slate-500 italic;
+}
+
+/* Status Badges */
+.status-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold;
+}
+
+/* Action Buttons */
+.action-buttons {
+  @apply flex items-center space-x-3;
+}
+
+.btn-action {
+  @apply w-10 h-10 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.btn-edit {
+  @apply hover:text-blue-600 hover:bg-blue-50;
+}
+
+.btn-view {
+  @apply hover:text-emerald-600 hover:bg-emerald-50;
+}
+
+.btn-delete {
+  @apply hover:text-red-600 hover:bg-red-50;
+}
+
+/* Pagination */
+.pagination-section {
+  @apply flex items-center justify-between px-8 py-6 bg-gradient-to-r from-slate-50/50 to-blue-50/50 border-t border-slate-200/50;
+}
+
+.pagination-info {
+  @apply text-sm font-medium text-slate-700;
+}
+
+.pagination-controls {
+  @apply flex items-center space-x-3;
+}
+
+.btn-pagination {
+  @apply w-10 h-10 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.page-numbers {
+  @apply flex items-center space-x-2;
+}
+
+.btn-page {
+  @apply w-10 h-10 rounded-xl flex items-center justify-center text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.btn-page.active {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600 shadow-lg;
+}
+
+/* Bulk Actions */
+.bulk-actions {
+  @apply fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-6 z-50;
+}
+
+.bulk-content {
+  @apply flex items-center space-x-6;
+}
+
+.bulk-text {
+  @apply text-base font-semibold text-slate-700;
+}
+
+.bulk-buttons {
+  @apply flex items-center space-x-3;
+}
+
+.btn-bulk {
+  @apply inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4;
+}
+
+.modal-content {
+  @apply bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-white/20;
+}
+
+.modal-content.modal-sm {
+  @apply max-w-md;
+}
+
+.modal-content.modal-lg {
+  @apply max-w-5xl;
+}
+
+.modal-content.modal-xl {
+  @apply max-w-7xl;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-8 border-b border-slate-200/50;
+}
+
+.modal-title {
+  @apply text-2xl font-bold text-slate-800;
+}
+
+.btn-close {
+  @apply w-10 h-10 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.modal-body {
+  @apply p-8;
+}
+
+.modal-footer {
+  @apply flex items-center justify-end space-x-4 p-8 border-t border-slate-200/50;
+}
+
+/* Form Styles */
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.form-group {
+  @apply space-y-3;
+}
+
+.form-group.full-width {
+  @apply md:col-span-2;
+}
+
+.form-label {
+  @apply block text-sm font-semibold text-slate-700;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.form-select {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.form-textarea {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-vertical bg-white/80 backdrop-blur-sm;
+}
+
+.form-help {
+  @apply text-xs text-slate-500;
+}
+
+.form-error {
+  @apply text-xs text-red-600 flex items-center;
+}
+
+/* Checkbox Styles */
+.checkbox {
+  @apply w-5 h-5 text-blue-600 border-slate-300 rounded-lg focus:ring-blue-500;
+}
+
+.checkbox-label {
+  @apply flex items-center space-x-3 cursor-pointer;
+}
+
+.checkbox-text {
+  @apply text-sm text-slate-700;
+}
+
+.checkbox-group {
+  @apply space-y-3;
+}
+
+/* Badge Styles */
+.type-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold;
+}
+
+.visibility-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold;
+}
+
+.visibility-badge.public {
+  @apply bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200;
+}
+
+.visibility-badge.private {
+  @apply bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 border border-slate-200;
+}
+
+/* Settings Grid */
+.settings-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.setting-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-200;
+}
+
+.setting-header {
+  @apply flex items-start justify-between mb-6;
+}
+
+.setting-info {
+  @apply flex-1;
+}
+
+.setting-key {
+  @apply text-xl font-bold text-slate-800 mb-2;
+}
+
+.setting-description {
+  @apply text-base text-slate-600;
+}
+
+.setting-badges {
+  @apply flex flex-col space-y-3;
+}
+
+.setting-content {
+  @apply space-y-6;
+}
+
+.setting-value {
+  @apply space-y-3;
+}
+
+.value-label {
+  @apply block text-sm font-semibold text-slate-700;
+}
+
+.value-display {
+  @apply space-y-3;
+}
+
+.boolean-input {
+  @apply w-5 h-5 text-blue-600 border-slate-300 rounded-lg focus:ring-blue-500;
+}
+
+.number-input {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.json-input {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-mono text-sm bg-white/80 backdrop-blur-sm;
+}
+
+.text-input {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm;
+}
+
+.setting-meta {
+  @apply flex items-center space-x-6 text-sm text-slate-500;
+}
+
+.meta-item {
+  @apply flex items-center;
+}
+
+.setting-actions {
+  @apply flex items-center space-x-3 pt-6 border-t border-slate-200/50;
+}
+
+.btn-reset {
+  @apply hover:text-orange-600 hover:bg-orange-50;
+}
+
+/* Categories Tabs */
+.categories-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.categories-tabs {
+  @apply flex flex-wrap gap-3;
+}
+
+.category-tab {
+  @apply inline-flex items-center px-6 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-800 hover:bg-slate-100 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.category-tab.active {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 border border-blue-200 shadow-lg;
+}
+
+/* Statistics */
+.stats-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.stat-card {
+  @apply flex items-center space-x-6 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.stat-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg;
+}
+
+.stat-content {
+  @apply flex-1;
+}
+
+.stat-number {
+  @apply text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.stat-label {
+  @apply text-base text-slate-600;
+}
+
+/* Tabs */
+.tabs-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8;
+}
+
+.tabs-nav {
+  @apply flex space-x-2;
+}
+
+.tab-button {
+  @apply px-6 py-3 text-sm font-semibold text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.tab-button.active {
+  @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 border border-blue-200 shadow-lg;
+}
+
+/* Roles Grid */
+.roles-grid {
+  @apply space-y-8;
+}
+
+.roles-list {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.role-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-200;
+}
+
+.role-header {
+  @apply flex items-start justify-between mb-6;
+}
+
+.role-info {
+  @apply flex-1;
+}
+
+.role-name {
+  @apply text-xl font-bold text-slate-800 mb-2;
+}
+
+.role-description {
+  @apply text-base text-slate-600 mb-3;
+}
+
+.role-key {
+  @apply text-sm text-slate-500 font-mono;
+}
+
+.role-badges {
+  @apply flex flex-col space-y-3;
+}
+
+.permission-count {
+  @apply flex items-center text-sm text-slate-600;
+}
+
+.user-count {
+  @apply flex items-center text-sm text-slate-600;
+}
+
+.role-permissions {
+  @apply mb-6;
+}
+
+.permissions-title {
+  @apply text-base font-semibold text-slate-700 mb-3;
+}
+
+.permissions-list {
+  @apply flex flex-wrap gap-2;
+}
+
+.permission-tag {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 border border-blue-200;
+}
+
+.more-permissions {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-slate-100 to-gray-100 text-slate-600 border border-slate-200;
+}
+
+.no-permissions {
+  @apply text-sm text-slate-500 italic;
+}
+
+.role-actions {
+  @apply flex items-center space-x-3 pt-6 border-t border-slate-200/50;
+}
+
+.btn-permissions {
+  @apply hover:text-purple-600 hover:bg-purple-50;
+}
+
+.btn-clone {
+  @apply hover:text-emerald-600 hover:bg-emerald-50;
+}
+
+/* Permissions by Module */
+.permissions-by-module {
+  @apply space-y-8;
+}
+
+.modules-list {
+  @apply space-y-8;
+}
+
+.module-section {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-2xl p-8;
+}
+
+.module-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.module-title {
+  @apply text-xl font-bold text-slate-800 flex items-center;
+}
+
+.module-count {
+  @apply text-base text-slate-500;
+}
+
+.permissions-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.permission-card {
+  @apply p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.permission-header {
+  @apply mb-3;
+}
+
+.permission-name {
+  @apply text-base font-semibold text-slate-800;
+}
+
+.permission-key {
+  @apply text-sm text-slate-500 font-mono;
+}
+
+.permission-description {
+  @apply text-sm text-slate-600 mb-3;
+}
+
+.permission-meta {
+  @apply flex items-center space-x-6 text-sm text-slate-500;
+}
+
+/* Logs Table */
+.logs-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden;
+}
+
+.time-info {
+  @apply flex flex-col;
+}
+
+.time-date {
+  @apply text-base font-semibold text-slate-800;
+}
+
+.time-time {
+  @apply text-sm text-slate-500;
+}
+
+.action-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold;
+}
+
+.module-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold;
+}
+
+.description-content {
+  @apply max-w-xs;
+}
+
+.description-text {
+  @apply text-base text-slate-800 truncate;
+}
+
+.ip-address {
+  @apply text-base text-slate-600 font-mono;
+}
+
+/* Log Details */
+.log-details {
+  @apply space-y-6;
+}
+
+.detail-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.detail-item {
+  @apply space-y-2;
+}
+
+.detail-item.full-width {
+  @apply md:col-span-2;
+}
+
+.detail-label {
+  @apply block text-sm font-semibold text-slate-700;
+}
+
+.detail-value {
+  @apply text-base text-slate-800;
+}
+
+.detail-value.description {
+  @apply text-base text-slate-700 leading-relaxed;
+}
+
+.detail-value.user-agent {
+  @apply text-sm text-slate-600 font-mono break-all;
+}
+
+/* Backup Cards */
+.backups-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.backups-container {
+  @apply space-y-8;
+}
+
+.backups-list {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.backup-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-200;
+}
+
+.backup-header {
+  @apply flex items-start justify-between mb-6;
+}
+
+.backup-info {
+  @apply flex-1;
+}
+
+.backup-name {
+  @apply text-xl font-bold text-slate-800 mb-2;
+}
+
+.backup-meta {
+  @apply text-base text-slate-600;
+}
+
+.backup-badges {
+  @apply flex flex-col space-y-3;
+}
+
+.backup-details {
+  @apply flex items-center space-x-6 text-base text-slate-600 mb-6;
+}
+
+.detail-item {
+  @apply flex items-center;
+}
+
+.backup-actions {
+  @apply flex items-center space-x-3 pt-6 border-t border-slate-200/50;
+}
+
+.btn-download {
+  @apply hover:text-blue-600 hover:bg-blue-50;
+}
+
+.btn-restore {
+  @apply hover:text-orange-600 hover:bg-orange-50;
+}
+
+/* Backup Options */
+.backup-options {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.option-card {
+  @apply flex flex-col items-center p-8 border-2 border-slate-200 rounded-2xl cursor-pointer hover:border-blue-300 transition-all duration-200 hover:shadow-lg;
+}
+
+.option-card.selected {
+  @apply border-blue-500 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg;
+}
+
+.option-icon {
+  @apply w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg;
+}
+
+.option-content {
+  @apply text-center;
+}
+
+.option-title {
+  @apply text-xl font-bold text-slate-800 mb-3;
+}
+
+.option-description {
+  @apply text-base text-slate-600;
+}
+
+/* Warning Messages */
+.warning-message {
+  @apply flex items-center text-base text-amber-600 bg-gradient-to-r from-amber-50 to-orange-50 p-4 rounded-2xl border border-amber-200;
+}
+
+.warning-box {
+  @apply flex items-center text-base text-amber-600 bg-gradient-to-r from-amber-50 to-orange-50 p-4 rounded-2xl border border-amber-200 mt-6;
+}
+
+.delete-message {
+  @apply text-base text-slate-700;
+}
+
+.restore-message {
+  @apply text-base text-slate-700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview-grid {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .actions-grid {
+    @apply grid-cols-1 md:grid-cols-2 gap-4;
+  }
+  
+  .filters-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .form-grid {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .settings-grid {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .roles-list {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .permissions-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .backups-list {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .backup-options {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .admin-dashboard {
+    @apply p-6 space-y-6;
+  }
+  
+  .dashboard-title {
+    @apply text-3xl;
+  }
+  
+  .page-title {
+    @apply text-3xl;
+  }
+}
+
+/* Print styles */
+@media print {
+  .header-actions,
+  .bulk-actions,
+  .modal-overlay {
+    @apply hidden;
+  }
+  
+  .admin-dashboard {
+    @apply p-0;
+  }
+  
+  .overview-card,
+  .health-card,
+  .action-card {
+    @apply shadow-none border border-slate-300;
+  }
+}

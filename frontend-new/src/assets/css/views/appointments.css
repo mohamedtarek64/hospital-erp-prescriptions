@@ -1,0 +1,137 @@
+/* Appointments Page Styles */
+.appointments-page {
+  @apply p-6 bg-gray-50 min-h-screen;
+}
+
+.page-header {
+  @apply mb-8;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.appointments-content {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.calendar-section {
+  @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+}
+
+.calendar-header {
+  @apply flex justify-between items-center mb-6;
+}
+
+.calendar-header h2 {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.calendar-controls {
+  @apply flex items-center gap-4;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-outline {
+  @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.current-month {
+  @apply font-medium text-gray-800;
+}
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-2;
+}
+
+.calendar-day {
+  @apply p-3 border border-gray-200 rounded-lg text-center hover:bg-gray-50 cursor-pointer;
+}
+
+.day-number {
+  @apply font-medium text-gray-800 mb-1;
+}
+
+.appointments-count {
+  @apply text-xs text-blue-600 bg-blue-100 rounded-full px-2 py-1;
+}
+
+.appointments-list {
+  @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+}
+
+.list-header {
+  @apply flex justify-between items-center mb-6;
+}
+
+.list-header h2 {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.appointments-timeline {
+  @apply space-y-4;
+}
+
+.timeline-item {
+  @apply flex gap-4;
+}
+
+.timeline-time {
+  @apply w-16 text-sm font-medium text-gray-600 pt-2;
+}
+
+.timeline-content {
+  @apply flex-1;
+}
+
+.appointment-card {
+  @apply bg-gray-50 rounded-lg p-4 border border-gray-200;
+  @apply flex justify-between items-center;
+}
+
+.patient-info h4 {
+  @apply font-medium text-gray-800 mb-1;
+}
+
+.patient-info p {
+  @apply text-sm text-gray-600 mb-1;
+}
+
+.prescription-date {
+  @apply text-xs text-gray-500;
+}
+
+.appointment-details {
+  @apply flex gap-2;
+}
+
+.department {
+  @apply px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800;
+}
+
+.status {
+  @apply px-3 py-1 text-xs font-medium rounded-full;
+}
+
+.status.pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.appointment-actions {
+  @apply flex gap-2;
+}
+
+.btn-icon {
+  @apply w-8 h-8 flex items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors duration-200;
+}

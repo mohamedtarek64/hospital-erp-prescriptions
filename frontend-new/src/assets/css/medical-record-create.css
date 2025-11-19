@@ -1,0 +1,290 @@
+/* Medical Record Create Form Styles - Modern Light Theme */
+
+.medical-record-create {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6;
+}
+
+/* Page Header */
+.page-header {
+  @apply bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-200;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.header-content {
+  @apply mb-6;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-description {
+  @apply text-gray-600 text-lg;
+}
+
+.header-actions {
+  @apply flex justify-end;
+}
+
+/* Form Container */
+.create-form-container {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-200;
+}
+
+.medical-record-form {
+  @apply p-8;
+}
+
+/* Form Sections */
+.form-section {
+  @apply mb-8 pb-8 border-b border-gray-200 last:border-b-0;
+}
+
+.section-title {
+  @apply text-xl font-bold text-gray-800 mb-6 flex items-center gap-3;
+}
+
+.section-title::before {
+  content: '';
+  @apply w-1 h-6 bg-gradient-to-b from-blue-600 to-indigo-600 rounded-full;
+}
+
+/* Form Grid */
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.form-group.full-width {
+  @apply md:col-span-2;
+}
+
+/* Form Labels */
+.form-label {
+  @apply block text-sm font-semibold text-gray-700 mb-2;
+}
+
+.required {
+  @apply text-red-500;
+}
+
+/* Form Inputs */
+.form-input,
+.form-select,
+.form-textarea {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 text-gray-800 placeholder-gray-500 transition-all duration-200;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  @apply bg-white shadow-lg;
+}
+
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  @apply border-red-500 ring-2 ring-red-200;
+}
+
+.form-textarea {
+  @apply resize-none;
+}
+
+/* Patient Selector */
+.patient-selector {
+  @apply relative;
+}
+
+.patient-dropdown {
+  @apply absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-xl shadow-lg z-50 max-h-60 overflow-y-auto;
+}
+
+.patient-option {
+  @apply p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0 transition-colors duration-200;
+}
+
+.patient-info {
+  @apply space-y-1;
+}
+
+.patient-name {
+  @apply font-semibold text-gray-800;
+}
+
+.patient-details {
+  @apply text-sm text-gray-600;
+}
+
+/* Selected Patient */
+.selected-patient {
+  @apply mt-4;
+}
+
+.patient-card {
+  @apply bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 flex items-center gap-4;
+}
+
+.patient-avatar {
+  @apply w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg;
+}
+
+.patient-details {
+  @apply flex-1;
+}
+
+.patient-name {
+  @apply font-semibold text-gray-800 mb-1;
+}
+
+.patient-info {
+  @apply text-sm text-gray-600;
+}
+
+.remove-patient-btn {
+  @apply p-2 text-gray-400 hover:text-red-500 transition-colors duration-200;
+}
+
+/* Error Messages */
+.error-message {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* Form Actions */
+.form-actions {
+  @apply flex justify-end gap-4 pt-6 border-t border-gray-200;
+}
+
+/* Buttons */
+.btn {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg hover:shadow-xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+}
+
+.btn-outline {
+  @apply bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400;
+}
+
+/* Loading Spinner */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medical-record-create {
+    @apply p-4;
+  }
+  
+  .page-header {
+    @apply p-6;
+  }
+  
+  .page-title {
+    @apply text-2xl;
+  }
+  
+  .medical-record-form {
+    @apply p-6;
+  }
+  
+  .form-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .form-actions {
+    @apply flex-col;
+  }
+  
+  .btn {
+    @apply w-full justify-center;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.medical-record-create > * {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.form-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Hover Effects */
+.patient-option:hover {
+  @apply bg-blue-50;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Focus States */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  @apply ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Modern Glass Effect */
+.page-header,
+.create-form-container {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Form Validation States */
+.form-input:valid,
+.form-select:valid,
+.form-textarea:valid {
+  @apply border-green-300;
+}
+
+.form-input:invalid:not(:placeholder-shown),
+.form-select:invalid:not(:placeholder-shown),
+.form-textarea:invalid:not(:placeholder-shown) {
+  @apply border-red-300;
+}
+
+/* Custom Scrollbar for Patient Dropdown */
+.patient-dropdown::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.patient-dropdown::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.patient-dropdown::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}

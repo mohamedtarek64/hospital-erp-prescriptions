@@ -1,0 +1,153 @@
+/* Laboratory Page Styles */
+.laboratory-page {
+  @apply p-6 bg-gray-50 min-h-screen;
+}
+
+.page-header {
+  @apply mb-8;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.laboratory-content {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+}
+
+.laboratory-stats {
+  @apply lg:col-span-1;
+}
+
+.stats-cards {
+  @apply grid grid-cols-1 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply bg-white rounded-xl p-6 shadow-lg border border-gray-200;
+  @apply flex items-center space-x-4 space-x-reverse;
+}
+
+.stat-icon {
+  @apply w-16 h-16 rounded-full flex items-center justify-center;
+}
+
+.stat-icon.tests {
+  @apply bg-blue-100;
+}
+
+.stat-icon.tests i {
+  @apply text-2xl text-blue-600;
+}
+
+.stat-icon.pending {
+  @apply bg-yellow-100;
+}
+
+.stat-icon.pending i {
+  @apply text-2xl text-yellow-600;
+}
+
+.stat-icon.completed {
+  @apply bg-green-100;
+}
+
+.stat-icon.completed i {
+  @apply text-2xl text-green-600;
+}
+
+.stat-icon.urgent {
+  @apply bg-red-100;
+}
+
+.stat-icon.urgent i {
+  @apply text-2xl text-red-600;
+}
+
+.stat-content h3 {
+  @apply text-sm font-medium text-gray-600 mb-1;
+}
+
+.stat-number {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.laboratory-dashboard {
+  @apply lg:col-span-2;
+}
+
+.dashboard-sections {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.dashboard-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+}
+
+.card-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.card-header h3 {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.card-content {
+  @apply space-y-4;
+}
+
+.quick-action {
+  @apply flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer transition-colors duration-200;
+}
+
+.quick-action i {
+  @apply w-5 h-5 text-gray-600;
+}
+
+.quick-action span {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.recent-item {
+  @apply flex justify-between items-center p-3 bg-gray-50 rounded-lg;
+}
+
+.item-info h4 {
+  @apply font-medium text-gray-800 text-sm;
+}
+
+.item-info p {
+  @apply text-xs text-gray-500;
+}
+
+.item-status {
+  @apply px-2 py-1 text-xs font-medium rounded-full;
+}
+
+.item-status.pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.item-status.completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.item-status.urgent {
+  @apply bg-red-100 text-red-800;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-outline {
+  @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+}

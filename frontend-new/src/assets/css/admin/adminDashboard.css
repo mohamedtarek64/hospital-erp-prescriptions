@@ -1,0 +1,253 @@
+/**
+ * Admin Dashboard CSS - Modern Light Theme
+ * 
+ * Styles for admin dashboard component with modern design
+ */
+
+/* Dashboard Header */
+.dashboard-header {
+  @apply flex items-center justify-between mb-8;
+}
+
+.header-content {
+  @apply flex-1;
+}
+
+.dashboard-title {
+  @apply text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3;
+}
+
+.dashboard-subtitle {
+  @apply text-slate-600 text-lg;
+}
+
+.header-actions {
+  @apply flex items-center space-x-3;
+}
+
+.btn-refresh {
+  @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl text-sm font-medium hover:from-blue-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-refresh:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Overview Grid */
+.overview-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10;
+}
+
+.overview-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300;
+}
+
+.card-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg;
+}
+
+.card-content {
+  @apply space-y-3;
+}
+
+.card-title {
+  @apply text-xl font-bold text-slate-800;
+}
+
+.card-stats {
+  @apply flex items-baseline space-x-3;
+}
+
+.stat-number {
+  @apply text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.stat-label {
+  @apply text-sm font-medium text-slate-500;
+}
+
+.card-details {
+  @apply flex flex-col space-y-2;
+}
+
+.detail-item {
+  @apply flex items-center text-sm font-medium text-slate-600;
+}
+
+/* System Health Section */
+.system-health-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-10;
+}
+
+.section-header {
+  @apply mb-8;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-slate-800 flex items-center;
+}
+
+.health-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.health-card {
+  @apply flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.health-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md;
+}
+
+.health-content {
+  @apply flex-1 min-w-0;
+}
+
+.health-title {
+  @apply text-base font-bold text-slate-800 mb-3;
+}
+
+.health-status {
+  @apply flex items-center space-x-3 mb-3;
+}
+
+.status-indicator {
+  @apply w-3 h-3 rounded-full shadow-sm;
+}
+
+.status-text {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+.health-details {
+  @apply text-sm text-slate-600 leading-relaxed;
+}
+
+/* Quick Actions Section */
+.quick-actions-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-10;
+}
+
+.actions-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6;
+}
+
+.action-card {
+  @apply flex flex-col items-center p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-blue-300 hover:shadow-lg hover:scale-105;
+}
+
+.action-icon {
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-lg;
+}
+
+.action-content {
+  @apply text-center;
+}
+
+.action-title {
+  @apply text-base font-bold text-slate-800 mb-2;
+}
+
+.action-description {
+  @apply text-sm text-slate-600;
+}
+
+/* Recent Activity Section */
+.recent-activity-section {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8;
+}
+
+.activity-list {
+  @apply space-y-6;
+}
+
+.loading-state {
+  @apply flex items-center justify-center py-12 text-slate-500;
+}
+
+.empty-state {
+  @apply flex flex-col items-center justify-center py-16 text-slate-500;
+}
+
+.error-state {
+  @apply flex flex-col items-center justify-center py-16 text-red-500;
+}
+
+.btn-retry {
+  @apply mt-6 inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.activity-items {
+  @apply space-y-4;
+}
+
+.activity-item {
+  @apply flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200/50 hover:shadow-lg transition-all duration-200;
+}
+
+.activity-icon {
+  @apply w-12 h-12 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md;
+}
+
+.activity-content {
+  @apply flex-1 min-w-0;
+}
+
+.activity-description {
+  @apply text-base font-medium text-slate-800 mb-2;
+}
+
+.activity-meta {
+  @apply flex items-center space-x-6 text-sm text-slate-600;
+}
+
+.activity-user {
+  @apply font-semibold;
+}
+
+.activity-time {
+  @apply text-sm text-gray-500;
+}
+
+/* Error State */
+.error-state {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+.error-content {
+  @apply text-center;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-slate-800 mb-4;
+}
+
+.error-message {
+  @apply text-slate-600 mb-6 text-lg;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-title {
+    @apply text-3xl;
+  }
+  
+  .overview-grid {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .actions-grid {
+    @apply grid-cols-1 md:grid-cols-2 gap-4;
+  }
+  
+  .health-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .overview-card,
+  .system-health-section,
+  .quick-actions-section,
+  .recent-activity-section {
+    @apply p-6;
+  }
+}
