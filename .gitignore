@@ -1,6 +1,12 @@
+.gitignore
 /vendor/
 node_modules/
 .env
+# Ignore all environment files
+.env
+*.env
+frontend/.env
+anything/.env
 .env.*
 /public/uploads/
 /config/*.local.php
