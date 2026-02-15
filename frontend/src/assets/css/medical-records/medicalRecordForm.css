@@ -1,0 +1,374 @@
+/* MedicalRecordForm Component Styles */
+
+.medical-record-form {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.medical-record-form-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(to right, #eff6ff, #e0e7ff);
+}
+
+.medical-record-form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.medical-record-form-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.medical-record-form-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.medical-record-form-status-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.medical-record-form-status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.medical-record-form-status-badge.valid {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.medical-record-form-status-badge.invalid {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.medical-record-form-content {
+  padding: 1.5rem;
+}
+
+.medical-record-form-section {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.medical-record-form-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.medical-record-form-section-icon {
+  margin-left: 0.5rem;
+  color: #2563eb;
+  font-size: 1.25rem;
+}
+
+.medical-record-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.medical-record-form-field {
+  margin-bottom: 1rem;
+}
+
+.medical-record-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.medical-record-form-label.required::after {
+  content: ' *';
+  color: #dc2626;
+}
+
+.medical-record-form-input,
+.medical-record-form-select,
+.medical-record-form-textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.medical-record-form-input:focus,
+.medical-record-form-select:focus,
+.medical-record-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.medical-record-form-input.error,
+.medical-record-form-select.error,
+.medical-record-form-textarea.error {
+  border-color: #f87171;
+}
+
+.medical-record-form-input.success,
+.medical-record-form-select.success,
+.medical-record-form-textarea.success {
+  border-color: #34d399;
+}
+
+.medical-record-form-error {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #dc2626;
+}
+
+.medical-record-form-textarea {
+  resize: vertical;
+  min-height: 2.5rem;
+}
+
+.medical-record-form-textarea.large {
+  min-height: 5rem;
+}
+
+.medical-record-form-dynamic-section {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.medical-record-form-dynamic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.medical-record-form-dynamic-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+}
+
+.medical-record-form-dynamic-icon {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.medical-record-form-add-btn {
+  padding: 0.375rem 0.75rem;
+  background-color: #059669;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.medical-record-form-add-btn:hover {
+  background-color: #047857;
+}
+
+.medical-record-form-add-btn.orange {
+  background-color: #ea580c;
+}
+
+.medical-record-form-add-btn.orange:hover {
+  background-color: #c2410c;
+}
+
+.medical-record-form-add-btn.blue {
+  background-color: #2563eb;
+}
+
+.medical-record-form-add-btn.blue:hover {
+  background-color: #1d4ed8;
+}
+
+.medical-record-form-dynamic-item {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 0.75rem;
+}
+
+.medical-record-form-dynamic-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.medical-record-form-dynamic-item-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.medical-record-form-dynamic-item-content.full-width {
+  grid-template-columns: 1fr;
+}
+
+.medical-record-form-dynamic-item-content.span-2 {
+  grid-column: span 2;
+}
+
+.medical-record-form-remove-btn {
+  padding: 0.25rem 0.5rem;
+  color: #dc2626;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.25rem;
+}
+
+.medical-record-form-remove-btn:hover {
+  color: #b91c1c;
+  background-color: #fef2f2;
+}
+
+.medical-record-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.medical-record-form-left-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.medical-record-form-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.medical-record-form-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.medical-record-form-btn.secondary {
+  color: #374151;
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.medical-record-form-btn.secondary:hover {
+  background-color: #e5e7eb;
+}
+
+.medical-record-form-btn.primary {
+  color: white;
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.medical-record-form-btn.primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.medical-record-form-btn.primary:disabled {
+  background-color: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.medical-record-form-btn.loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medical-record-form-btn.loading .spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.medical-record-form-empty-state {
+  text-align: center;
+  padding: 1.5rem;
+  color: #9ca3af;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .medical-record-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .medical-record-form-dynamic-item-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .medical-record-form-actions {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .medical-record-form-left-actions,
+  .medical-record-form-right-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .medical-record-form-header {
+    padding: 1rem;
+  }
+  
+  .medical-record-form-content {
+    padding: 1rem;
+  }
+  
+  .medical-record-form-section {
+    padding: 0.75rem;
+  }
+  
+  .medical-record-form-dynamic-section {
+    padding: 0.75rem;
+  }
+}

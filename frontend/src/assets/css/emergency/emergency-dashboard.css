@@ -1,0 +1,472 @@
+/* Emergency Dashboard - Modern Light Theme */
+
+.emergency-dashboard {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50;
+  @apply p-6;
+}
+
+/* Header Styles */
+.emergency-header {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 mb-6;
+  @apply flex justify-between items-start;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-800 mb-2 flex items-center;
+}
+
+.page-title i {
+  @apply mr-3 text-blue-600;
+}
+
+.page-subtitle {
+  @apply text-gray-600;
+}
+
+.header-actions {
+  @apply flex gap-3;
+}
+
+/* Critical Alerts Section */
+.critical-alerts-section {
+  @apply mb-8;
+}
+
+.alerts-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4;
+}
+
+.alert-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply hover:shadow-xl transition-all duration-200;
+}
+
+.alert-critical {
+  @apply border-l-4 border-red-500;
+}
+
+.alert-high {
+  @apply border-l-4 border-orange-500;
+}
+
+.alert-medium {
+  @apply border-l-4 border-yellow-500;
+}
+
+.alert-low {
+  @apply border-l-4 border-green-500;
+}
+
+.alert-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.alert-type {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.alert-priority {
+  @apply px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.alert-content {
+  @apply mb-4;
+}
+
+.alert-title {
+  @apply text-lg font-semibold text-gray-800 mb-2;
+}
+
+.alert-message {
+  @apply text-gray-600 mb-3;
+}
+
+.alert-meta {
+  @apply flex flex-wrap gap-4 text-sm text-gray-500;
+}
+
+.alert-actions {
+  @apply flex gap-2;
+}
+
+/* Statistics Section */
+.stats-section {
+  @apply mb-8;
+}
+
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.stat-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply flex items-center space-x-4 hover:shadow-xl transition-shadow duration-200;
+}
+
+.stat-icon {
+  @apply w-12 h-12 rounded-full flex items-center justify-center text-white;
+}
+
+.stat-icon i {
+  @apply text-xl;
+}
+
+.stat-content {
+  @apply flex-1;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600;
+}
+
+/* Active Cases Section */
+.active-cases-section {
+  @apply mb-8;
+}
+
+.cases-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4;
+}
+
+.case-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply hover:shadow-xl transition-all duration-200;
+}
+
+.case-card.priority-critical {
+  @apply border-l-4 border-red-500;
+}
+
+.case-card.priority-high {
+  @apply border-l-4 border-orange-500;
+}
+
+.case-card.priority-medium {
+  @apply border-l-4 border-yellow-500;
+}
+
+.case-card.priority-low {
+  @apply border-l-4 border-green-500;
+}
+
+.case-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.case-number {
+  @apply text-lg font-bold text-gray-800;
+}
+
+.case-priority {
+  @apply px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.case-content {
+  @apply mb-4;
+}
+
+.case-info {
+  @apply space-y-2;
+}
+
+.case-patient {
+  @apply flex items-center justify-between;
+}
+
+.case-type {
+  @apply text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded;
+}
+
+.case-location,
+.case-time {
+  @apply flex items-center text-sm text-gray-600;
+}
+
+.case-location i,
+.case-time i {
+  @apply mr-2 text-blue-600;
+}
+
+.case-status {
+  @apply mb-3;
+}
+
+.case-actions {
+  @apply flex gap-2;
+}
+
+/* Ambulances Section */
+.ambulances-section {
+  @apply mb-8;
+}
+
+.ambulances-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4;
+}
+
+.ambulance-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply hover:shadow-xl transition-all duration-200;
+}
+
+.ambulance-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.vehicle-number {
+  @apply text-lg font-bold text-gray-800;
+}
+
+.ambulance-type {
+  @apply text-sm text-gray-600 bg-blue-100 px-2 py-1 rounded;
+}
+
+.ambulance-content {
+  @apply mb-4;
+}
+
+.ambulance-info {
+  @apply space-y-2;
+}
+
+.ambulance-staff {
+  @apply space-y-1;
+}
+
+.staff-member {
+  @apply flex items-center text-sm text-gray-600;
+}
+
+.staff-member i {
+  @apply mr-2 text-blue-600;
+}
+
+.ambulance-capacity {
+  @apply flex items-center text-sm text-gray-600;
+}
+
+.ambulance-capacity i {
+  @apply mr-2 text-blue-600;
+}
+
+.ambulance-status {
+  @apply mb-3;
+}
+
+.ambulance-actions {
+  @apply flex gap-2;
+}
+
+/* Triage Section */
+.triage-section {
+  @apply mb-8;
+}
+
+.triage-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4;
+}
+
+.triage-card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  @apply hover:shadow-xl transition-all duration-200;
+}
+
+.triage-card.triage-red {
+  @apply border-l-4 border-red-500;
+}
+
+.triage-card.triage-orange {
+  @apply border-l-4 border-orange-500;
+}
+
+.triage-card.triage-yellow {
+  @apply border-l-4 border-yellow-500;
+}
+
+.triage-card.triage-green {
+  @apply border-l-4 border-green-500;
+}
+
+.triage-card.triage-blue {
+  @apply border-l-4 border-blue-500;
+}
+
+.triage-header {
+  @apply flex justify-between items-center mb-4;
+}
+
+.triage-level {
+  @apply px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.triage-time {
+  @apply text-sm text-gray-600;
+}
+
+.triage-content {
+  @apply mb-4;
+}
+
+.triage-patient {
+  @apply mb-2;
+}
+
+.triage-symptoms {
+  @apply text-sm text-gray-600 mb-3;
+}
+
+.triage-vitals {
+  @apply flex flex-wrap gap-2;
+}
+
+.vital-sign {
+  @apply flex items-center text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded;
+}
+
+.vital-sign i {
+  @apply mr-1 text-blue-600;
+}
+
+.triage-actions {
+  @apply flex gap-2;
+}
+
+/* Status Badges */
+.status-badge {
+  @apply px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.status-pending {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.status-dispatched {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-en_route {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-on_scene {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.status-transporting {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.status-arrived {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-cancelled {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-available {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Priority Badges */
+.priority-critical {
+  @apply bg-red-100 text-red-800;
+}
+
+.priority-high {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.priority-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.priority-low {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Triage Level Badges */
+.triage-red {
+  @apply bg-red-100 text-red-800;
+}
+
+.triage-orange {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.triage-yellow {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.triage-green {
+  @apply bg-green-100 text-green-800;
+}
+
+.triage-blue {
+  @apply bg-blue-100 text-blue-800;
+}
+
+/* Loading State */
+.loading-overlay {
+  @apply fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50;
+}
+
+.loading-spinner {
+  @apply text-center;
+}
+
+.loading-spinner i {
+  @apply text-4xl text-blue-600 mb-4;
+}
+
+.loading-spinner p {
+  @apply text-gray-600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emergency-dashboard {
+    @apply p-4;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-1 md:grid-cols-2;
+  }
+  
+  .cases-grid,
+  .ambulances-grid,
+  .triage-grid {
+    @apply grid-cols-1;
+  }
+  
+  .header-actions {
+    @apply flex-col gap-2;
+  }
+}
+
+/* Animation Classes */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}

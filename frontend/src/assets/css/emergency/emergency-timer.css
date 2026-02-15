@@ -1,0 +1,356 @@
+/* Emergency Timer Component Styles */
+.emergency-timer {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden;
+}
+
+/* Timer Header */
+.timer-header {
+  @apply flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white;
+}
+
+.timer-title {
+  @apply text-lg font-bold flex items-center;
+}
+
+.timer-controls {
+  @apply flex items-center space-x-2;
+}
+
+.btn-toggle,
+.btn-reset {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-toggle {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-toggle.active {
+  @apply bg-red-600 hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn-reset {
+  @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+}
+
+.btn-toggle:disabled,
+.btn-reset:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Timer Display */
+.timer-display {
+  @apply p-6 bg-gray-50 border-b border-gray-200;
+}
+
+.time-main {
+  @apply text-center mb-6;
+}
+
+.time-value {
+  @apply text-4xl font-bold text-gray-800 block;
+}
+
+.time-label {
+  @apply text-sm text-gray-600 uppercase tracking-wide;
+}
+
+.time-breakdown {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.time-segment {
+  @apply text-center;
+}
+
+.segment-value {
+  @apply text-xl font-semibold text-gray-800 block;
+}
+
+.segment-label {
+  @apply text-xs text-gray-600 uppercase tracking-wide;
+}
+
+/* Timer Milestones */
+.timer-milestones {
+  @apply p-4;
+}
+
+.milestones-title {
+  @apply text-lg font-semibold text-gray-800 mb-4;
+}
+
+.milestones-list {
+  @apply space-y-3;
+}
+
+.milestone-item {
+  @apply flex items-center space-x-3 p-3 rounded-lg border-2 border-gray-200 transition-all duration-200;
+}
+
+.milestone-item.completed {
+  @apply border-green-500 bg-green-50;
+}
+
+.milestone-item.current {
+  @apply border-blue-500 bg-blue-50 ring-2 ring-blue-200;
+}
+
+.milestone-icon {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-white flex-shrink-0;
+}
+
+.milestone-item:not(.completed) .milestone-icon {
+  @apply bg-gray-400;
+}
+
+.milestone-item.completed .milestone-icon {
+  @apply bg-green-500;
+}
+
+.milestone-item.current .milestone-icon {
+  @apply bg-blue-500;
+}
+
+.milestone-content {
+  @apply flex-1 flex items-center justify-between;
+}
+
+.milestone-name {
+  @apply font-medium text-gray-800;
+}
+
+.milestone-time {
+  @apply text-sm font-mono text-gray-600;
+}
+
+.milestone-check {
+  @apply flex-shrink-0;
+}
+
+/* Timer Alerts */
+.timer-alerts {
+  @apply p-4 space-y-2;
+}
+
+.alert-warning {
+  @apply flex items-center p-3 bg-yellow-100 border border-yellow-300 rounded-md text-yellow-800;
+}
+
+.alert-critical {
+  @apply flex items-center p-3 bg-red-100 border border-red-300 rounded-md text-red-800;
+}
+
+/* Timer Settings */
+.timer-settings {
+  @apply p-4 bg-gray-50 border-t border-gray-200;
+}
+
+.settings-title {
+  @apply text-lg font-semibold text-gray-800 mb-4;
+}
+
+.settings-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.setting-item {
+  @apply space-y-2;
+}
+
+.setting-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.setting-input,
+.setting-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Animation Classes */
+.emergency-timer {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timer Pulse Animation */
+.time-value {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Milestone Animation */
+.milestone-item {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Current Milestone Animation */
+.milestone-item.current {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}
+
+/* Warning Alert Animation */
+.alert-warning {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Critical Alert Animation */
+.alert-critical {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.7;
+  }
+}
+
+/* Button Hover Effects */
+.btn-toggle:hover,
+.btn-reset:hover {
+  @apply transform scale-105;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timer-header {
+    @apply flex-col space-y-3;
+  }
+  
+  .timer-controls {
+    @apply w-full justify-center;
+  }
+  
+  .time-breakdown {
+    @apply grid-cols-1 space-y-2;
+  }
+  
+  .settings-grid {
+    @apply grid-cols-1;
+  }
+  
+  .time-value {
+    @apply text-3xl;
+  }
+}
+
+/* Focus States */
+.btn-toggle:focus,
+.btn-reset:focus {
+  @apply outline-none;
+}
+
+.setting-input:focus,
+.setting-select:focus {
+  @apply ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Loading State */
+.emergency-timer.loading {
+  @apply opacity-50 pointer-events-none;
+}
+
+/* Timer Running State */
+.emergency-timer.running .time-value {
+  @apply text-blue-600;
+}
+
+.emergency-timer.running .time-main {
+  @apply bg-blue-50;
+}
+
+/* Milestone Completion Animation */
+.milestone-item.completed {
+  animation: complete 0.5s ease-out;
+}
+
+@keyframes complete {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Icon Animation */
+.milestone-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Segment Value Animation */
+.segment-value {
+  transition: color 0.3s ease;
+}
+
+.time-segment:hover .segment-value {
+  @apply text-blue-600;
+}

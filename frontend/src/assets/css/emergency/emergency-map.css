@@ -1,0 +1,341 @@
+/* Emergency Map Component Styles */
+.emergency-map {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden;
+}
+
+/* Map Header */
+.map-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50;
+}
+
+.map-title {
+  @apply text-lg font-semibold text-gray-800 flex items-center;
+}
+
+.map-controls {
+  @apply flex items-center space-x-2;
+}
+
+.btn-refresh,
+.btn-fullscreen {
+  @apply p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200;
+}
+
+.btn-refresh:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Map Container */
+.map-container {
+  @apply relative h-96 bg-gray-100;
+}
+
+.map-container.fullscreen {
+  @apply fixed inset-0 z-50 h-screen;
+}
+
+.map-loading,
+.map-error {
+  @apply flex flex-col items-center justify-center h-full text-gray-500;
+}
+
+.map-loading i,
+.map-error i {
+  @apply text-2xl mb-2;
+}
+
+.btn-retry {
+  @apply mt-2 px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200;
+}
+
+/* Map Content */
+.map-content {
+  @apply relative w-full h-full overflow-hidden;
+}
+
+.map-placeholder {
+  @apply flex flex-col items-center justify-center h-full text-gray-400;
+}
+
+.map-placeholder i {
+  @apply text-4xl mb-2;
+}
+
+/* Emergency Markers */
+.emergency-markers {
+  @apply absolute inset-0 pointer-events-none;
+}
+
+.emergency-marker {
+  @apply absolute w-8 h-8 rounded-full flex items-center justify-center text-white cursor-pointer pointer-events-auto transform transition-transform duration-200 hover:scale-110;
+}
+
+.emergency-marker.priority-critical {
+  @apply bg-red-600 shadow-lg shadow-red-200;
+}
+
+.emergency-marker.priority-high {
+  @apply bg-orange-500 shadow-lg shadow-orange-200;
+}
+
+.emergency-marker.priority-medium {
+  @apply bg-yellow-500 shadow-lg shadow-yellow-200;
+}
+
+.emergency-marker.priority-low {
+  @apply bg-green-500 shadow-lg shadow-green-200;
+}
+
+.emergency-marker i {
+  @apply text-sm;
+}
+
+/* Ambulance Markers */
+.ambulance-markers {
+  @apply absolute inset-0 pointer-events-none;
+}
+
+.ambulance-marker {
+  @apply absolute w-8 h-8 rounded-full flex items-center justify-center text-white cursor-pointer pointer-events-auto transform transition-transform duration-200 hover:scale-110;
+}
+
+.ambulance-marker.status-available {
+  @apply bg-blue-600 shadow-lg shadow-blue-200;
+}
+
+.ambulance-marker.status-busy {
+  @apply bg-gray-600 shadow-lg shadow-gray-200;
+}
+
+.ambulance-marker.status-maintenance {
+  @apply bg-purple-600 shadow-lg shadow-purple-200;
+}
+
+.ambulance-marker i {
+  @apply text-sm;
+}
+
+/* Hospital Marker */
+.hospital-marker {
+  @apply absolute w-10 h-10 rounded-full flex items-center justify-center text-white cursor-pointer pointer-events-auto transform transition-transform duration-200 hover:scale-110 bg-indigo-600 shadow-lg shadow-indigo-200;
+}
+
+.hospital-marker i {
+  @apply text-lg;
+}
+
+/* Marker Tooltips */
+.marker-tooltip {
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-white rounded-lg shadow-lg border border-gray-200 p-3 min-w-48 opacity-0 pointer-events-none transition-opacity duration-200;
+}
+
+.emergency-marker:hover .marker-tooltip,
+.ambulance-marker:hover .marker-tooltip,
+.hospital-marker:hover .marker-tooltip {
+  @apply opacity-100;
+}
+
+.tooltip-header {
+  @apply flex items-center justify-between mb-2;
+}
+
+.case-number,
+.vehicle-number,
+.hospital-name {
+  @apply font-semibold text-gray-800;
+}
+
+.case-priority,
+.ambulance-status {
+  @apply text-xs px-2 py-1 rounded-full text-white;
+}
+
+.tooltip-content {
+  @apply text-sm text-gray-600;
+}
+
+.case-type,
+.ambulance-type {
+  @apply font-medium text-gray-700 mb-1;
+}
+
+.case-time,
+.ambulance-capacity,
+.hospital-address {
+  @apply text-gray-500;
+}
+
+/* Map Legend */
+.map-legend {
+  @apply p-4 border-t border-gray-200 bg-gray-50;
+}
+
+.legend-title {
+  @apply font-semibold text-gray-800 mb-3;
+}
+
+.legend-items {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-3;
+}
+
+.legend-item {
+  @apply flex items-center space-x-2;
+}
+
+.legend-marker {
+  @apply w-4 h-4 rounded-full;
+}
+
+.legend-marker.priority-critical {
+  @apply bg-red-600;
+}
+
+.legend-marker.priority-high {
+  @apply bg-orange-500;
+}
+
+.legend-marker.priority-medium {
+  @apply bg-yellow-500;
+}
+
+.legend-marker.priority-low {
+  @apply bg-green-500;
+}
+
+.legend-marker.status-available {
+  @apply bg-blue-600;
+}
+
+.legend-marker.status-busy {
+  @apply bg-gray-600;
+}
+
+.legend-marker.hospital {
+  @apply bg-indigo-600;
+}
+
+.legend-item span {
+  @apply text-sm text-gray-700;
+}
+
+/* Selected Details */
+.selected-details {
+  @apply absolute top-4 right-4 w-80 bg-white rounded-lg shadow-lg border border-gray-200 z-10;
+}
+
+.details-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-200;
+}
+
+.details-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.btn-close {
+  @apply p-1 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-md transition-colors duration-200;
+}
+
+.details-content {
+  @apply p-4;
+}
+
+.emergency-details,
+.ambulance-details {
+  @apply space-y-3;
+}
+
+.detail-item {
+  @apply flex items-center justify-between;
+}
+
+.detail-item label {
+  @apply font-medium text-gray-700;
+}
+
+.detail-item span {
+  @apply text-gray-600;
+}
+
+.priority-badge {
+  @apply px-2 py-1 rounded-full text-xs text-white;
+}
+
+.priority-badge.priority-critical {
+  @apply bg-red-600;
+}
+
+.priority-badge.priority-high {
+  @apply bg-orange-500;
+}
+
+.priority-badge.priority-medium {
+  @apply bg-yellow-500;
+}
+
+.priority-badge.priority-low {
+  @apply bg-green-500;
+}
+
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs text-white;
+}
+
+.status-badge.status-available {
+  @apply bg-blue-600;
+}
+
+.status-badge.status-busy {
+  @apply bg-gray-600;
+}
+
+.status-badge.status-maintenance {
+  @apply bg-purple-600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .map-container {
+    @apply h-64;
+  }
+  
+  .legend-items {
+    @apply grid-cols-1;
+  }
+  
+  .selected-details {
+    @apply w-full top-0 right-0 left-0;
+  }
+  
+  .marker-tooltip {
+    @apply min-w-32;
+  }
+}
+
+/* Animation Classes */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover Effects */
+.emergency-marker:hover,
+.ambulance-marker:hover,
+.hospital-marker:hover {
+  @apply shadow-xl;
+}
+
+/* Focus States */
+.btn-refresh:focus,
+.btn-fullscreen:focus,
+.btn-retry:focus,
+.btn-close:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}

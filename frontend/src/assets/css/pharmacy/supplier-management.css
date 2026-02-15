@@ -1,0 +1,184 @@
+/* Supplier Management Styles */
+.supplier-management {
+  @apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100;
+}
+
+.supplier-management-header {
+  @apply bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-200;
+}
+
+.supplier-management-title {
+  @apply flex items-center justify-between mb-4;
+}
+
+.supplier-management-title-text {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.supplier-management-title-description {
+  @apply text-gray-600 mt-2;
+}
+
+.supplier-management-actions {
+  @apply flex gap-3;
+}
+
+.supplier-management-action-btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-2;
+}
+
+.supplier-management-action-btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg;
+}
+
+.supplier-management-action-btn-secondary {
+  @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400;
+}
+
+.supplier-management-action-btn-icon {
+  @apply w-4 h-4;
+}
+
+.supplier-management-content {
+  @apply bg-white rounded-xl shadow-lg border border-gray-200;
+}
+
+.supplier-management-filters {
+  @apply p-6 border-b border-gray-200;
+}
+
+.supplier-management-filter-group {
+  @apply flex gap-4 items-end;
+}
+
+.supplier-management-filter-item {
+  @apply flex-1;
+}
+
+.supplier-management-filter-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.supplier-management-filter-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.supplier-management-filter-btn {
+  @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors;
+}
+
+.supplier-management-table {
+  @apply w-full;
+}
+
+.supplier-management-table-header {
+  @apply bg-gray-50;
+}
+
+.supplier-management-table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.supplier-management-table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.supplier-management-table-row {
+  @apply hover:bg-gray-50 transition-colors;
+}
+
+.supplier-management-table-cell {
+  @apply px-6 py-4 whitespace-nowrap;
+}
+
+.supplier-management-table-cell-primary {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.supplier-management-table-cell-secondary {
+  @apply text-sm text-gray-500;
+}
+
+.supplier-management-actions-cell {
+  @apply px-6 py-4 whitespace-nowrap text-right text-sm font-medium;
+}
+
+.supplier-management-action-link {
+  @apply text-blue-600 hover:text-blue-900 mr-3;
+}
+
+.supplier-management-action-button {
+  @apply text-red-600 hover:text-red-900;
+}
+
+.supplier-management-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.supplier-management-modal-content {
+  @apply bg-white rounded-xl shadow-xl max-w-md w-full mx-4;
+}
+
+.supplier-management-modal-header {
+  @apply px-6 py-4 border-b border-gray-200;
+}
+
+.supplier-management-modal-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.supplier-management-modal-body {
+  @apply px-6 py-4;
+}
+
+.supplier-management-form-group {
+  @apply mb-4;
+}
+
+.supplier-management-form-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.supplier-management-form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.supplier-management-form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none;
+}
+
+.supplier-management-modal-footer {
+  @apply px-6 py-4 border-t border-gray-200 flex justify-end gap-3;
+}
+
+.supplier-management-modal-btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.supplier-management-modal-btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.supplier-management-modal-btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.supplier-management-empty {
+  @apply text-center py-12;
+}
+
+.supplier-management-empty-icon {
+  @apply w-16 h-16 text-gray-400 mx-auto mb-4;
+}
+
+.supplier-management-empty-text {
+  @apply text-gray-500 text-lg;
+}
+
+.supplier-management-loading {
+  @apply flex items-center justify-center py-12;
+}
+
+.supplier-management-loading-spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500;
+}

@@ -1,0 +1,392 @@
+/* System Logs CSS - Modern Light Theme */
+.system-logs-container {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 p-6;
+}
+
+.logs-header {
+  @apply mb-10 text-center;
+}
+
+.logs-title {
+  @apply text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6;
+}
+
+.logs-subtitle {
+  @apply text-xl text-slate-600 max-w-3xl mx-auto;
+}
+
+.logs-filters {
+  @apply bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 mb-10 border border-white/20;
+}
+
+.filters-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.filter-group {
+  @apply space-y-2;
+}
+
+.filter-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.filter-input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+.filter-select {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+.filter-date {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+.logs-content {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-100;
+}
+
+.logs-header-bar {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.logs-count {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.logs-actions {
+  @apply flex gap-3;
+}
+
+.logs-table {
+  @apply w-full;
+}
+
+.logs-table-header {
+  @apply bg-gray-50 border-b border-gray-200;
+}
+
+.logs-table-header th {
+  @apply px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.logs-table-body {
+  @apply divide-y divide-gray-200;
+}
+
+.logs-table-row {
+  @apply hover:bg-gray-50 transition-colors duration-200;
+}
+
+.logs-table-row td {
+  @apply px-6 py-4 whitespace-nowrap text-sm;
+}
+
+.log-level {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.log-level.info {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.log-level.warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.log-level.error {
+  @apply bg-red-100 text-red-800;
+}
+
+.log-level.critical {
+  @apply bg-red-200 text-red-900;
+}
+
+.log-level.debug {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.log-timestamp {
+  @apply text-gray-500;
+}
+
+.log-user {
+  @apply text-gray-800 font-medium;
+}
+
+.log-action {
+  @apply text-gray-700;
+}
+
+.log-details {
+  @apply text-gray-600 max-w-xs truncate;
+}
+
+.log-ip {
+  @apply text-gray-500 font-mono text-xs;
+}
+
+.log-actions {
+  @apply flex gap-2;
+}
+
+.log-detail-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.log-detail-content {
+  @apply bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto;
+}
+
+.log-detail-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.log-detail-title {
+  @apply text-2xl font-semibold text-gray-800;
+}
+
+.log-detail-close {
+  @apply text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.log-detail-body {
+  @apply p-6 space-y-6;
+}
+
+.log-detail-section {
+  @apply space-y-4;
+}
+
+.log-detail-section-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.log-detail-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.log-detail-item {
+  @apply space-y-2;
+}
+
+.log-detail-label {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.log-detail-value {
+  @apply text-sm text-gray-800 bg-gray-50 rounded-lg p-3;
+}
+
+.log-detail-json {
+  @apply text-sm text-gray-800 bg-gray-50 rounded-lg p-3 font-mono overflow-x-auto;
+}
+
+.logs-pagination {
+  @apply flex items-center justify-between px-6 py-4 border-t border-gray-200;
+}
+
+.pagination-info {
+  @apply text-sm text-gray-700;
+}
+
+.pagination-controls {
+  @apply flex items-center gap-2;
+}
+
+.pagination-btn {
+  @apply px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors duration-200;
+}
+
+.pagination-btn.active {
+  @apply bg-blue-600 text-white border-blue-600;
+}
+
+.pagination-btn.disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.logs-export {
+  @apply bg-white rounded-2xl shadow-lg p-6 mt-8 border border-gray-100;
+}
+
+.export-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.export-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.export-actions {
+  @apply flex gap-3;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-600 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-white/80 backdrop-blur-sm text-slate-700 px-8 py-4 rounded-xl font-semibold hover:bg-white focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl border border-slate-200;
+}
+
+.btn-success {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-emerald-600 hover:to-green-600 focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-warning {
+  @apply bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-amber-600 hover:to-orange-600 focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-rose-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-red-600 hover:to-rose-600 focus:ring-2 focus:ring-red-300 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.logs-status {
+  @apply flex items-center justify-between p-4 bg-green-50 border border-green-200 rounded-lg mt-6;
+}
+
+.status-icon {
+  @apply w-5 h-5 text-green-600;
+}
+
+.status-text {
+  @apply text-sm font-medium text-green-800;
+}
+
+.logs-error {
+  @apply flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-lg mt-6;
+}
+
+.error-icon {
+  @apply w-5 h-5 text-red-600;
+}
+
+.error-text {
+  @apply text-sm font-medium text-red-800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .system-logs-container {
+    @apply p-4;
+  }
+  
+  .filters-grid {
+    @apply grid-cols-1;
+  }
+  
+  .logs-filters {
+    @apply p-4;
+  }
+  
+  .logs-title {
+    @apply text-3xl;
+  }
+  
+  .logs-table {
+    @apply text-xs;
+  }
+  
+  .logs-table-header th,
+  .logs-table-row td {
+    @apply px-3 py-2;
+  }
+  
+  .log-detail-content {
+    @apply mx-2;
+  }
+  
+  .log-detail-body {
+    @apply p-4;
+  }
+  
+  .log-detail-grid {
+    @apply grid-cols-1;
+  }
+}
+
+/* Modern Light Theme - Enhanced */
+.system-logs-container {
+  @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100;
+}
+
+.logs-title {
+  @apply text-slate-800;
+}
+
+.logs-subtitle {
+  @apply text-slate-600;
+}
+
+.logs-filters,
+.logs-content,
+.logs-export {
+  @apply bg-white/80 backdrop-blur-sm border-slate-200/50 shadow-xl;
+}
+
+.logs-count,
+.logs-title,
+.export-title,
+.log-detail-title,
+.log-detail-section-title {
+  @apply text-slate-800;
+}
+
+.filter-label,
+.logs-table-header th {
+  @apply text-slate-700;
+}
+
+.filter-input,
+.filter-select,
+.filter-date {
+  @apply bg-white/80 backdrop-blur-sm border-slate-300 text-slate-800;
+}
+
+.logs-table-header {
+  @apply bg-gradient-to-r from-slate-50 to-blue-50 border-slate-200/50;
+}
+
+.logs-table-row {
+  @apply hover:bg-gradient-to-r hover:from-slate-50/50 hover:to-blue-50/50;
+}
+
+.logs-table-row td {
+  @apply text-slate-700;
+}
+
+.log-user,
+.log-action {
+  @apply text-slate-800;
+}
+
+.log-detail-content {
+  @apply bg-white/80 backdrop-blur-sm;
+}
+
+.log-detail-header {
+  @apply border-slate-200/50;
+}
+
+.log-detail-label {
+  @apply text-slate-700;
+}
+
+.log-detail-value,
+.log-detail-json {
+  @apply bg-slate-50/80 backdrop-blur-sm text-slate-800;
+}
+
+.logs-pagination {
+  @apply border-slate-200/50;
+}
+
+.pagination-info {
+  @apply text-slate-700;
+}
+
+.pagination-btn {
+  @apply bg-white/80 backdrop-blur-sm border-slate-300 text-slate-700 hover:bg-white hover:text-slate-800;
+}

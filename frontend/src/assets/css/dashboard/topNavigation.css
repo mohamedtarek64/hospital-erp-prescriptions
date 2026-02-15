@@ -1,0 +1,129 @@
+/* Top Navigation Styles - Enhanced with Modern Light Theme */
+
+/* Main Content Container */
+.main-content {
+  @apply transition-all duration-300 ease-in-out;
+  margin-right: 16rem; /* Default sidebar width */
+}
+
+/* Collapsed Sidebar Adjustment */
+.main-content.sidebar-collapsed {
+  margin-right: 4rem;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-right: 0;
+  }
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  @apply bg-white shadow-sm border-b border-gray-100 sticky top-0 z-30;
+  @apply bg-gradient-to-r from-white to-blue-50;
+}
+
+.top-nav-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.top-nav-left {
+  @apply flex items-center;
+}
+
+.top-nav-title {
+  @apply text-2xl font-bold text-gray-800 py-4;
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.top-nav-right {
+  @apply flex items-center justify-end;
+}
+
+.top-nav-user {
+  @apply flex items-center space-x-3 py-4;
+}
+
+.top-nav-user-name {
+  @apply text-sm font-semibold text-gray-800;
+}
+
+.top-nav-user-role {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  @apply max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-nav-content {
+    @apply px-4;
+  }
+  
+  .top-nav-title {
+    @apply text-xl;
+  }
+  
+  .dashboard-content {
+    @apply px-4;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .top-nav {
+    display: none !important;
+  }
+  
+  .main-content {
+    margin-right: 0 !important;
+  }
+}
+
+/* Animation Classes */
+.top-nav-enter-active,
+.top-nav-leave-active {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.top-nav-enter-from,
+.top-nav-leave-to {
+  @apply opacity-0 transform -translate-y-2;
+}
+
+.top-nav-enter-to,
+.top-nav-leave-from {
+  @apply opacity-100 transform translate-y-0;
+}
+
+/* Hover Effects */
+.top-nav-user:hover .top-nav-user-name {
+  @apply text-blue-600;
+}
+
+.top-nav-user:hover .top-nav-user-role {
+  @apply bg-gradient-to-r from-blue-200 to-indigo-200 text-blue-900;
+}
+
+/* Focus States */
+.top-nav:focus-within {
+  @apply ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Loading States */
+.top-nav-loading {
+  @apply opacity-50 pointer-events-none;
+}
+
+/* Error States */
+.top-nav-error {
+  @apply border-red-500 bg-red-50;
+}
+
+.top-nav-error .top-nav-title {
+  @apply text-red-600;
+}
